@@ -1,6 +1,6 @@
 <p align=center>
-  <a href="http://www.layui.com">
-    <img src="http://xiyueta/images/logo-2.png" alt="layui" width="360">
+  <a href="http://www.xiyueta.com">
+    <img src="http://www.xiyueta.com/images/logo-2.png" alt="xiyueta" width="360">
   </a>
 </p>
 <p align=center>
