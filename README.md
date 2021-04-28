@@ -59,4 +59,4 @@ xiyueta（谐音：喜悦它 API) 是一个快速，小型且功能丰富的Java
 从现在开始，尽情地拥抱 xiyueta 吧！但愿她能成为你长远的开发伴侣，化作你方寸屏幕前的亿万字节！
 
 ## 相关
-[官网](http://www.xiyueta.com/)、[更新日志](http://xiyueta.com/doc/changelog.asp)
+[官网](http://www.xiyueta.com/)、[更新日志](http://www.xiyueta.com/doc/changelog.asp)
