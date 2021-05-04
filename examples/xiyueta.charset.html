@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>xiyueta库 测试 xiyueta().charset();</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://www.xiyueta.com/layui/css/layui.css" media="all">
+    <script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
+
+</head>
+
+<body>
+    <div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">html内容</label>
+            <div class="layui-input-block">
+                <textarea name="code" id="code" class="layui-textarea" rows="10">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+&lt;html xmlns="http://www.w3.org/1999/xhtml">
+&lt;head>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+&lt;title>无标题文档&lt;/title>
+&lt;/head>
+
+&lt;body>
+author:xiyueta
+&lt;/body>
+&lt;/html>
+
+ 
+
+</textarea>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">处理后html</label>
+            <div class="layui-input-block">
+                <textarea name="show" id="showcode" class="layui-textarea" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item ">
+            <input type="button" class="layui-btn" value='xiyueta().charset();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
+            <input type="button" class="layui-btn" value='xiyueta().charset("GBK");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
+        </div>
+    </div>
+    <script type="text/javascript">
+    function test() {
+        xiyueta(document.getElementById("code").value).parser(); //解析html
+        document.getElementById("showcode").innerHTML = xiyueta().charset();  
+    }
+    function test2() {
+        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta().charset("GBK");
+        document.getElementById("showcode").innerHTML = xiyueta().print(); //显示获得div文本
+    }
+
+    
+    </script>

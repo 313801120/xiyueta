@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>xiyueta库 测试 xiyueta().cutlabel();</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://www.xiyueta.com/layui/css/layui.css" media="all">
+    <script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
+    <script src="http://www.xiyueta.com/js/jquery.js"></script>
+
+</head>
+
+<body>
+    <div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">html内容</label>
+            <div class="layui-input-block">
+                <textarea name="code" id="code" class="layui-textarea" rows="10">
+&lt;style>
+div{background:yellow;}
+#nav{color:yellow;font-size:20px;}
+.nav{color:green:margin:0;}
+
+&lt;/style>
+&lt;body>
+  aaa&lt;div>喜悦TA&lt;div>\n作者&lt;div style='color:red' id=nav>xiyueta\n&lt;/div>&lt;/div>&lt;/div>&lt;div>网址：xiyueta.com&lt;/div>bbbb
+&lt;/body>
+</textarea>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">处理后html</label>
+            <div class="layui-input-block">
+                <textarea name="show" id="showcode" class="layui-textarea" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item ">
+            <input type="button" class="layui-btn" value='xiyueta("div[id=nav]").cutlabel();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
+             
+        </div>
+    </div>
+    <script type="text/javascript">
+    function test() {
+        xiyueta(document.getElementById("code").value).parser(); //解析html
+        document.getElementById("showcode").innerHTML = xiyueta("div[id=nav]").cutlabel();
+    } 
+    
+    </script>
