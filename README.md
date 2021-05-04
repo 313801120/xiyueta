@@ -16,9 +16,9 @@ xiyueta（谐音：喜悦它 API) 是一个快速，小型且功能丰富的Java
 
 ```js
 //xiyueta库使用
-  xiyueta('<title>喜悦TA</title>').parser();//解析html
-  xiyueta("title").text("xiyueta")
-  alert(xiyueta().print())
+xiyueta('<title>喜悦TA</title>').parser();//解析html
+xiyueta("title").text("xiyueta")
+alert(xiyueta().print())
 ```
 没错，她具备jQuery的影子，页与jQuery不一样的地方是，xiyueta库是直接操作html文件内容。
 
