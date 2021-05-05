@@ -40,6 +40,12 @@
         <input type="button" class="layui-btn" value='xiyueta("div").remove()' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
         <input type="button" class="layui-btn" value='xiyueta("img").remove()' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
         <input type="button" class="layui-btn" value='xiyueta(div[class=cc]).remove()' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test3()" />
+        <input type="button" class="layui-btn" value='判断移除是否成功' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test4()" />        
+    </div>
+
+    <div class="layui-form-item ">
+        <input type="button" class="layui-btn" value='xiyueta("div").html(" ","all")同xiyueta("div").remove()有所不同' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test5()" />
+
     </div>
 </div>  
 <script type="text/javascript">  
@@ -58,5 +64,18 @@ function test3(){
     xiyueta("div[class=cc]").remove()  
     document.getElementById("showcode").value=xiyueta().print();
 } 
+function test4(){ 
+    xiyueta(document.getElementById("code").value).parser();
+    var check=xiyueta("div").remove()
+    var c="移除div="+check;
+    var check=xiyueta("span").remove()
+    c+="\n移除span="+check;
+    document.getElementById("showcode").value=c;
+}
+function test5(){ 
+    xiyueta(document.getElementById("code").value).parser();
+    xiyueta("div").html(" ","all")
+    document.getElementById("showcode").value=xiyueta().print();
+}
 </script>
  

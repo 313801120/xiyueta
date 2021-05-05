@@ -25,7 +25,7 @@
         &lt;div>xiyueta.com
             &lt;div class=xx>更多&lt;/div>
         &lt;/div>
-    &lt;/div>&lt;a class=xx>xiyueta&lt;/a>
+    &lt;/div>&lt;a href='1.asp' class=xx>xiyueta&lt;/a>
 &lt;/div>
 &lt;a id="name">xiyueta&lt;/a>
 
@@ -44,7 +44,7 @@ this is xiyueta
         </div>
         <div class="layui-form-item ">
             <input type="button" class="layui-btn" value='xiyueta("a").attr("href");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
-            <input type="button" class="layui-btn" value='xiyueta("a").attr("href","哈哈")' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
+            <input type="button" class="layui-btn" value='xiyueta("a").attr("href","xiyueta.com")' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
         </div>
     </div>
     <script type="text/javascript">
@@ -54,7 +54,7 @@ this is xiyueta
     }
     function test2() {
         xiyueta(document.getElementById("code").value).parser(); //解析html        
-        document.getElementById("showcode").value = xiyueta("a").attr("href","哈哈"); 
+        document.getElementById("showcode").value = xiyueta("a").attr("href","xiyueta.com"); 
         document.getElementById("showcode").value = xiyueta().print();
     }
     </script>

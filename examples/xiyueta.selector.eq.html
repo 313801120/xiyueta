@@ -56,11 +56,11 @@ this is xiyueta
     function test() {
         xiyueta(document.getElementById("code").value).parser(); //解析html
         var s = xiyueta("div:eq(0)").text();
-        document.getElementById("showcode").innerHTML = s; //显示获得div文本
+        document.getElementById("showcode").value = s; //显示获得div文本
     }
     function test2() {
         xiyueta(document.getElementById("code").value).parser(); //解析html
         var s = xiyueta("   div:eq(2)  ").text();
-        document.getElementById("showcode").innerHTML = s; //显示获得div文本
+        document.getElementById("showcode").value = s; //显示获得div文本
     }
     </script>

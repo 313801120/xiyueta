@@ -45,19 +45,19 @@
     function test() {
         xiyueta(document.getElementById("code").value).parser(); //解析html
         var s=xiyueta("img:eq(0)").swap("img:eq(1)");
-        document.getElementById("showcode").innerHTML = xiyueta().print(); //显示获得div文本
+        document.getElementById("showcode").value = xiyueta().print(); //显示获得div文本
         xiyueta().debug()
     }
     function test2() {
         xiyueta(document.getElementById("code").value).parser(); //解析html
         var s=xiyueta("span:eq(0)").swap("span:eq(1)");
-        document.getElementById("showcode").innerHTML = xiyueta().print(); //显示获得div文本 
+        document.getElementById("showcode").value = xiyueta().print(); //显示获得div文本 
         xiyueta().debug()
     }
     function test3() {
         xiyueta(document.getElementById("code").value).parser(); //解析html
         var s=xiyueta("span:eq(0)").swap("img:eq(0)");
-        document.getElementById("showcode").innerHTML = xiyueta().print(); //显示获得div文本 
+        document.getElementById("showcode").value = xiyueta().print(); //显示获得div文本 
         xiyueta().debug()
     }
 
