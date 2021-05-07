@@ -16,7 +16,7 @@ xiyueta（谐音：喜悦它 API) 是一个快速，小型且功能丰富的Java
 
 ```js
 //xiyueta库使用
-xiyueta('<title>喜悦TA</title>').parser();//解析html
+xiyueta('<title>喜悦TA</title>').parse();//解析html
 xiyueta("title").text("xiyueta")
 alert(xiyueta().print())
 ```
@@ -47,7 +47,7 @@ alert(xiyueta().print())
  
 <script src="js/xiyueta.min.js"></script>
 <script>
-  xiyueta('<title>喜悦TA</title>').parser();//解析html
+  xiyueta('<title>喜悦TA</title>').parse();//解析html
   xiyueta("title").text("xiyueta")
   alert(xiyueta().print())
 </script> 
