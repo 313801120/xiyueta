@@ -60,7 +60,7 @@ this is xiyueta
     </div>
     <script type="text/javascript">
     function test() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         var c=""
         xiyueta("img").each(function(i,obj){        
             var s=xiyueta(obj).attr("src")
@@ -72,7 +72,7 @@ this is xiyueta
 
     }
     function test2() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         var c=""
         xiyueta("li").each(function(i,obj){         
             c+="内容="+obj.innerHTML+"\n";

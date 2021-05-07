@@ -48,11 +48,11 @@ this is xiyueta
     </div>
     <script type="text/javascript">
     function test() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         document.getElementById("showcode").value = xiyueta("div").text(); //显示获得div文本
     }
     function test2() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         xiyueta("div").text("设置内容为xiyueta"); //设置div文本
         document.getElementById("showcode").value = xiyueta().print();
     }

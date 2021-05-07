@@ -49,12 +49,12 @@ this is xiyueta
     </div>
     <script type="text/javascript">
     function test() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         console.log(xiyueta().config())
         alert("console控制台查找打印config")
     }
     function test2() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         xiyueta().config({serverurl:"www.xiyueta.com/api/"})
         document.getElementById("showcode").value = xiyueta().config().serverurl;  
         console.log(xiyueta().config())

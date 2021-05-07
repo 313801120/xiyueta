@@ -50,22 +50,22 @@
 </div>  
 <script type="text/javascript">  
 function test(){ 
-    xiyueta(document.getElementById("code").value).parser();
+    xiyueta(document.getElementById("code").value).parse();
     xiyueta("div").remove()
     document.getElementById("showcode").value=xiyueta().print();
 } 
 function test2(){ 
-    xiyueta(document.getElementById("code").value).parser();
+    xiyueta(document.getElementById("code").value).parse();
     xiyueta("img").remove()    
     document.getElementById("showcode").value=xiyueta().print();
 } 
 function test3(){ 
-    xiyueta(document.getElementById("code").value).parser();
+    xiyueta(document.getElementById("code").value).parse();
     xiyueta("div[class=cc]").remove()  
     document.getElementById("showcode").value=xiyueta().print();
 } 
 function test4(){ 
-    xiyueta(document.getElementById("code").value).parser();
+    xiyueta(document.getElementById("code").value).parse();
     var check=xiyueta("div").remove()
     var c="移除div="+check;
     var check=xiyueta("span").remove()
@@ -73,7 +73,7 @@ function test4(){
     document.getElementById("showcode").value=c;
 }
 function test5(){ 
-    xiyueta(document.getElementById("code").value).parser();
+    xiyueta(document.getElementById("code").value).parse();
     xiyueta("div").html(" ","all")
     document.getElementById("showcode").value=xiyueta().print();
 }

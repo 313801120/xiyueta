@@ -54,30 +54,30 @@ this is xiyueta
     </div>
     <script type="text/javascript">
     function test() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         document.getElementById("showcode").value = xiyueta("div").html();  
     }
     function test2() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         document.getElementById("showcode").value = xiyueta("div").html(null,"all");  
     }
     function test3() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         xiyueta("div:eq(2)").html("设置新内容");
         document.getElementById("showcode").value = xiyueta().print(); 
     }
     function test4() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         xiyueta("div:eq(2)").html("设置新内容","all");
         document.getElementById("showcode").value = xiyueta().print(); 
     }
     function test5() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html 
+        xiyueta(document.getElementById("code").value).parse(); //解析html 
         document.getElementById("showcode").value =xiyueta("img").html();  
         alert(xiyueta("img").html())
     }
     function test6() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         document.getElementById("showcode").value = xiyueta("img").html(null,"all"); 
     }
 

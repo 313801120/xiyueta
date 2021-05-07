@@ -49,11 +49,11 @@ author:xiyueta
     </div>
     <script type="text/javascript">
     function test() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         document.getElementById("showcode").value = xiyueta().charset();  
     }
     function test2() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html
+        xiyueta(document.getElementById("code").value).parse(); //解析html
         xiyueta().charset("GBK");
         document.getElementById("showcode").value = xiyueta().print(); //显示获得div文本
     }

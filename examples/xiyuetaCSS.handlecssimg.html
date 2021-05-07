@@ -44,19 +44,20 @@
     <script type="text/javascript">
  
     function test2() {
-        xiyuetaCSS(document.getElementById("code").value).parser();
+        xiyuetaCSS(document.getElementById("code").value).parse();
         var s=xiyuetaCSS("").handlecssimg("clean","http://www.xiyueta.com/css/style.css");
         document.getElementById("showcode").value =s
+        xiyuetaCSS().debug();
 
     }
     function test3() {
-        xiyuetaCSS(document.getElementById("code").value).parser();
+        xiyuetaCSS(document.getElementById("code").value).parse();
         var s=xiyuetaCSS("").handlecssimg("clean|web","http://www.xiyueta.com/css/style.css");
         document.getElementById("showcode").value =s
 
     }
     function test4() {
-        xiyueta(document.getElementById("code").value).parser(); //解析html        
+        xiyueta(document.getElementById("code").value).parse(); //解析html        
         var s=xiyuetaCSS("").handlecssimg("clean|web|down","http://www.xiyueta.com/css/style.css");
         document.getElementById("showcode").value =s;
     }
