@@ -35,6 +35,7 @@
 &lt;/div>
 
 this is xiyueta
+<div class='b1 t2'>小云</div>
 
 &lt;div>说明&lt;/div>
 
@@ -53,6 +54,7 @@ this is xiyueta
             <input type="button" class="layui-btn" value='xiyueta("div[id=more]").html();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
             <input type="button" class="layui-btn" value='xiyueta("img[class=xx]").item();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test3()" />
             <input type="button" class="layui-btn" value='xiyueta("img[class|NOUL=xx]").item();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test4()" />
+            <input type="button" class="layui-btn" value='xiyueta("div[class=&acute;b1 t2&acute;]").html(null,"all");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test5()" />
         </div>
     </div>
     <script type="text/javascript">
@@ -74,6 +76,11 @@ this is xiyueta
     function test4() {
         xiyueta(document.getElementById("code").value).parse(); //解析html
         var s=xiyueta("img[class|NOUL=xx]").item();
+        document.getElementById("showcode").value = s; //显示获得div文本
+    }
+    function test5() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        var s = xiyueta("div[class='b1 t2']").html(null,"all");
         document.getElementById("showcode").value = s; //显示获得div文本
     }
     </script>

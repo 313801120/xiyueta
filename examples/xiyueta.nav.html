@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>xiyueta库 测试 xiyueta().nav();</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://www.xiyueta.com/layui/css/layui.css" media="all">
+    <script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
+    <script src="http://www.xiyueta.com/js/jquery.js"></script>
+
+</head>
+
+<body>
+    <div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">html内容</label>
+            <div class="layui-input-block">
+                <textarea name="code" id="code" class="layui-textarea" rows="10">
+&lt;div id="nav">
+    &lt;li>&lt;a href="">网站首页&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="">公司介绍&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="">新闻中心&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="">产品展示&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="">联系我们&lt;/a>&lt;/li>
+&lt;/div>
+
+</textarea>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">处理后html</label>
+            <div class="layui-input-block">
+                <textarea name="show" id="showcode" class="layui-textarea" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item ">
+            <input type="button" class="layui-btn" value='xiyueta("div").nav();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
+             
+        </div>
+    </div>
+    <script type="text/javascript">
+    function test() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        xiyueta("div").nav("li"); //显示获得div文本
+        document.getElementById("showcode").value = xiyueta().print();
+    } 
+    
+    </script>
