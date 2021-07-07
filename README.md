@@ -4,7 +4,7 @@
   </a>
 </p>
 <p align=center>
-  Xiyueta is a fast, small, and feature-rich JavaScript library
+  Xiyueta is a fast, small, and feature-rich JavaScript library.
 </p>
 
 
