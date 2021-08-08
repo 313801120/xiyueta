@@ -18,9 +18,6 @@
             <label class="layui-form-label">html内容</label>
             <div class="layui-input-block">
                 <textarea name="code" id="code" class="layui-textarea" rows="10">
-
-
-
 哈哈
 &lt;div>&lt;a href="xiyueta.asp">喜悦TA&lt;/a> 
 
@@ -55,7 +52,7 @@ this is xiyueta
         </div>
         <div class="layui-form-item ">
             <input type="button" class="layui-btn" value='xiyueta("img").each();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
-            <input type="button" class="layui-btn" value='xiyueta("img").each();第二种方法' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" /> 
+            <input type="button" class="layui-btn" value='xiyueta("li").each();第二种方法' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" /> 
         </div>
     </div>
     <script type="text/javascript">
@@ -75,7 +72,7 @@ this is xiyueta
         xiyueta(document.getElementById("code").value).parse(); //解析html
         var c=""
         xiyueta("li").each(function(i,obj){         
-            c+="内容="+obj.innerHTML+"\n";
+            c+="内容="+xiyueta(obj).html()+"\n";
             console.log(obj)
         })
         document.getElementById("showcode").value = c; //显示获得div文本

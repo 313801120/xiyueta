@@ -37,12 +37,19 @@
         </div>
         <div class="layui-form-item ">
             <input type="button" class="layui-btn" value='xiyueta("div").nav();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
+            <input type="button" class="layui-btn" value='xiyueta().tplconfig({type:"dedecms"});' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
              
         </div>
     </div>
     <script type="text/javascript">
     function test() {
         xiyueta(document.getElementById("code").value).parse(); //解析html
+        xiyueta("div").nav("li"); //显示获得div文本
+        document.getElementById("showcode").value = xiyueta().print();
+    } 
+    function test2() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        xiyueta().tplconfig({type:"dedecms"});
         xiyueta("div").nav("li"); //显示获得div文本
         document.getElementById("showcode").value = xiyueta().print();
     } 

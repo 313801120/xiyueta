@@ -19,12 +19,12 @@
             <div class="layui-input-block">
                 <textarea name="code" id="code" class="layui-textarea" rows="10">
 
-/*Header*/
+.gds {background:url(/img/1.jpg) no-repeat 5px center;}
    .SeaNav   ul,        .warp     { width: 1200px;min-width:1200px;}
 .SeaSearch {float:right;color:red;font-size:12px;border:1px solid red;}
 .MoreKeyWords {width:580px; height:72px;margin:8px 0 0 0; float:left; overflow:hidden}
 .ChannelIco_MM {background:url(../sdfsad/Ico_mm.png) no-repeat 5px center;}
-.gds {background:url(/img/1.jpg) no-repeat 5px center;}
+
  
  </textarea>
             </div>
@@ -38,6 +38,8 @@
         <div class="layui-form-item ">
             <input type="button" class="layui-btn" value='xiyuetaCSS(".gds").css("background");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
             <input type="button" class="layui-btn" value='xiyuetaCSS(".gds").css("background","xiyueta.css.jpg");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="testB()" />
+            <input type="button" class="layui-btn" value='xiyuetaCSS().css("|url");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test3()" />
+            <input type="button" class="layui-btn" value='xiyuetaCSS().css("|url","logo.png");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test4()" />
         </div>
     </div>
     <script type="text/javascript">
@@ -50,6 +52,15 @@
         xiyuetaCSS(document.getElementById("code").value).parse();
         var s=xiyuetaCSS(".gds").css("background","url(xiyueta.css.jpg)");
         document.getElementById("showcode").value =xiyuetaCSS().print()
-
+    } 
+    function test3() {
+        xiyuetaCSS(document.getElementById("code").value).parse();
+        var c=xiyuetaCSS().css("|url"); 
+        document.getElementById("showcode").value =c
+    } 
+    function test4() {
+        xiyuetaCSS(document.getElementById("code").value).parse();
+        xiyuetaCSS().css("|url","logo.png"); 
+        document.getElementById("showcode").value =xiyuetaCSS().print()
     } 
     </script>

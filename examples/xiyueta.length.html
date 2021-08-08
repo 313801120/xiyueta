@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>xiyueta库 测试 xiyueta().news();</title>
+    <title>xiyueta库 测试 xiyueta().length;</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="http://www.xiyueta.com/layui/css/layui.css" media="all">
     <script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
-    <script src="http://www.xiyueta.com/js/jquery.js"></script>
 
 </head>
 
@@ -17,16 +17,10 @@
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">html内容</label>
             <div class="layui-input-block">
-                <textarea name="code" id="code" class="layui-textarea" rows="10">
-&lt;div id="news">
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>
-&lt;/div>
-
+                <textarea name="code" id="code" class="layui-textarea" rows="10">&lt;ul>
+&lt;li>11&lt;br>22&lt;br>&lt;/li>
+&lt;li>aa&lt;br>bb&lt;br>&lt;/li>
+&lt;/ul>
 </textarea>
             </div>
         </div>
@@ -37,22 +31,19 @@
             </div>
         </div>
         <div class="layui-form-item ">
-            <input type="button" class="layui-btn" value='xiyueta("div").news();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
-            <input type="button" class="layui-btn" value='xiyueta().tplconfig({type:"dedecms"});' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
-             
+            <input type="button" class="layui-btn" value='xiyueta("li").length' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
+            <input type="button" class="layui-btn" value='xiyueta("li").find("br").length' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" /> 
         </div>
     </div>
     <script type="text/javascript">
     function test() {
         xiyueta(document.getElementById("code").value).parse(); //解析html
-        xiyueta("div").news("li"); //显示获得div文本
-        document.getElementById("showcode").value = xiyueta().print();
-    } 
+        document.getElementById("showcode").value = xiyueta("li").length
+
+
+    }
     function test2() {
         xiyueta(document.getElementById("code").value).parse(); //解析html
-        xiyueta().tplconfig({type:"dedecms"});
-        xiyueta("div").news("li"); //显示获得div文本
-        document.getElementById("showcode").value = xiyueta().print();
+        document.getElementById("showcode").value = xiyueta("li").find("br").length
     } 
-    
     </script>

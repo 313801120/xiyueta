@@ -44,19 +44,46 @@ this is xiyueta
             </div>
         </div>
         <div class="layui-form-item ">
-            <input type="button" class="layui-btn" value='xiyueta("div").doc();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
+            <input type="button" class="layui-btn" value='xiyueta("div").doc();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test1()" />
             <input type="button" class="layui-btn" value='xiyueta("div").doc("all");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
+
+            <input type="button" class="layui-btn" value='xiyueta("div").doc("label");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test3()" />
+            <input type="button" class="layui-btn" value='xiyueta("div").doc("label|all");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test4()" />
+            <br>
+            <input type="button" class="layui-btn" value='xiyueta("div").docWrap();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="testa()" />
+            <input type="button" class="layui-btn" value='xiyueta("div").docLabel();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="testb()" />
+            <input type="button" class="layui-btn" value='xiyueta("div").docLabelWrap();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="testc()" />
 
         </div>
     </div>
     <script type="text/javascript">
-    function test() {
+    function test1() {
         xiyueta(document.getElementById("code").value).parse(); //解析html
         document.getElementById("showcode").value = xiyueta("div").doc();  
     }
     function test2() {
         xiyueta(document.getElementById("code").value).parse(); //解析html
         document.getElementById("showcode").value = xiyueta("div").doc("all");  
+    }
+    function test3() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyueta("div").doc('label');  
+    }
+    function test4() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyueta("div").doc('label|all');  
+    }
+    function testa() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyueta("div").docWrap();  
+    }
+    function testb() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyueta("div").docLabel();  
+    }
+    function testc() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyueta("div").docLabelWrap();  
     }
     
     </script>

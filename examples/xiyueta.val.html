@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>xiyueta库 测试 xiyueta().attr();</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://www.xiyueta.com/layui/css/layui.css" media="all">
+    <script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
+
+</head>
+
+<body>
+    <div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">html内容</label>
+            <div class="layui-input-block">
+                <textarea name="code" id="code" class="layui-textarea" rows="10">
+&lt;textarea>
+    &lt;ul>
+        &lt;li>aa&lt;/li>
+        &lt;li>bb&lt;/li>
+        &lt;li>cc&lt;/li>
+    &lt;/ul>
+
+&lt;/textarea>
+&lt;textarea>
+哈哈
+
+&lt;/textarea>
+
+<input type="text" value="111">
+<input type="text" value="222">
+<input type="text" value="333">
+
+<select>
+    <option value="tt">tt</option>
+    <option value="pp">pp</option>
+    <option value="11">11</option>
+    <option value="22">22</option>
+</select>
+
+<select>
+    <option value="中国">中国</option>
+    <option value="pp">pp</option>
+    <option value="11">11</option>
+    <option value="22">22</option>
+</select>
+ 
+ </textarea>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">处理后html</label>
+            <div class="layui-input-block">
+                <textarea name="show" id="showcode" class="layui-textarea" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item ">
+            <input type="button" class="layui-btn" value='xiyueta("input").val();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test1()" />
+            <input type="button" class="layui-btn" value='xiyueta("input").val("aabbcc");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
+
+            <input type="button" class="layui-btn" value='xiyueta("textarea").val();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test3()" />
+            <input type="button" class="layui-btn" value='xiyueta("textarea").val("aabbcc");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test4()" />
+
+
+            <input type="button" class="layui-btn" value='xiyueta("select").val();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test5()" />
+        </div>
+    </div>
+    <script type="text/javascript">
+    function test1() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyueta("input").val();
+    }
+    function test2() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html        
+        xiyueta("input").val("aabbcc"); 
+        document.getElementById("showcode").value = xiyueta().print();
+    }
+
+    function test3() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyueta("textarea").val();
+    }
+    function test4() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html        
+        xiyueta("textarea").val("aabbcc"); 
+        document.getElementById("showcode").value = xiyueta().print();
+    }
+    
+    function test5() {
+        xiyueta(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyueta("select").val();
+    }
+    </script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>xiyueta库 测试 xiyuetaCSS().print();</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://www.xiyueta.com/layui/css/layui.css" media="all">
+    <script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
+
+</head>
+
+<body>
+    <div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">html内容</label>
+            <div class="layui-input-block">
+                <textarea name="code" id="code" class="layui-textarea" rows="10">
+@charset "gb2312";
+body{ color:#222;font: 14px/1.5 tahoma,arial,"Microsoft YaHei"; background:#ffffff;}
+
+body,ul,form,p,h1,h2,h3,h4,h5,h6,form,input,button{ margin:0; padding:0; list-style:none}    /*note*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {margin:0;padding:0;outline:none;}
+img{ border:none; vertical-align:middle}
+a.more{color:#666666;float:right; font-weight:lighter; line-height:18px; margin:14px 0 13px}
+a{color:#585858; text-decoration:none}
+a:hover{ color:#bb4046;}
+
+</textarea>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">处理后html</label>
+            <div class="layui-input-block">
+                <textarea name="show" id="showcode" class="layui-textarea" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item ">
+            <input type="button" class="layui-btn" value='xiyuetaCSS().print();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
+            <input type="button" class="layui-btn" value='xiyuetaCSS().print("format");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test2()" />
+            <input type="button" class="layui-btn" value='xiyuetaCSS().print("zip");' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test3()" />
+        </div>
+    </div>
+    <script type="text/javascript">
+    function test() {
+        xiyuetaCSS(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyuetaCSS().print();  
+    }
+    function test2() {
+        xiyuetaCSS(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyuetaCSS().print("format");
+    }
+    function test3() {
+        xiyuetaCSS(document.getElementById("code").value).parse(); //解析html
+        document.getElementById("showcode").value = xiyuetaCSS().print("zip");
+    }
+
+    
+    </script>
