@@ -4,28 +4,29 @@
   </a>
 </p>
 <p align=center>
-  Xiyueta is a fast, small, and feature-rich JavaScript library. 20210729
+  Xiyueta is a fast, small, and feature-rich JavaScript library.
+  Last updated 20210808
 </p>
 
 
 ---
 
-xiyueta（谐音：喜悦它 API) 是一个快速，小型且功能丰富的JavaScript库。通过易于使用的API（可在多种浏览器中使用），对HTML/CSSJS/JS/文档内容进行操作和处理，可以像使用jquery语言一样来使用xiyueta。可以对html文档顺序排序，html标记对检测等。处理后html/JS/CSS内容可以输出，方便再次手动对html内容查看和修改。
+xiyuetaJS库（谐音：喜悦它 API) 是一个快速，小型且功能丰富的JavaScript库。通过易于使用的API（可在多种浏览器中使用），对HTML/CSSJS/JS/文档内容进行操作和处理，可以像使用jquery语言一样来使用xiyueta。可以对html文档顺序排序，html标记对检测等。处理后html/JS/CSS内容可以输出，方便再次手动对html内容查看和修改。
 
 
 
 ```js
 //xiyueta库使用
 xiyueta('<title>喜悦TA</title>').parse();//解析html
-xiyueta("title").text("xiyueta")
-alert(xiyueta().print())
+xiyueta("title").text("xiyueta");//获得网页标签
+alert(xiyueta().print());//打印HTML
 ```
-没错，她具备jQuery的影子，页与jQuery不一样的地方是，xiyueta库是直接操作html文件内容。
+没错，她具备jQuery的影子，页与jQuery不一样的地方是，xiyuetaJS库是直接操作html网页内容。
 
 
 ## 快速上手
 
-获得 xiyueta 后，将其完整地部署到你的项目目录（或静态资源服务器），你只需要引入下述一个JS文件：
+获得 xiyuetaJS库 后，将其完整地部署到你的项目目录（或静态资源服务器），你只需要引入下述一个JS文件：
 
 ```
 ./xiyueta.js //xiyueta核心库
