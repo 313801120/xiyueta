@@ -1,0 +1,11 @@
+﻿<script type="text/javascript" src="dist/xiyueta.min.js"></script>
+<script type="text/javascript">
+	var html=`<ul>
+<li>aaaa</li>
+<li>bbbb</li>
+<li>1111</li>
+	</ul>`
+	$(html).parse();//解析
+	document.write($("li").html());//获得li的文本内容 == 等同于jQuery
+	$().debug();
+</script>
