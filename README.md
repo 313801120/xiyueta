@@ -29,7 +29,7 @@ alert(xiyueta().print());//打印HTML
 获得 xiyuetaJS库 后，将其完整地部署到你的项目目录（或静态资源服务器），你只需要引入下述一个JS文件：
 
 ```
-./xiyueta.js //xiyueta核心库
+./xiyueta.min.js //xiyuetaJS库核心文件
 ```
 
 不用去管其它任何文件。像使用jQuery一样来使用xiyueta
