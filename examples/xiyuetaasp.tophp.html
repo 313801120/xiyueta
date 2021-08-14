@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>xiyueta框架 测试 xiyueta().attr();</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://www.xiyueta.com/layui/css/layui.css" media="all">
+    <script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">ASP代码</label>
+            <div class="layui-input-block">
+                <textarea name="code" id="code" class="layui-textarea" rows="7">&lt;%
+response.write("aaa")
+%&gt;
+            </textarea>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">处理后PHP</label>
+            <div class="layui-input-block">
+                <textarea name="show" id="show" class="layui-textarea" rows="7"></textarea>
+            </div>
+        </div>
+ 
+        <div class="layui-form-item ">
+            <input type="button" class="layui-btn" value="转PHP代码" lay-filter="LAY-user-front-submit" onclick="toPHP()" /> <a href="https://c.runoob.com/compile/1" target="_blank" rel="nofollow">PHP在线运行</a>
+        </div>
+    </div> 
+    <script type="text/javascript">
+        function toPHP(){
+            var s=xiyuetaASP(document.getElementById("code").value).parse().toPHP();
+            document.getElementById("show").value=s;
+        }
+    </script>
