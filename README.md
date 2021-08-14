@@ -57,10 +57,10 @@ alert(xiyueta().print());//打印HTML
 ```
 
 ## [阅读文档](http://www.xiyueta.com/)
-从现在开始，尽情地拥抱 xiyueta 吧！但愿她能成为你长远的开发伴侣，化作你方寸屏幕前的亿万字节！
+从现在开始，尽情地拥抱 xiyueta框架 吧！但愿她能成为你长远的开发伴侣，化作你方寸屏幕前的亿万字节！
 
 ## [教程案例](http://www.xiyueta.com/demo/)
-提供大量对xiyueta JS库的AIP使用教程
+提供大量对xiyueta框架的属性方法使用教程
 
 ## 相关
 [官网](http://www.xiyueta.com/)、[更新日志](http://www.xiyueta.com/doc/changelog.asp)
