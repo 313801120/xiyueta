@@ -11,14 +11,14 @@
 
 ---
 
-xiyueta是一个快速、简洁的JavaScript框架，xiyueta框架设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta框架的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。
+xiyueta是一个快速、简洁的JavaScript框架，xiyueta框架设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta框架的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。 1、可以用jQuery语法的方式来操作xiyuetaJS框架。 2、可以遍历DOM以及查找DOM的某个部分，及修改DOM的某个部分。 3、可以对html标签进行标签化处理，可以转成dedecms标记块。 4、可以把ASP代码转换成PHP代码等
 
 
 
 ```js
 //xiyueta框架使用
-xiyueta('<title>喜悦TA</title>').parse();//解析html
-xiyueta("title").text("xiyueta");//获得网页标签
+xiyueta('<title>网页标题</title>').parse();//解析html
+xiyueta("title").text("xiyuetaJS框架");//设置网页标题
 alert(xiyueta().print());//打印HTML
 ```
 没错，她具备jQuery的影子，与jQuery不一样的地方是，xiyueta框架是直接操作纯html网页文本。
@@ -48,15 +48,15 @@ alert(xiyueta().print());//打印HTML
  
 <script src="js/xiyueta.min.js"></script>
 <script>
-  xiyueta('<title>喜悦TA</title>').parse();//解析html
-  xiyueta("title").text("xiyueta")
+  xiyueta('<title>网页标题</title>').parse();//解析html
+  xiyueta("title").text("xiyuetaJS框架");//设置网页标题
   alert(xiyueta().print())
 </script> 
 </body>
 </html>
 ```
 
-## [阅读文档](http://www.xiyueta.com/)
+## [阅读文档](http://www.xiyueta.com/doc/)
 从现在开始，尽情地拥抱 xiyueta框架 吧！但愿她能成为你长远的开发伴侣，化作你方寸屏幕前的亿万字节！
 
 ## [教程案例](http://www.xiyueta.com/demo/)
