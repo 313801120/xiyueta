@@ -4,7 +4,7 @@
   </a>
 </p>
 <p align=center>
-  Xiyueta is a fast, small, and feature-rich JavaScript library.
+  xiyueta is a fast, small, and feature-rich JavaScript library.
   <br>last updated 20210816<br>Latest version v1.2.5
 </p>
 
@@ -32,7 +32,7 @@ alert(xiyueta().print());//打印HTML
 ./xiyueta.min.js //xiyueta框架核心文件
 ```
 
-不用去管其它任何文件。像使用jQuery一样来使用xiyueta框架
+不用去管其它任何文件。像使用jQuery语法一样来使用xiyueta框架
 
 ```html
 <!DOCTYPE html>
