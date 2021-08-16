@@ -1,4 +1,6 @@
 ﻿<script type="text/javascript" src="dist/xiyueta.min.js"></script>
+<textarea id="code" style="width:100%;height:200px"></textarea>
+<a href="https://c.runoob.com/compile/1" target="_blank" rel="nofollow">PHP在线运行</a>
 <script type="text/javascript">
 	var html=`
 <%
@@ -74,7 +76,7 @@ End Function
 Class myClass
     Function printInfo()
         Dim s, sName
-        sName = "云祥孙"
+        sName = "xiyueta.com"
         s = "my is " & sName
         printInfo = s
     End Function
@@ -83,6 +85,9 @@ End Class
 
 	`
 	xiyuetaASP(html).parse();//解析
-	console.log(xiyuetaASP("li").toPHP());//转PHP程序
+	var c=xiyuetaASP("li").toPHP();//转PHP程序
+    document.getElementById("code").value=c;
+    console.log(c);
+
 	xiyuetaASP().debug();
 </script>

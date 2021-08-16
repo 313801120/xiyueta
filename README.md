@@ -5,7 +5,7 @@
 </p>
 <p align=center>
   Xiyueta is a fast, small, and feature-rich JavaScript library.
-  <br>last updated 20210808<br>Latest version v1.2.4
+  <br>last updated 20210816<br>Latest version v1.2.5
 </p>
 
 
