@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>xiyueta框架 测试 xiyueta().attr();</title>
+    <title>xiyueta 测试 xiyueta().attr();</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,9 +18,85 @@
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">ASP代码</label>
             <div class="layui-input-block">
-                <textarea name="code" id="code" class="layui-textarea" rows="7">&lt;%
-response.write("aaa")
-%&gt;
+                <textarea name="code" id="code" class="layui-textarea" rows="7"><%
+'作者：xiyueta QQ313801120  http://www.xiyueta.com/
+Call loadRun()
+Function loadRun()
+    Dim obj, i, isOK, n, splStr, s, sArray, nArray, objectA
+    Response.Write("字典：")
+    Set obj = CreateObject("scripting.dictionary")
+        obj.add "aa", "this is aa"
+        obj.add "bb", "this is bb"
+        obj.add "cc", "this is cc"
+
+        Response.Write("aa=" & obj("aa") & "<br>")
+        Response.Write("bb=" & obj("bb") & "<br>")
+    Set obj = Nothing
+
+    Response.Write("<hr>Do While 循环：")
+    i = 5 : isOK = True
+    Do While i > 0 And isOK = True
+        i = i - 1
+        Response.Write(i & "、" & vbCrLf)
+    Loop
+
+    Response.Write("<hr>IF 判断：")
+    n = 92
+    If n >= 90 Then
+        Response.Write("优秀")
+    ElseIf n >= 60 Then
+        Response.Write("良")
+    Else
+        Response.Write("差")
+    End If
+    Response.Write("<br>第二种：")
+    n = 2
+    Select Case n
+        Case 1 :
+            Response.Write("一班")
+        Case 2 :
+            Response.Write("二班")
+        Case Else :
+            Response.Write("三班")
+            Response.Write("，其它")
+    End Select
+
+    Response.Write("<hr>Split 分割：")
+    splStr = Split("aa|bb|cc", "|")
+    For Each s In splStr
+        Response.Write(s & "、" & vbCrLf)
+    Next
+    Response.Write("<br>第二方法：")
+    For i = 0 To UBound(splStr)
+        Response.Write(i & "=" & splStr(i) & "、" & vbCrLf)
+    Next
+
+    Response.Write("<hr>Array数组：")
+    nArray = Array(3, 4, 1, 8, 2)
+    For Each n In nArray
+        Response.Write(n & "、" & vbCrLf)
+    Next
+    Response.Write("<br>字符数组类型：")
+    sArray = Array("aa", "bb", "cc")
+    For Each s In sArray
+        Response.Write(s & "、" & vbCrLf)
+    Next
+
+    Response.Write("<hr>Class 类：")
+    Set objectA = new myClass
+        Response.Write(objectA.printInfo())
+    Set objectA = Nothing
+End Function
+'类
+Class myClass
+    Function printInfo()
+        Dim s, sName
+        sName = "云祥孙"
+        s = "my is " & sName
+        printInfo = s
+    End Function
+End Class
+%>
             </textarea>
             </div>
         </div>
@@ -41,3 +117,6 @@ response.write("aaa")
             document.getElementById("show").value=s;
         }
     </script>
+
+    
+</body></html>
