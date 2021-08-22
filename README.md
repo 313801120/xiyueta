@@ -47,7 +47,7 @@ alert(xiyueta('title').parse("<title>网页标题</title>").text());//解析html
  
 <script src="dist/xiyueta.min.js"></script>
 <script>
-  xiyueta('<title>网页标题</title>').parse();//解析html
+  xiyueta().parse('<title>网页标题</title>');//解析html
   xiyueta("title").text("xiyuetaJS");//设置网页标题
   alert(xiyueta().print())
 </script> 
