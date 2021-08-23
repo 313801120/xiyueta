@@ -16,7 +16,7 @@ xiyueta - 是一个快速、小巧且功能丰富的 JavaScript 库。它通过�
 
 
 ```js
-//xiyueta使用
+//web 里使用 xiyueta
 alert(xiyueta('title').parse("<title>网页标题</title>").text());//解析html并获得网页标题
 ```
 
