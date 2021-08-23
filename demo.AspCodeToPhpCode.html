@@ -84,8 +84,8 @@ End Class
 %>
 
 	`
-	xiyuetaASP(html).parse();//解析
-	var c=xiyuetaASP("li").beautify().toPHP();//转PHP程序
+	xiyuetaASP().parse(html);//解析
+	var c=xiyuetaASP().beautify().toPHP();//转PHP程序
     document.getElementById("code").value=c;
     console.log(c);
 

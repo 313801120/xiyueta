@@ -1,0 +1,21 @@
+{
+  "name": "xiyueta",
+  "version": "1.2.7",
+  "description": "xiyueta - 是一个快速、小巧且功能丰富的 JavaScript 库。它通过易于使用的 API 使 HTML 文档遍历和操作等工作变得更加简单，该 API 可在多种浏览器上运行。xiyueta设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。也可以把ASP代码转换成PHP代码等",
+  "main": "dist/nodejs.xiyueta.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://www.xiyueta.com/"
+  },
+  "keywords": [
+    "xiyueta,xiyuetaJS,js库"
+  ],
+  "author": "xiyueta.com",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^7.20.2"
+  }
+}

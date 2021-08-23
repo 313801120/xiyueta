@@ -5,7 +5,6 @@
 </p>
 <p align=center>
   xiyueta is a fast, small, and feature-rich JavaScript library.
-  <br>last updated 20210816<br>Latest version v1.2.5
 </p>
 
 
@@ -20,6 +19,14 @@ xiyueta - 是一个快速、小巧且功能丰富的 JavaScript 库。它通过�
 //xiyueta使用
 alert(xiyueta('title').parse("<title>网页标题</title>").text());//解析html并获得网页标题
 ```
+
+```js
+//nodejs 里使用 xiyueta
+var $ = require('xiyueta')
+console.log($("title").parse("<title>xiyueta</title>").text());                        
+```
+
+
 没错，她具备jQuery的影子，与jQuery不一样的地方是，xiyueta是直接操作纯html网页文本。
 
 

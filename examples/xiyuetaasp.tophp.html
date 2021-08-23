@@ -108,12 +108,12 @@ End Class
         </div>
  
         <div class="layui-form-item ">
-            <input type="button" class="layui-btn" value="转PHP代码" lay-filter="LAY-user-front-submit" onclick="toPHP()" /> <a href="https://c.runoob.com/compile/1" target="_blank" rel="nofollow">PHP在线运行</a>
+            <input type="button" class="layui-btn" value="转PHP代码" lay-filter="LAY-user-front-submit" onClick="toPHP()" /> <a href="https://c.runoob.com/compile/1" target="_blank" rel="nofollow">PHP在线运行</a>
         </div>
     </div> 
     <script type="text/javascript">
         function toPHP(){
-            var s=xiyuetaASP(document.getElementById("code").value).parse().toPHP();
+            var s=xiyuetaASP().parse(document.getElementById("code").value).toPHP();
             document.getElementById("show").value=s;
         }
     </script>

@@ -1,11 +1,9 @@
 <meta charset="utf-8">
 <script type="text/javascript" src="dist/xiyueta.min.js"></script>
-
 <script type="text/javascript">
 var beginTime = +new Date();
 
-
- 
+console.log(test_asp());//测试asp()
 console.log(test_css());//测试css()
 console.log(test_item());//测试item()
 console.log(test_swap());//测试swap()
@@ -19,10 +17,25 @@ console.log(test_attr());//测试attr()
 console.log(test_html());//测试html()
 console.log(test_find());//测试find()
 console.log(test_text());//测试text()
+console.log(test_moreother());//测试moreother()
 
 
 console.log("用时共计 "+(new Date()-beginTime)+" 毫秒");
 
+
+//测试 xiyuetaASP().toPHP()
+function test_asp(){
+    var asp='<'+'%\nresponse.write("aaa")\n%'+'>'
+    var php='<?'+'PHP\necho("aaa");\n?'+'>'
+    $asp().parse(asp);  
+    // $asp().debug()
+//     return $asp().toPHP(); 
+
+    if($asp().toPHP()!=php){
+        return "xiyuetaASP().toPHP() 出错1";
+    }
+    return "xiyuetaASP().toPHP() 测试通过 成功 OK";
+}
 
 //测试 xiyueta().css()
 function test_css(){
@@ -371,13 +384,27 @@ function test_text(){
     }
     return "xiyueta().text() 测试通过 成功 OK";
 }
+//测试 xiyueta().moreother()
+function test_moreother(){
+    var html=`<ul>
+    <li>aaaa</li>
+    <li>bbbb</li>
+    <li>cccc<br></li>
+    </ul><div>1111<br></div><span>2<br>2<br>2</span>`
+
+    $().parse(html);  
+    // $().debug()
+    // return $("ul ,span").find("br")
+    if($("ul *,span").length!=5){
+        return "xiyueta().text() 出错1";
+    }else if($("ul ,span").find("br").length!=3){
+        return "xiyueta().text() 出错2";
+    }
+    return "xiyueta().moreother() 测试通过 成功 OK";
+}
 
  </script> 
  
-
-
-
-
 
 
 
