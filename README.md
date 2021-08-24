@@ -26,6 +26,14 @@ var $ = require('xiyueta')
 console.log($("title").parse("<title>xiyueta</title>").text());                        
 ```
 
+```js
+//asp 里使用 xiyueta
+<script  language="javascript" runat="server" src="./dist/asp.xiyueta.min.js"></script> 
+<%
+console.log(xiyueta("p").parse("<p class='nav'>xiyueta<br>bbb</p>").text())
+%>                       
+```
+
 
 没错，她具备jQuery的影子，与jQuery不一样的地方是，xiyueta是直接操作纯html网页文本。
 
