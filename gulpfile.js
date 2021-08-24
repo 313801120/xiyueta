@@ -22,6 +22,7 @@ module.exports = $
 `]
 
 var src = '../xiyueta/js/'
+var dist = '../xiyueta/js/xiyueta/dist/'
 
 //任务
 var task = {
@@ -31,7 +32,7 @@ var task = {
             .pipe(concat('xiyueta.min.js'))
             .pipe(uglify())
             .pipe(header.apply(null, note))
-            .pipe(gulp.dest(src))
+            .pipe(gulp.dest(dist))
     }, //生成nodejs JS文件
     nodejs: function(ver) {
         gulp.src([src + 'xiyueta.css.js', src + 'xiyueta.asp.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
@@ -40,17 +41,17 @@ var task = {
             .pipe(uglify())
             .pipe(header.apply(null, note))
             .pipe(footer.apply(null, nodejs))
-            .pipe(gulp.dest(src))
+            .pipe(gulp.dest(dist))
     }, //生成aspjs JS文件
     aspjs: function(ver) {
-        gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'url.js', src + 'handle.js', src + 'xiyueta.css.js', src + 'xiyueta.asp.js'])
+        gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js',  src + 'xiyueta.css.js', src + 'url.js', src + 'handle.js', src + 'xiyueta.asp.js'])
             .pipe(replace('_xyt.info\(\);', ''))
             .pipe(concat('asp.xiyueta.min.js'))
             .pipe(uglify())
             .pipe(header.apply(null, note))
-            .pipe(gbkConvert())
-            .pipe(gulp.dest(src))
-    }, //生成合并源码 JS文件
+            // .pipe(gbkConvert())
+            .pipe(gulp.dest(dist))
+    }, //生成aspjs 2 JS文件
     sourcejs: function(ver) {
         gulp.src([src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'common.js', src + 'xiyueta.css.js', src + 'xiyueta.asp.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'url.js', src + 'tpl.js'])
             .pipe(concat('xiyueta.source.js'))
@@ -59,7 +60,28 @@ var task = {
             //     compress: false, //类型：Boolean 默认：true， 是否完全压缩
             // }))
             .pipe(header.apply(null, note))
-            .pipe(gulp.dest(src))
+            .pipe(gulp.dest(dist))
+    }, // 拷贝
+    copyxiyuetajs: function(ver) {
+        gulp.src(dist + 'xiyueta.min.js')
+            .pipe(gulp.dest(src + 'xiyueta.min.js'));
+    },
+    debug: function(ver) {
+        gulp.src([src + 'debug.xiyueta.js'])
+            .pipe(concat('debug.web版单元测试.html'))
+            .pipe(header.apply(null, ['<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />\n<script type="text/javascript" src="dist/xiyueta.min.js"></script>\n<script type="text/javascript">\n']))
+            .pipe(footer.apply(null, ['\n</script>']))
+            .pipe(gulp.dest(dist + '../'))
+        gulp.src([src + 'debug.xiyueta.js'])
+            .pipe(concat('debug.nodejs版单元测试.js'))
+            .pipe(header.apply(null, ['var $ = require(\'xiyueta\')\n']))
+            .pipe(gulp.dest(dist + '../'))
+        gulp.src([src + 'debug.xiyueta.asp.head.asp',src + 'debug.xiyueta.js'])
+            .pipe(concat('debug.asp版单元测试.asp'))
+            .pipe(footer.apply(null, ['\n</script>']))            
+            // .pipe(gbkConvert())
+            .pipe(gulp.dest(dist + '../'))
+
     }
 };
 
@@ -68,12 +90,9 @@ gulp.task('auto', function() { //rc 版：gulp --rc
     task.webjs();
     task.nodejs();
     task.aspjs();
-    task.sourcejs();
+    // task.sourcejs();
 });
-
-//aspjs gulp
-gulp.task('aspjs', function() { //rc 版：gulp --rc
-
-    task.aspjs();
-
+//copy gulp
+gulp.task('debug', function() { //rc 版：gulp --rc
+    task.debug();
 });

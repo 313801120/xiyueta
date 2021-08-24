@@ -1,6 +1,4 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="dist/xiyueta.min.js"></script>
-<script type="text/javascript">
+var $ = require('xiyueta')
 var beginTime = +new Date();
 
 console.log(test_asp());//测试asp()
@@ -402,5 +400,3 @@ function test_moreother(){
     }
     return "xiyueta().moreother() TestOK";
 }
-
-</script>

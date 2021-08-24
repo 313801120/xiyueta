@@ -1,6 +1,10 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="dist/xiyueta.min.js"></script>
-<script type="text/javascript">
+<script language="javascript" runat="server" src="./dist/asp.xiyueta.min.js"></script>
+<%
+'单元测试如果出错了，请查看文件是否为gbk JS文件与ASP文件都要为GBK编码'
+console.log(xiyueta("p").parse("<p class='nav'>xiyueta<br>bbb</p>").css("color","red").htmlWrap())
+%>
+
+<script  language="javascript" runat="server">
 var beginTime = +new Date();
 
 console.log(test_asp());//测试asp()
