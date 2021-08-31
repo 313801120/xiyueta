@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta JS库 xiyueta().css() 方法</title>
+    <title>测试 xiyueta JS库 xiyueta().dom() 方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -55,27 +55,35 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析HTML
-.css()      获取匹配元素集中第一个元素的计算样式属性的值，或者为每个匹配元素设置一个或多个 CSS 属性
+.parse()        解析HTML
+.dom()          获取匹配元素集中第一个元素的HTML结构
+.domwrap()      获得div块结构html，出现多个时，只显示第一条，并且包括div块
+.domlabel()     获得div块结构html标签，出现多个时，只显示第一条
+.domlabelwrap() 获得div块结构html标签，出现多个时，只显示第一条，并且包括div块
 $.log()     在浏览器里显示内容 == document.write()
-.print()    打印HTML对象全部内容 format为格式化HTML
 */
 
 var html=`&lt;div>
-&lt;ul>
-&lt;li style="color:blue;font-size:12px;">xiyueta库&lt;/li>
-   &lt;li>xiyueta.com&lt;/li>
+&lt;ul id="nav">
+&lt;li name="x">xiyueta库&lt;/li>
+&lt;li class="url">xiyueta.com&lt;/li>
 &lt;li>&lt;/li>
 &lt;/ul>
+&lt;a href="1.html">1.html&lt;/a>
+&lt;a href="2.html">2.html&lt;/a>
 &lt;/div>`
 
 $().parse(html);
-var s=$("li:eq(0)").css("color");
-$.log(s);
+$.log($("ul").dom());
 
 document.write("&lt;br>")
-$("li").css("color","red").css("font-weight","bold");
-$.log($().print("format"))
+$.log($("ul").domwrap());
+
+document.write("&lt;br>")
+$.log($("ul").domlabel());
+
+document.write("&lt;br>")
+$.log($("ul").domlabelwrap());
 
 &lt;/script></textarea>
         </div>

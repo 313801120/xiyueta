@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta JS库 xiyueta().css() 方法</title>
+    <title>测试 xiyueta JS库 xiyuetacss().cssall() 方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -54,28 +54,24 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="http://www.xiyueta.com/js/xiyueta.min.js?v2">&lt;/script>
 &lt;script>
 
-/*
-.parse()    解析HTML
-.css()      获取匹配元素集中第一个元素的计算样式属性的值，或者为每个匹配元素设置一个或多个 CSS 属性
+xhvxvhdd/*
+.parse()    解析CSS
+.allcss()   css查找与替换(全部)
 $.log()     在浏览器里显示内容 == document.write()
-.print()    打印HTML对象全部内容 format为格式化HTML
+.debug()    在浏览器调试面板里显示全部HTML结构
 */
 
-var html=`&lt;div>
-&lt;ul>
-&lt;li style="color:blue;font-size:12px;">xiyueta库&lt;/li>
-   &lt;li>xiyueta.com&lt;/li>
-&lt;li>&lt;/li>
-&lt;/ul>
-&lt;/div>`
+var css = `.SeaNav   ul,        .warp     { width: 1200px;min-width:1200px;}
+.gds {background:url(/img/xiyueta.jpg) no-repeat 5px center;}
+a,.gds{background:url(2.jpg)}`
 
-$().parse(html);
-var s=$("li:eq(0)").css("color");
-$.log(s);
+$css("").parse();
+var s = $css(".gds").allcss("background");
+$.log(s)
 
-document.write("&lt;br>")
-$("li").css("color","red").css("font-weight","bold");
-$.log($().print("format"))
+document.write("&lt;br>");
+$css().debug();
+$css().debug(true);
 
 &lt;/script></textarea>
         </div>

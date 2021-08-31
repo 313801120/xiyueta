@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta JS库 xiyueta().css() 方法</title>
+    <title>测试 xiyueta JS库 xiyueta().removeClass() 方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -55,27 +55,23 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析HTML
-.css()      获取匹配元素集中第一个元素的计算样式属性的值，或者为每个匹配元素设置一个或多个 CSS 属性
-$.log()     在浏览器里显示内容 == document.write()
-.print()    打印HTML对象全部内容 format为格式化HTML
+.parse()       解析HTML
+.removeClass() 从匹配元素集中的每个元素中删除单个类、多个类或所有类
+$.log()        在浏览器里显示内容 == document.write()
+.print()       打印HTML对象全部内容 format为格式化HTML
 */
 
 var html=`&lt;div>
 &lt;ul>
-&lt;li style="color:blue;font-size:12px;">xiyueta库&lt;/li>
-   &lt;li>xiyueta.com&lt;/li>
-&lt;li>&lt;/li>
+&lt;li>xiyueta库&lt;/li>
+&lt;li class="url">xiyueta.com&lt;/li>
+&lt;li class="foot like">&lt;/li>
 &lt;/ul>
 &lt;/div>`
 
 $().parse(html);
-var s=$("li:eq(0)").css("color");
-$.log(s);
-
-document.write("&lt;br>")
-$("li").css("color","red").css("font-weight","bold");
-$.log($().print("format"))
+$("li").removeClass("url like");
+$.log($().print());
 
 &lt;/script></textarea>
         </div>

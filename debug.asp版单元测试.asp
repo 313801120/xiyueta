@@ -1,12 +1,17 @@
 <script language="javascript" runat="server" src="./dist/asp.xiyueta.min.js"></script>
 <%
 '单元测试如果出错了，请查看文件是否为gbk JS文件与ASP文件都要为GBK编码'
-console.log(xiyueta("p").parse("<p class='nav'>xiyueta<br>bbb</p>").css("color","red").htmlWrap())
+console.log(xiyueta("p").parse("<p class='nav'>xiyueta<br>bbb</p>").css("color","red").htmlwrap())
 %>
 
 <script  language="javascript" runat="server">
+
+//为了兼容在ASP里测试，少用中文或中文符号，会报错和乱码
+
 var beginTime = +new Date();
 
+console.log(test_repair());//测试repair()
+console.log(test_wrap());//测试wrap()
 console.log(test_asp());//测试asp()
 console.log(test_css());//测试css()
 console.log(test_item());//测试item()
@@ -27,18 +32,45 @@ console.log(test_moreother());//测试moreother()
 console.log("Time use "+(new Date()-beginTime)+" ms");
 
 
-//测试 xiyuetaASP().toPHP()
+//测试 xiyueta().repair()
+function test_repair(){
+    var html="<div><ul><li></li></div>";
+    $().parse(html);  
+    $().repair();
+    // $().debug()
+    // return $().print();
+
+    if($().print()!="<div><ul><li></li></ul></div>"){
+        return "xiyueta().repair err1";
+    }
+    return "xiyueta().repair() TestOK";
+}
+//测试 xiyueta().wrap().unwrap()
+function test_wrap(){
+    var html="<div><p class='nav'>hellp word<br>bbb</p></div>";
+    $().parse(html);  
+    // $().debug()
+    // return $("br").wrap("<div>aaa</div>").print()
+
+    if($("br").wrap("<div>aaa</div>").print()!="<div><p class='nav'>hellp word<div>aaa<br></div>bbb</p></div>"){
+        return "xiyueta().wrap().unwrap() err1";
+    }else if($("br").unwrap().print()!="<div>hellp word<div>aaa<br></div>bbb</div>"){
+        return "xiyueta().wrap().unwrap() err2";
+    }
+    return "xiyueta().wrap().unwrap() TestOK";
+}
+//测试 xiyuetaASP().tophp()
 function test_asp(){
     var asp='<'+'%\nresponse.write("aaa")\n%'+'>'
     var php='<?'+'PHP\necho("aaa");\n?'+'>'
     $asp().parse(asp);  
     // $asp().debug()
-//     return $asp().toPHP(); 
+//     return $asp().tophp(); 
 
-    if($asp().toPHP()!=php){
-        return "xiyuetaASP().toPHP() err1";
+    if($asp().tophp()!=php){
+        return "xiyuetaASP().tophp() err1";
     }
-    return "xiyuetaASP().toPHP() TestOK";
+    return "xiyuetaASP().tophp() TestOK";
 }
 
 //测试 xiyueta().css()
@@ -46,11 +78,11 @@ function test_css(){
     var html='<div>aaa</div><span style="font-size: 22px;color: red;">aaaa</span>';
     $().parse(html);  
     // $().debug()
-    // return $("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlWrap() 
+    // return $("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap() 
     
-    if($("div").css("color","blue").htmlWrap()!='<div style="color:blue;">aaa</div>'){
+    if($("div").css("color","blue").htmlwrap()!='<div style="color:blue;">aaa</div>'){
         return "xiyueta().css() err1";
-    }else if($("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlWrap()!='<span style="font-weight:bold;font-size: 33px;color: green;">aaaa</span>'){
+    }else if($("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap()!='<span style="font-weight:bold;font-size: 33px;color: green;">aaaa</span>'){
         return "xiyueta().css() err2";
     }
     return "xiyueta().css() TestOK";
@@ -83,50 +115,50 @@ function test_swap(){
 }
 
 
-//测试 xiyueta().doc()
+//测试 xiyueta().dom()
 function test_doc(){
     var html='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\' class=\'redA bb\'>xiyueta</a></li>\
-    <li id="navs" class="  list  ">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\' class=\'redA bb\'>xiyueta</a></li>\
+    <li id="navs" class="  list  ">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>333'
     $().parse(html);  
     // $().debug()
-    // return $("li:eq(0)").docLabelWrap(); 
+    // return $("li:eq(0)").domlabelwrap(); 
     
-    if( $("li:eq(0)").doc()!="<a href='1.asp' class='redA bb'></a>"){
-        return "xiyueta().doc() err1";
-    }else if( $("li:eq(0)").docWrap()!="<li class=\"news\"><a href='1.asp' class='redA bb'></a></li>"){
-        return "xiyueta().doc() err2";
-    }else if( $("*").docLabel()!="<li><a></a></li><li><a></a></li><li><a></a></li>"){
-        return "xiyueta().doc() err3";
-    }else if( $("li:eq(0)").docLabelWrap()!="<li><a></a></li>"){
-        return "xiyueta().doc() err4";
+    if( $("li:eq(0)").dom()!="<a href='1.asp' class='redA bb'></a>"){
+        return "xiyueta().dom() err1";
+    }else if( $("li:eq(0)").domwrap()!="<li class=\"news\"><a href='1.asp' class='redA bb'></a></li>"){
+        return "xiyueta().dom() err2";
+    }else if( $("*").domlabel()!="<li><a></a></li><li><a></a></li><li><a></a></li>"){
+        return "xiyueta().dom() err3";
+    }else if( $("li:eq(0)").domlabelwrap()!="<li><a></a></li>"){
+        return "xiyueta().dom() err4";
 
     }
-    return "xiyueta().doc() TestOK";
+    return "xiyueta().dom() TestOK";
 }
 
 //测试 xiyueta().eq()
 function test_eq(){
     var html='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\' class=\'redA bb\'>xiyueta</a></li>\
-    <li id="navs" class="  list  ">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\' class=\'redA bb\'>xiyueta</a></li>\
+    <li id="navs" class="  list  ">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>333'
     $().parse(html);  
     // $().debug()
     // return $("li").eq(-6).text() 
     
-    if( $("li").eq(0).text()!="1、xiyueta"){
+    if( $("li").eq(0).text()!="1.xiyueta"){
         return "xiyueta().eq() err1";
-    }else if( $("li").first().text()!="1、xiyueta"){
+    }else if( $("li").first().text()!="1.xiyueta"){
         return "xiyueta().eq() err1.1";
-    }else if($("li").eq(-1).text()!="3、xiyueta"){
+    }else if($("li").eq(-1).text()!="3.xiyueta"){
         return "xiyueta().eq() err2";
-    }else if($("li").last().text()!="3、xiyueta"){
+    }else if($("li").last().text()!="3.xiyueta"){
         return "xiyueta().eq() err2.1";
-    }else if($("li").eq(-2).text()!="2、javascript框架"){
+    }else if($("li").eq(-2).text()!="2.javascript框架"){
         return "xiyueta().eq() err3";
     }else if($("li").eq(-6).text()!=""){
         return "xiyueta().eq() err4";
@@ -139,9 +171,9 @@ function test_eq(){
 //测试 xiyueta().addClass()
 function test_addClass(){
     var html='<html><head></head><body><ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\' class=\'redA bb\'>xiyueta</a></li>\
-    <li id="navs" class="list">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\' class=\'redA bb\'>xiyueta</a></li>\
+    <li id="navs" class="list">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>333</body></html>'
     $().parse(html);  
     // $().debug()
@@ -162,15 +194,15 @@ function test_addClass(){
 //测试 xiyueta().each()
 function test_each(){
     var html='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\' class=\'redA bb\'>xiyueta</a></li>\
-    <li id="navs" class="list">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\' class=\'redA bb\'>xiyueta</a></li>\
+    <li id="navs" class="list">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>333'
     $().parse(html);  
 var s1='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\' class=\'bb\'><b>new 2</b></a></li>\
-    <li id="navs" class="list">2、</li>\
-    <li class="news">3、<a href=\'3.asp\' class="greenB">&lt;b&gt;new 3&lt;/b&gt;</a></li>\
+    <li class="news">1.<a href=\'1.asp\' class=\'bb\'><b>new 2</b></a></li>\
+    <li id="navs" class="list">2.</li>\
+    <li class="news">3.<a href=\'3.asp\' class="greenB">&lt;b&gt;new 3&lt;/b&gt;</a></li>\
     </ul>333'
 
     // $().debug()
@@ -203,9 +235,9 @@ var s1='<ul id="nav">\
 //测试 xiyueta().remove()
 function test_remove(){
     var html='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\'>xiyueta</a></li>\
-    <li id="navs" class="list">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\'>xiyueta</a></li>\
+    <li id="navs" class="list">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>333'
     $().parse(html);  
 
@@ -225,7 +257,7 @@ function test_remove(){
 
 
 
-//测试 xiyueta().attr()
+//测试 xiyueta().val()
 function test_val(){
     var html='<textarea id="txt"><ul>\
         <li>aa</li>\
@@ -253,7 +285,7 @@ function test_val(){
      // $().debug()
 
 
-    // return  $(" textarea ").val("new") 
+    // return "show="+$("#txt").val() 
 
     if($("input").val()!="111"){
         return "xiyueta().val() err1";
@@ -275,15 +307,15 @@ function test_val(){
 //测试 xiyueta().attr()
 function test_attr(){
     var html='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\'>xiyueta</a></li>\
-    <li id="navs" class="list">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\'>xiyueta</a></li>\
+    <li id="navs" class="list">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>'
     $().parse(html);  
     var s1='<ul id="nav" name="value">\
-    <li class="news" name="value">1、<a href=\'1.asp\' name="value">xiyueta</a></li>\
-    <li id="navs" class="list" name="value">2、<a href=\'2.asp\' name="value">javascript框架</a></li>\
-    <li class="news" name="value">3、<a href=\'3.asp\' name="value">xiyueta</a></li>\
+    <li class="news" name="value">1.<a href=\'1.asp\' name="value">xiyueta</a></li>\
+    <li id="navs" class="list" name="value">2.<a href=\'2.asp\' name="value">javascript框架</a></li>\
+    <li class="news" name="value">3.<a href=\'3.asp\' name="value">xiyueta</a></li>\
     </ul>'
 
     // return $("ul").find("li:eq(1)")
@@ -305,9 +337,9 @@ function test_attr(){
 //测试 xiyueta().html()
 function test_html(){
     var html='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\'>xiyueta</a></li>\
-    <li id="navs" class="list">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\'>xiyueta</a></li>\
+    <li id="navs" class="list">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>'
     $().parse(html);  
 
@@ -319,7 +351,7 @@ function test_html(){
         return "xiyueta().html() err2";
     }else if($("ul li[class=news]:eq(1)").html("new html").html()!="new html"){
         return "xiyueta().html() err3";
-    }else if($("ul li:eq(1)").html()!="2、<a href='2.asp'>javascript框架</a>"){
+    }else if($("ul li:eq(1)").html()!="2.<a href='2.asp'>javascript框架</a>"){
         return "xiyueta().html() err4";
     }
     return "xiyueta().html() TestOK";
@@ -330,9 +362,9 @@ function test_html(){
 //测试 xiyueta().find()
 function test_find(){
     var html='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\'>xiyueta</a></li>\
-    <li id="navs" class="list">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\'>xiyueta</a></li>\
+    <li id="navs" class="list">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>'
     $().parse(html);  
 
@@ -353,16 +385,16 @@ function test_find(){
 //测试 xiyueta().text()
 function test_text(){
     var html='<ul id="nav">\
-    <li class="news">1、<a href=\'1.asp\'>xiyueta</a></li>\
-    <li id="navs" class="list">2、<a href=\'2.asp\'>javascript框架</a></li>\
-    <li class="news">3、<a href=\'3.asp\'>xiyueta</a></li>\
+    <li class="news">1.<a href=\'1.asp\'>xiyueta</a></li>\
+    <li id="navs" class="list">2.<a href=\'2.asp\'>javascript框架</a></li>\
+    <li class="news">3.<a href=\'3.asp\'>xiyueta</a></li>\
     </ul>'
 
     var s1='\
-    1、xiyueta\
-    2、javascript框架\
-    3、xiyueta\
-    1、xiyuetaxiyueta2、javascript框架javascript框架3、xiyuetaxiyueta'
+    1.xiyueta\
+    2.javascript框架\
+    3.xiyueta\
+    1.xiyuetaxiyueta2.javascript框架javascript框架3.xiyuetaxiyueta'
 
     $().parse(html);  
     // $().debug()
@@ -371,7 +403,7 @@ function test_text(){
         return "xiyueta().text() err1";
     }else if($("*").text()!=s1){
         return "xiyueta().text() err2";
-    }else if($("ul li:eq(1)").text()!="2、javascript框架"){
+    }else if($("ul li:eq(1)").text()!="2.javascript框架"){
         return "xiyueta().text() err3";
     }else if($("li:eq(1) a").text("this is new content").text()!="this is new content"){
         return "xiyueta().text() err4";

@@ -22,7 +22,8 @@ alert(xiyueta('title').parse("<title>网页标题</title>").text());//解析html
 
 ```js
 //nodejs 里使用 xiyueta
-var $ = require('xiyueta')
+var $ = require('./dist/nodejs.xiyueta.min.js');
+//var $ = require('xiyueta');//本地存在则可以直接调用 使用方法:在CMD里输入 node demo.nodejs版.js
 console.log($("title").parse("<title>xiyueta</title>").text());                        
 ```
 

@@ -1,67 +1,178 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>xiyueta 测试 xiyueta().scan();</title>
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="http://www.xiyueta.com/layui/css/layui.css" media="all">
-    <script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
-    <script src="http://www.xiyueta.com/js/jquery.js"></script>
-
+    <meta charset="utf-8"> 
+    <title>测试 xiyueta JS库 xiyueta().scan() 方法</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <script src="https://cdn.staticfile.org/codemirror/5.40.2/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/codemirror/5.40.2/codemirror.min.css">
+    <script src="https://cdn.staticfile.org/codemirror/5.40.2/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.40.2/mode/css/css.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.40.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.40.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.40.2/addon/edit/closetag.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.40.2/addon/edit/closebrackets.min.js"></script> 
+    
+    <!--[if lt IE 9]>
+    <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <![endif]-->
+    <!-- <script type="text/javascript" src="http://www.xiyueta.com/js/xiyueta.min.js?v1.2.8"></script> -->
 </head>
-
 <body>
-    <div class="layui-form" lay-filter="layuiadmin-form-useradmin" id="layuiadmin-form-useradmin" style="padding: 20px 0 0 0;">
-        <div class="layui-form-item layui-form-text">
-            <label class="layui-form-label">html内容</label>
-            <div class="layui-input-block">
-                <textarea name="code" id="code" class="layui-textarea" rows="10">
-&lt;html lang="zh-CN"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Xiyueta - 是一个快速，小型且功能丰富的开源JavaScript库。&lt;/title&gt;
-  &lt;meta name="keywords" content="xiyueta,js库,javascript库,喜悦TA,JS组件"&gt;
-  &lt;meta name="description" content="xiyueta（谐音：喜悦它 API) 是一个快速，小型且功能丰富的开源JavaScript库。遵循原生 HTML/CSS/JS 的开发方式，极易上手，拿来即用。其外在极简，却又不失饱满的内在，体积轻盈，API丰盈，从核心代码到使用方法的每一处细节都经过精心雕琢，非常适合对网页HTML内容处理"&gt;
-  &lt;meta name="renderer" content="webkit"&gt;
-  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;
-  &lt;meta name="apple-mobile-web-app-status-bar-style" content="black"&gt; 
-  &lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
-  &lt;meta name="format-detection" content="telephone=no"&gt;
-  &lt;script src="1.js"&gt;&lt;/script&gt;
-  &lt;link rel="stylesheet" href="/layui/css/layui.css"  media="all"&gt;
-  &lt;link rel="stylesheet" href="/layui/global.css" media="all"&gt;
-&lt;/head&gt;
-&lt;body class="site-home" id="LAY_home" style="background-color: #eee;" data-date="5-1"&gt;
-&lt;div id=nav&gt;
-   &lt;a href=1.asp&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<style>
+body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.CodeMirror{min-height:300px;;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#textareaCode{min-height:300px}#iframeResult{display: block;overflow: hidden;border:0!important;min-width:100px;width:100%;min-height:300px;background-color:#fff}@media screen and (max-width:768px){#textareaCode{height:300px}.CodeMirror{height:300px;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#iframeResult{height:300px}.form-inline{padding:6px 0 2px 0}}.logo h1{background-image:url(/images/logo-domain-white.png);background-repeat:no-repeat;text-indent:-9999px;width:160px;height:39px;margin-top:10px;display:block}
+</style>
+<nav class="navbar navbar-default navbar-fixed-top" style="background: #96b97d;">
+      <div class="container">
+        <div class="navbar-header logo"><h1 onClick="window.open('http://www.xiyueta.com')">XIYUETA.COM</h1>
+        </div>
+      </div>
+    </nav>
+    <div class="container" >
+    <div class="row">
+    
+    <div class="col-sm-6">
+    <div class="panel panel-default"> 
+        <div class="panel-heading">
+            <form class="form-inline">
+        <div class="row">
+            <div class="col-xs-6">
+                 <button type="button" class="btn btn-default">源代码：</button>
+                  <!-- <a href="/try/try.php?filename=tryjs_events" class="btn btn-warning" role="button">左右布局</a> -->
+                
+              </div>
+              <div class="col-xs-6 text-right">
+                <button type="button" class="btn btn-success" onclick="submitTryit()" id="submitBTN"><span class="glyphicon glyphicon-send"></span> 点击运行</button>
+            </div>
+        </div>
+                
+            </form>
+        </div>
+        <div class="panel-body">
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="http://www.xiyueta.com/js/xiyueta.min.js?v2">&lt;/script>
+&lt;script>
 
-</textarea>
-            </div>
-        </div>
-        <div class="layui-form-item layui-form-text">
-            <label class="layui-form-label">处理后html</label>
-            <div class="layui-input-block">
-                <textarea name="show" id="showcode" class="layui-textarea" rows="10"></textarea>
-            </div>
-        </div>
-        <div class="layui-form-item ">
-            <input type="button" class="layui-btn" value='xiyueta("div").scan();' lay-submit="lay-submit" lay-filter="LAY-user-front-submit" onclick="test()" />
-             
+/*
+scan()     扫描网页以获得更多当前网页信息
+$.log()    在浏览器里显示内容 == document.write()
+*/
+
+var html=`&lt;html lang="zh-CN">
+&lt;head>
+  &lt;meta charset="utf-8">
+  &lt;title>Xiyueta - 是一个快速，小型且功能丰富的开源JavaScript库。&lt;/title>
+&lt;/head>
+&lt;body class="site-home" id="LAY_home" style="background-color: #eee;" data-date="5-1">
+&lt;div id=nav>
+   &lt;a href=1.asp>xiyueta库&lt;/a>
+   &lt;a href=2.asp>xiyueta.com&lt;/a>
+&lt;/div>
+&lt;/body>
+&lt;/html>`
+
+$().parse(html);
+$.log($().scan());
+
+&lt;/script></textarea>
         </div>
     </div>
-    <script type="text/javascript">
-    function test() {
-        xiyueta(document.getElementById("code").value).parse(); //解析html
-        document.getElementById("showcode").value = xiyueta().scan(); //显示获得div文本
-    } 
-    
-    </script>
+    </div>
 
+    <div class="col-sm-6">
+    <div class="panel panel-default"> 
+        <div class="panel-heading"><form class="form-inline"> <button type="button" class="btn btn-default">运行结果</button></form></div>
+        <div class="panel-body"><div id="iframewrapper"></div></div>
+    </div>
+    </div>
+  
+    </div>
     
-</body></html>
+    <footer>
+        <div class="row">
+            <div class="col-sm-12">
+      <div style="text-align: center;">
+
+                <p>
+    Copyright © 2021 <a href="http://www.xiyueta.com/">xiyueta.com</a> MIT Licensed</p>
+         </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+var mixedMode = {
+name: "htmlmixed",
+scriptTypes: [{matches: /\/x-handlebars-template|\/x-mustache/i,
+               mode: null},
+              {matches: /(text|application)\/(x-)?vb(a|script)/i,
+               mode: "vbscript"}]
+};
+var editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+    mode: mixedMode,
+    selectionPointer: true,
+    lineNumbers: false,
+    matchBrackets: true,
+    indentUnit: 4,
+    indentWithTabs: true
+});
+
+window.addEventListener("resize", autodivheight);
+
+var x = 0;
+function autodivheight(){
+    var winHeight=0;
+    if (window.innerHeight) {
+        winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+        winHeight = document.body.clientHeight;
+    }
+    //通过深入Document内部对body进行检测，获取浏览器窗口高度
+    if (document.documentElement && document.documentElement.clientHeight) {
+        winHeight = document.documentElement.clientHeight;
+    }
+    height = winHeight*0.63
+  
+    editor.setSize('100%', height);
+    document.getElementById("iframeResult").style.height= height + "px";
+} 
+
+function submitTryit() {
+  var text = editor.getValue();
+  var patternHtml = /<html[^>]*>((.|[\n\r])*)<\/html>/im
+  var patternHead = /<head[^>]*>((.|[\n\r])*)<\/head>/im
+  var array_matches_head = patternHead.exec(text);
+  var patternBody = /<body[^>]*>((.|[\n\r])*)<\/body>/im;
+  
+  var array_matches_body = patternBody.exec(text);
+  // var basepath_flag = 1;
+  // var basepath = '';
+  // if(basepath_flag) {
+  //   basepath = '<base href="http://m.xiyueta.com/" target="_blank">';
+  // }
+  // if(array_matches_head) {
+  //   text = text.replace('<head>', '<head>' + basepath );
+  // } else if (patternHtml) {
+  //   text = text.replace('<html>', '<head>' + basepath + '</head>');
+  // } else if (array_matches_body) {
+  //   text = text.replace('<body>', '<body>' + basepath );
+  // } else {
+  //   text = basepath + text;
+  // }
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");  
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+ 
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);  
+  ifrw.document.close();
+  autodivheight();
+}
+submitTryit();
+autodivheight();
+</script></body>
+</html>
