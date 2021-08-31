@@ -10,29 +10,36 @@
 
 ---
 
-xiyueta - 是一个快速、小巧且功能丰富的 JavaScript 库。它通过易于使用的 API 使 HTML 文档遍历和操作等工作变得更加简单，该 API 可在多种浏览器上运行。xiyueta设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。也可以把ASP代码转换成PHP代码等
+xiyueta - 是一个快速、小巧且功能丰富的 JavaScript 库。它通过易于使用的 API 使 HTML 文档遍历和操作等工作变得更加简单，该 API 可在多种浏览器上运行。xiyueta设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。可同时运行在WEB、ASP、nodeJS上，也可以把ASP代码转换成PHP代码等功能
 
 
 
 
 ```js
 //web 里使用 xiyueta
-alert(xiyueta('title').parse("<title>网页标题</title>").text());//解析html并获得网页标题
+alert($('title').parse("<title>hello world!</title>").text());//解析html并获得网页标题
 ```
+
 
 ```js
 //nodejs 里使用 xiyueta
 var $ = require('./dist/nodejs.xiyueta.min.js');
 //var $ = require('xiyueta');//本地存在则可以直接调用 使用方法:在CMD里输入 node demo.nodejs版.js
-console.log($("title").parse("<title>xiyueta</title>").text());                        
+console.log($("title").parse("<title>hello world!</title>").text());                        
 ```
+
 
 ```js
 //asp 里使用 xiyueta
 <script  language="javascript" runat="server" src="./dist/asp.xiyueta.min.js"></script> 
 <%
-console.log(xiyueta("p").parse("<p class='nav'>xiyueta<br>bbb</p>").text())
-%>                       
+'这里需要运行一段ASP程序，下面才可以正常运行javascript程序，疑问？'
+console.log(xiyueta("title").parse("<title>hello world!</title>").text()) 'ASP里不可以用 $ 直接用 xiyueta代替
+%>
+
+<script language="javascript" runat="server">
+  console.log($("title").parse("<title>hello world!</title>").text()); \/\/上面要运行一段ASP程序，这里才不会报错，因为要用到ASP程序里的response.write输出函数
+</script>
 ```
 
 
@@ -44,7 +51,7 @@ console.log(xiyueta("p").parse("<p class='nav'>xiyueta<br>bbb</p>").text())
 获得xiyueta后，将其完整地部署到你的项目目录（或静态资源服务器），你只需要引入下述一个JS文件：
 
 ```
-./xiyueta.min.js //xiyueta核心文件
+./dist/xiyueta.min.js //xiyueta核心文件
 ```
 
 不用去管其它任何文件。像使用jQuery语法一样来使用xiyueta
@@ -55,17 +62,17 @@ console.log(xiyueta("p").parse("<p class='nav'>xiyueta<br>bbb</p>").text())
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>开始使用 xiyueta</title>
+  <title>Start using xiyueta JS Library</title>
 </head>
 <body>
  
-<!-- 你的 HTML 代码 -->
+<!-- Your HTML code -->
  
-<script src="dist/xiyueta.min.js"></script>
+<script src="./dist/xiyueta.min.js"></script>
 <script>
-  xiyueta().parse('<title>网页标题</title>');//解析html
-  xiyueta("title").text("xiyuetaJS");//设置网页标题
-  alert(xiyueta().print())
+  $().parse('<title>hello world!</title>'); //Parsing HTML
+  $("title").text("xiyueta.com"); //Set page title
+  alert($().print())
 </script> 
 </body>
 </html>
