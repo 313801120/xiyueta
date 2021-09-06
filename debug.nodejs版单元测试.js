@@ -4,7 +4,9 @@ var $ = require('./dist/nodejs.xiyueta.min.js');
 //为了兼容在ASP里测试，少用中文或中文符号，会报错和乱码
 
 var beginTime = +new Date();
+ 
 
+console.log(test_selector());//测试selector
 console.log(test_repair());//测试repair()
 console.log(test_wrap());//测试wrap()
 console.log(test_asp());//测试asp()
@@ -26,6 +28,21 @@ console.log(test_moreother());//测试moreother()
 
 console.log("Time use "+(new Date()-beginTime)+" ms");
 
+
+//测试 xiyueta().selector()
+function test_selector(){
+    var html='<h2 class="title">Hello world</h2><h2>Hello world</h2>';
+    $().parse(html);  
+    // $().debug()
+    // return $("h2.title").text('Hello there!').print()
+
+    if($("h2.title").text('Hello there!').print()!='<h2 class="title">Hello there!</h2><h2>Hello world</h2>'){
+        return "xiyueta().selector err1";
+    }else if($("*.title").text('xiyueta.com').print()!='<h2 class="title">xiyueta.com</h2><h2>Hello world</h2>'){
+        return "xiyueta().selector err2";
+    }
+    return "xiyueta().selector() TestOK";
+}
 
 //测试 xiyueta().repair()
 function test_repair(){
@@ -79,6 +96,8 @@ function test_css(){
         return "xiyueta().css() err1";
     }else if($("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap()!='<span style="font-weight:bold;font-size: 33px;color: green;">aaaa</span>'){
         return "xiyueta().css() err2";
+    }else if($("li:eq(1)").parse("<li>aaa</li><li>1111</li><li>ccc</li>").css({color:"red","font-size":"22px"}).print()!='<li>aaa</li><li style="font-size:22px;color:red;">1111</li><li>ccc</li>'){
+        return "xiyueta().css() err3";
     }
     return "xiyueta().css() TestOK";
 }
@@ -180,6 +199,8 @@ function test_addClass(){
         return "xiyueta().addClass() err2";
     }else if($("a").removeClass(" bb ").attr("class")!="redA"){
         return "xiyueta().addClass() err3";
+    }else if($("li:eq(1)").parse("<li>aaa</li><li>1111</li><li>ccc</li>").attr({id:"nav",name:"daohang"}).print()!='<li>aaa</li><li id="nav" name="daohang">1111</li><li>ccc</li>'){
+        return "xiyueta().addClass() err4";
 
     }
     return "xiyueta().addClass() TestOK";
