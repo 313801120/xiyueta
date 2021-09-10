@@ -22,7 +22,7 @@
 </head>
 <body>
 <style>
-body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.CodeMirror{min-height:300px;;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#textareaCode{min-height:300px}#iframeResult{display: block;overflow: hidden;border:0!important;min-width:100px;width:100%;min-height:300px;background-color:#fff}@media screen and (max-width:768px){#textareaCode{height:300px}.CodeMirror{height:300px;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#iframeResult{height:300px}.form-inline{padding:6px 0 2px 0}}.logo h1{background-image:url(/images/logo-domain-white.png);background-repeat:no-repeat;text-indent:-9999px;width:160px;height:39px;margin-top:10px;display:block}
+body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.CodeMirror{min-height:300px;;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#textareaCode{min-height:300px}#iframeResult{display: block;overflow: hidden;border:0!important;min-width:100px;width:100%;min-height:300px;background-color:#fff}@media screen and (max-width:768px){#textareaCode{height:300px}.CodeMirror{height:300px;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#iframeResult{height:300px}.form-inline{padding:6px 0 2px 0}}.logo h1{background-image:url(http://www.xiyueta.com/images/logo-domain-white.png);background-repeat:no-repeat;text-indent:-9999px;width:160px;height:39px;margin-top:10px;display:block}
 </style>
 <nav class="navbar navbar-default navbar-fixed-top" style="background: #96b97d;">
       <div class="container">
@@ -78,7 +78,9 @@ $.log(xiyueta().print("format"));
 
     <div class="col-sm-6">
     <div class="panel panel-default"> 
-        <div class="panel-heading"><form class="form-inline"> <button type="button" class="btn btn-default">运行结果</button></form></div>
+        <div class="panel-heading"><form class="form-inline"> <button type="button" class="btn btn-default">运行结果</button>
+
+        </form></div>
         <div class="panel-body"><div id="iframewrapper"></div></div>
     </div>
     </div>
@@ -136,12 +138,12 @@ function autodivheight(){
 
 function submitTryit() {
   var text = editor.getValue();
-  var patternHtml = /<html[^>]*>((.|[\n\r])*)<\/html>/im
-  var patternHead = /<head[^>]*>((.|[\n\r])*)<\/head>/im
-  var array_matches_head = patternHead.exec(text);
-  var patternBody = /<body[^>]*>((.|[\n\r])*)<\/body>/im;
+  // var patternHtml = /<html[^>]*>((.|[\n\r])*)<\/html>/im
+  // var patternHead = /<head[^>]*>((.|[\n\r])*)<\/head>/im
+  // var array_matches_head = patternHead.exec(text);
+  // var patternBody = /<body[^>]*>((.|[\n\r])*)<\/body>/im;
   
-  var array_matches_body = patternBody.exec(text);
+  // var array_matches_body = patternBody.exec(text);
   // var basepath_flag = 1;
   // var basepath = '';
   // if(basepath_flag) {

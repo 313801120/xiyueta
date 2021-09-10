@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta JS库 xiyueta().news() 方法</title>
+    <title>测试 xiyueta JS库 xiyuetaASP().toPHP() 方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -55,24 +55,20 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析HTML
-.news()     静态html生成CMS标签文章列表
-$.log()     在浏览器里显示内容 == document.write()
-.print()    打印HTML对象全部内容 format为格式化HTML
+.parse()   解析ASP
+.tophp()   ASP语言代码转PHP语言代码
+$.log()    在浏览器里显示内容 == document.write()
 */
 
-var html = '&lt;div id="news">\n\
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
-&lt;/div>';
 
-$().parse(html);
-$("div[id=news]").nav("li");
-$.log(xiyueta().print())
+var code = `&lt;%
+response.write("hello world!")
+
+%>
+
+  `
+$asp().parse(code);
+$.log($asp().tophp());
 
 &lt;/script></textarea>
         </div>
@@ -82,7 +78,7 @@ $.log(xiyueta().print())
     <div class="col-sm-6">
     <div class="panel panel-default"> 
         <div class="panel-heading"><form class="form-inline"> <button type="button" class="btn btn-default">运行结果</button>
-
+<a href='https://c.runoob.com/compile/1' target='_blank' rel='nofollow'>PHP在线运行</a>
         </form></div>
         <div class="panel-body"><div id="iframewrapper"></div></div>
     </div>

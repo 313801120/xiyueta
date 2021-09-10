@@ -22,7 +22,7 @@
 </head>
 <body>
 <style>
-body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.CodeMirror{min-height:300px;;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#textareaCode{min-height:300px}#iframeResult{display: block;overflow: hidden;border:0!important;min-width:100px;width:100%;min-height:300px;background-color:#fff}@media screen and (max-width:768px){#textareaCode{height:300px}.CodeMirror{height:300px;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#iframeResult{height:300px}.form-inline{padding:6px 0 2px 0}}.logo h1{background-image:url(/images/logo-domain-white.png);background-repeat:no-repeat;text-indent:-9999px;width:160px;height:39px;margin-top:10px;display:block}
+body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.CodeMirror{min-height:300px;;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#textareaCode{min-height:300px}#iframeResult{display: block;overflow: hidden;border:0!important;min-width:100px;width:100%;min-height:300px;background-color:#fff}@media screen and (max-width:768px){#textareaCode{height:300px}.CodeMirror{height:300px;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#iframeResult{height:300px}.form-inline{padding:6px 0 2px 0}}.logo h1{background-image:url(http://www.xiyueta.com/images/logo-domain-white.png);background-repeat:no-repeat;text-indent:-9999px;width:160px;height:39px;margin-top:10px;display:block}
 </style>
 <nav class="navbar navbar-default navbar-fixed-top" style="background: #96b97d;">
       <div class="container">
@@ -55,93 +55,92 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()   解析CSS
+.parse()   解析ASP
 .tophp()   ASP语言代码转PHP语言代码
 $.log()    在浏览器里显示内容 == document.write()
 */
 
 
-var code = `&lt;%
-'作者：xiyueta QQ313801120  http://www.xiyueta.com/
-Call loadRun()
-Function loadRun()
-    Dim obj, i, isOK, n, splStr, s, sArray, nArray, objectA
-    Response.Write("字典：")
-    Set obj = CreateObject("scripting.dictionary")
-        obj.add "aa", "this is aa"
-        obj.add "bb", "this is bb"
-        obj.add "cc", "this is cc"
+var code = '&lt;%\n\
+\'作者：xiyueta QQ313801120  http://www.xiyueta.com/\n\
+Call loadRun()\n\
+Function loadRun()\n\
+    Dim obj, i, isOK, n, splStr, s, sArray, nArray, objectA\n\
+    Response.Write("字典：")\n\
+    Set obj = CreateObject("scripting.dictionary")\n\
+        obj.add "aa", "this is aa"\n\
+        obj.add "bb", "this is bb"\n\
+        obj.add "cc", "this is cc"\n\
+\n\
+        Response.Write("aa=" & obj("aa") & "&lt;br>")\n\
+        Response.Write("bb=" & obj("bb") & "&lt;br>")\n\
+    Set obj = Nothing\n\
+\n\
+    Response.Write("&lt;hr>Do While 循环：")\n\
+    i = 5 : isOK = True\n\
+    Do While i > 0 And isOK = True\n\
+        i = i - 1\n\
+        Response.Write(i & "、" & vbCrLf)\n\
+    Loop\n\
+\n\
+    Response.Write("&lt;hr>IF 判断：")\n\
+    n = 92\n\
+    If n >= 90 Then\n\
+        Response.Write("优秀")\n\
+    ElseIf n >= 60 Then\n\
+        Response.Write("良")\n\
+    Else\n\
+        Response.Write("差")\n\
+    End If\n\
+    Response.Write("&lt;br>第二种：")\n\
+    n = 2\n\
+    Select Case n\n\
+        Case 1 :\n\
+            Response.Write("一班")\n\
+        Case 2 :\n\
+            Response.Write("二班")\n\
+        Case Else :\n\
+            Response.Write("三班")\n\
+            Response.Write("，其它")\n\
+    End Select\n\
+\n\
+    Response.Write("&lt;hr>Split 分割：")\n\
+    splStr = Split("aa|bb|cc", "|")\n\
+    For Each s In splStr\n\
+        Response.Write(s & "、" & vbCrLf)\n\
+    Next\n\
+    Response.Write("&lt;br>第二方法：")\n\
+    For i = 0 To UBound(splStr)\n\
+        Response.Write(i & "=" & splStr(i) & "、" & vbCrLf)\n\
+    Next\n\
+\n\
+    Response.Write("&lt;hr>Array数组：")\n\
+    nArray = Array(3, 4, 1, 8, 2)\n\
+    For Each n In nArray\n\
+        Response.Write(n & "、" & vbCrLf)\n\
+    Next\n\
+    Response.Write("&lt;br>字符数组类型：")\n\
+    sArray = Array("aa", "bb", "cc")\n\
+    For Each s In sArray\n\
+        Response.Write(s & "、" & vbCrLf)\n\
+    Next\n\
+\n\
+    Response.Write("&lt;hr>Class 类：")\n\
+    Set objectA = new myClass\n\
+        Response.Write(objectA.printInfo())\n\
+    Set objectA = Nothing\n\
+End Function\n\
+\'类\n\
+Class myClass\n\
+    Function printInfo()\n\
+        Dim s, sName\n\
+        sName = "xiyueta.com"\n\
+        s = "my is " & sName\n\
+        printInfo = s\n\
+    End Function\n\
+End Class\n\
+%>';
 
-        Response.Write("aa=" & obj("aa") & "&lt;br>")
-        Response.Write("bb=" & obj("bb") & "&lt;br>")
-    Set obj = Nothing
-
-    Response.Write("&lt;hr>Do While 循环：")
-    i = 5 : isOK = True
-    Do While i > 0 And isOK = True
-        i = i - 1
-        Response.Write(i & "、" & vbCrLf)
-    Loop
-
-    Response.Write("&lt;hr>IF 判断：")
-    n = 92
-    If n >= 90 Then
-        Response.Write("优秀")
-    ElseIf n >= 60 Then
-        Response.Write("良")
-    Else
-        Response.Write("差")
-    End If
-    Response.Write("&lt;br>第二种：")
-    n = 2
-    Select Case n
-        Case 1 :
-            Response.Write("一班")
-        Case 2 :
-            Response.Write("二班")
-        Case Else :
-            Response.Write("三班")
-            Response.Write("，其它")
-    End Select
-
-    Response.Write("&lt;hr>Split 分割：")
-    splStr = Split("aa|bb|cc", "|")
-    For Each s In splStr
-        Response.Write(s & "、" & vbCrLf)
-    Next
-    Response.Write("&lt;br>第二方法：")
-    For i = 0 To UBound(splStr)
-        Response.Write(i & "=" & splStr(i) & "、" & vbCrLf)
-    Next
-
-    Response.Write("&lt;hr>Array数组：")
-    nArray = Array(3, 4, 1, 8, 2)
-    For Each n In nArray
-        Response.Write(n & "、" & vbCrLf)
-    Next
-    Response.Write("&lt;br>字符数组类型：")
-    sArray = Array("aa", "bb", "cc")
-    For Each s In sArray
-        Response.Write(s & "、" & vbCrLf)
-    Next
-
-    Response.Write("&lt;hr>Class 类：")
-    Set objectA = new myClass
-        Response.Write(objectA.printInfo())
-    Set objectA = Nothing
-End Function
-'类
-Class myClass
-    Function printInfo()
-        Dim s, sName
-        sName = "xiyueta.com"
-        s = "my is " & sName
-        printInfo = s
-    End Function
-End Class
-%>
-
-  `
 $asp().parse(code);
 $.log($asp().tophp());
 
@@ -152,7 +151,9 @@ $.log($asp().tophp());
 
     <div class="col-sm-6">
     <div class="panel panel-default"> 
-        <div class="panel-heading"><form class="form-inline"> <button type="button" class="btn btn-default">运行结果</button></form></div>
+        <div class="panel-heading"><form class="form-inline"> <button type="button" class="btn btn-default">运行结果</button>
+<a href='https://c.runoob.com/compile/1' target='_blank' rel='nofollow'>PHP在线运行</a>
+        </form></div>
         <div class="panel-body"><div id="iframewrapper"></div></div>
     </div>
     </div>
@@ -210,12 +211,12 @@ function autodivheight(){
 
 function submitTryit() {
   var text = editor.getValue();
-  var patternHtml = /<html[^>]*>((.|[\n\r])*)<\/html>/im
-  var patternHead = /<head[^>]*>((.|[\n\r])*)<\/head>/im
-  var array_matches_head = patternHead.exec(text);
-  var patternBody = /<body[^>]*>((.|[\n\r])*)<\/body>/im;
+  // var patternHtml = /<html[^>]*>((.|[\n\r])*)<\/html>/im
+  // var patternHead = /<head[^>]*>((.|[\n\r])*)<\/head>/im
+  // var array_matches_head = patternHead.exec(text);
+  // var patternBody = /<body[^>]*>((.|[\n\r])*)<\/body>/im;
   
-  var array_matches_body = patternBody.exec(text);
+  // var array_matches_body = patternBody.exec(text);
   // var basepath_flag = 1;
   // var basepath = '';
   // if(basepath_flag) {
