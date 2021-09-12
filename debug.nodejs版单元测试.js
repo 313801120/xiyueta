@@ -55,6 +55,19 @@ function test_repair(){
     if($().print()!="<div><ul><li></li></ul></div>"){
         return "xiyueta().repair err1";
     }
+
+
+    var html="<div>xiyueta\n<span>JS库</div>\n    <p>www.xiyueta.com\n</div>";
+    $().parse(html);  
+    $().repair();
+    // return $().print()
+    if($().print()!="<div>xiyueta\n<span>JS库</span></div>\n    <p>www.xiyueta.com\n</p>"){
+        return "xiyueta().repair err2";
+    }
+
+
+
+
     return "xiyueta().repair() TestOK";
 }
 //测试 xiyueta().wrap().unwrap()
