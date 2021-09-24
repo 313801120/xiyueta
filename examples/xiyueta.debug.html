@@ -18,7 +18,17 @@
     <!--[if lt IE 9]>
     <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <![endif]-->
-    <!-- <script type="text/javascript" src="http://www.xiyueta.com/js/xiyueta.min.js?v1.2.8"></script> -->
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e75428c7b3992dd93bd71098a1f9dc3";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
 </head>
 <body>
 <style>
@@ -59,9 +69,9 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 .debug()    在浏览器调试面板里显示全部HTML结构 
 */
 
-var html=`&lt;div>
-&lt;a href='www.xiyueta.com'>xiyueta.com&lt;br>&lt;/a>
-&lt;/div>`
+var html='&lt;div>\n\
+&lt;a href='www.xiyueta.com'>xiyueta.com&lt;br>&lt;/a>\n\
+&lt;/div>'
 
 $().parse(html);
 $().debug();

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta JS库 xiyuetacss().allcss() 方法</title>
+    <title>测试 xiyueta JS库 xiyuetacss().background() 方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -18,7 +18,17 @@
     <!--[if lt IE 9]>
     <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <![endif]-->
-    <!-- <script type="text/javascript" src="http://www.xiyueta.com/js/xiyueta.min.js?v1.2.8"></script> -->
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e75428c7b3992dd93bd71098a1f9dc3";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
 </head>
 <body>
 <style>
@@ -55,26 +65,28 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析CSS
-.allcss()   css查找与替换(全部)
-$.log()     在浏览器里显示内容 == document.write()
-.debug()    在浏览器调试面板里显示全部HTML结构
+.parse()    	解析CSS
+.background()   css样式背景图片查找与替换
+$.log()     	在浏览器里显示内容 == document.write()
+.debug()    	在浏览器调试面板里显示全部HTML结构
 */
 
-var css = '.SeaNav   ul,        .warp     { width: 1200px;min-width:1200px;}\n\
-.gds {background:url(/img/xiyueta.jpg) no-repeat 5px center;}\n\
-a,.gds{background:url(2.jpg)}';
+xiyuetaCSS().parse("div{color:red}div{color : blu  e}div{color:green}.gds{background:url(  '/img/xiyueta.jpg '  );color:red}");
+$.log(xiyuetaCSS("(all)").background());
 
-$css().parse(css);
-var s = $css(".gds").allcss("background");
-$.log(s)
+xiyuetaCSS("(all)").background("/img/logo.jpg");
+$.log(xiyuetaCSS("(all)").background());
+
+xiyuetaCSS("(all)").background("server=http://xiyueta.com/images/");
+$.log(xiyuetaCSS("(all)").background());
 
 
-$.log( $css().cssall("|url") )
+xiyuetaCSS("(all)").background("nav.jpg");
+xiyuetaCSS("(all)").background("dir=../../images/");
+$.log(xiyuetaCSS("(all)").background());
 
-document.write("&lt;br>");
-$css().debug();
-$css().debug(true);
+document.write("&lt;br>")
+$.log(xiyuetaCSS().print());
 
 &lt;/script></textarea>
         </div>

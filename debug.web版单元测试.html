@@ -7,6 +7,8 @@
 var beginTime = +new Date();
  
 
+console.log(test_xiyuetaCSS());//测试xiyuetaCSS
+console.log(test_showhide());//测试showhide
 console.log(test_selector());//测试selector
 console.log(test_repair());//测试repair()
 console.log(test_wrap());//测试wrap()
@@ -30,6 +32,51 @@ console.log(test_moreother());//测试moreother()
 console.log("Time use "+(new Date()-beginTime)+" ms");
 
 
+
+
+
+//测试 xiyuetacss() 
+function test_xiyuetaCSS(){
+    
+    var css='div{color:red;}.nav{font-size:12px;}#news{color:blue}';
+    xiyuetaCSS().parse(css);  
+    // $().debug()
+    // return xiyuetaCSS("(all):eq(-1)").html()
+     
+     if(xiyuetaCSS("(all)").length!=3){
+        return "xiyuetacss() err1";
+     }else if(xiyuetaCSS("#news").css("color")!="blue"){
+        return "xiyuetacss() err2";
+     }else if(xiyuetaCSS(".nav").text()!="font-size:12px;"){
+        return "xiyuetacss() err3";
+     }else if(xiyuetaCSS("(all):eq(-1)").html()!="#news{color:blue}"){
+        return "xiyuetacss() err4";
+     }else if( (xiyuetaCSS("div:eq(0)").text()!=xiyuetaCSS("div").eq(0).text()) || (xiyuetaCSS("div:eq()").text()!=xiyuetaCSS("div").eq().text()) || (xiyuetaCSS("div:eq('abc')").text()!=xiyuetaCSS("div").eq('abc').text())|| (xiyuetaCSS("div:eq(-1)").text()!=xiyuetaCSS("div").eq(-1).text()) ){
+        return "xiyuetacss() err5";
+     }else if( (xiyuetaCSS("div:first").text()!=xiyuetaCSS("div").first(0).text()) || (xiyuetaCSS("div:last").text()!=xiyuetaCSS("div").last().text())    ){
+        return "xiyuetacss() err6";
+    }
+    return "xiyuetacss() TestOK";
+}
+//测试 xiyueta().show() xiyueta().hide()
+function test_showhide(){
+    
+    var html='<span>xiyeuta</span><p style="display:none">js library</p>';
+    $().parse(html);  
+    // $().debug() 
+    $("span").hide()
+    $("p").show()
+
+    // return $().print()
+    
+    if($().print()!='<span style="display:none;">xiyeuta</span><p>js library</p>'){
+        return "xiyueta().show().hide() err1";
+    }
+    return "xiyueta().show().hide() TestOK";
+}
+ 
+
+
 //测试 xiyueta().selector()
 function test_selector(){
     var html='<h2 class="title">Hello world</h2><h2>Hello world</h2>';
@@ -42,6 +89,35 @@ function test_selector(){
     }else if($("*.title").text('xiyueta.com').print()!='<h2 class="title">xiyueta.com</h2><h2>Hello world</h2>'){
         return "xiyueta().selector err2";
     }
+
+    var html='<ul><li>第1条</li><li>第2条</li><li>第3条</li><li>第4条</li><li>第5条</li></ul>';
+    $().parse(html);
+    var s1=$("li").even().css("color","red").print();
+    $().parse(html);
+    var s2=$("li:even").css("color","red").print();
+    // return s1 +"\n"+ s2
+    if(s1!=s2 || s1!='<ul><li style="color:red;">第1条</li><li>第2条</li><li style="color:red;">第3条</li><li>第4条</li><li style="color:red;">第5条</li></ul>'){
+        return "xiyueta().selector err3";
+    }
+
+    $().parse(html);
+    var s1=$("li").odd().css("color","red").print();
+    $().parse(html);
+    var s2=$("li:odd").css("color","red").print();
+    // return s1;
+    if(s1!=s2 || s1!='<ul><li>第1条</li><li style="color:red;">第2条</li><li>第3条</li><li style="color:red;">第4条</li><li>第5条</li></ul>'){
+        return "xiyueta().selector err4";
+    }
+
+    $().parse(html);
+     
+    // return ($("li:eq('abc')").text()+"\n[|]"+$("li").eq('abc').text())
+    if( ($("li:eq(0)").text()!=$("li").eq(0).text()) || ($("li:eq()").text()!=$("li").eq().text()) || ($("li:eq('abc')").text()!=$("li").eq('abc').text())|| ($("li:eq(-1)").text()!=$("li").eq(-1).text()) ){
+        return "xiyueta().selector err4";
+    }    
+    
+
+
     return "xiyueta().selector() TestOK";
 }
 
@@ -88,14 +164,26 @@ function test_wrap(){
 //测试 xiyuetaASP().tophp()
 function test_asp(){
     var asp='<'+'%\nresponse.write("aaa")\n%'+'>'
-    var php='<?'+'PHP\necho("aaa");\n?'+'>'
+    var php='<?'+"PHP\necho('aaa');\n?"+'>'
     $asp().parse(asp);  
     // $asp().debug()
-//     return $asp().tophp(); 
+    // console.log(php)
+    // return $asp().tophp(); 
+
+
 
     if($asp().tophp()!=php){
         return "xiyuetaASP().tophp() err1";
     }
+    var asp='<%\ndim s:s="a"\ndim c:c="c"\nfunction aa(byval s1,ByRef s2)\n    s1="s1"\n    s2="s2"\nend function\ncall aa(s,c)\nresponse.write("s=" & s)\nresponse.write("<br>c=" & c)\n%>'
+    var php="<?PHP\n$s='';$s='a';\n$c='';$c='c';\nfunction aa($s1,&$s2){\n    $aa='';\n    $s1='s1';\n    $s2='s2';\n    return @$aa;\n}\naa($s,$c);\necho('s='.$s);\necho('<br>c='.$c);\n?>";
+    $asp().parse(asp);
+    // return $asp().tophp()  
+
+    if($asp().tophp()!=php){
+        return "xiyuetaASP().tophp() err2";
+    }
+
     return "xiyuetaASP().tophp() TestOK";
 }
 

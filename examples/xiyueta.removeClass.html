@@ -18,7 +18,17 @@
     <!--[if lt IE 9]>
     <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <![endif]-->
-    <!-- <script type="text/javascript" src="http://www.xiyueta.com/js/xiyueta.min.js?v1.2.8"></script> -->
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?9e75428c7b3992dd93bd71098a1f9dc3";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
 </head>
 <body>
 <style>
@@ -61,13 +71,13 @@ $.log()        在浏览器里显示内容 == document.write()
 .print()       打印HTML对象全部内容 format为格式化HTML
 */
 
-var html=`&lt;div>
-&lt;ul>
-&lt;li>xiyueta库&lt;/li>
-&lt;li class="url">xiyueta.com&lt;/li>
-&lt;li class="foot like">&lt;/li>
-&lt;/ul>
-&lt;/div>`
+var html='&lt;div>\n\
+&lt;ul>\n\
+&lt;li>xiyueta库&lt;/li>\n\
+&lt;li class="url">xiyueta.com&lt;/li>\n\
+&lt;li class="foot like">&lt;/li>\n\
+&lt;/ul>\n\
+&lt;/div>'
 
 $().parse(html);
 $("li").removeClass("url like");

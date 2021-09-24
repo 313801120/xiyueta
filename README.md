@@ -10,11 +10,7 @@
 
 ---
 
-xiyueta - 是一个快速、小巧且功能丰富的 JavaScript 库。它通过易于使用的 API 使 HTML 文档遍历和操作等工作变得更加简单，该 API 可在多种浏览器上运行。
-
-xiyueta里的大部分API同jQuery里的API调用方法一致。在jQuery里怎么使用，在xiyueta里同样可以使用，会jQuery会xiyueta。xiyueta库和jQuery库不同之处是，xiyuetaJS库是遍历和操作HTML网页源码，xiyuetaJS库可在WEB浏览器里使用，也可以在ASP语言里使用，也可以在nodejs里使用。
-
-xiyueta设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。
+xiyueta是一个快速解析遍历网页html字符串的JavaScript库。它通过与jQuery语法使用一致的 API 使 HTML 文档遍历和操作等工作变得更加简单。xiyueta库是先解析网页html文本再操作网页DOM，xiyueta库可以在WEB浏览器里使用，也可以在ASP程序里使用，也可以在nodejs里使用，还可以把ASP程序转成PHP程序等。 xiyueta设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。
 
 
 
