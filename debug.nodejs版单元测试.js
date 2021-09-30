@@ -11,7 +11,6 @@ console.log(test_showhide());//测试showhide
 console.log(test_selector());//测试selector
 console.log(test_repair());//测试repair()
 console.log(test_wrap());//测试wrap()
-console.log(test_asp());//测试asp()
 console.log(test_css());//测试css()
 console.log(test_item());//测试item()
 console.log(test_swap());//测试swap()
@@ -68,7 +67,7 @@ function test_showhide(){
 
     // return $().print()
     
-    if($().print()!='<span style="display:none;">xiyeuta</span><p>js library</p>'){
+    if($().print()!='<span style="display: none;">xiyeuta</span><p>js library</p>'){
         return "xiyueta().show().hide() err1";
     }
     return "xiyueta().show().hide() TestOK";
@@ -89,13 +88,13 @@ function test_selector(){
         return "xiyueta().selector err2";
     }
 
-    var html='<ul><li>第1条</li><li>第2条</li><li>第3条</li><li>第4条</li><li>第5条</li></ul>';
+    var html='<ul><li>this is 1 </li><li>this is 2 </li><li>this is 3 </li><li>this is 4 </li><li>this is 5 </li></ul>';
     $().parse(html);
     var s1=$("li").even().css("color","red").print();
     $().parse(html);
     var s2=$("li:even").css("color","red").print();
     // return s1 +"\n"+ s2
-    if(s1!=s2 || s1!='<ul><li style="color:red;">第1条</li><li>第2条</li><li style="color:red;">第3条</li><li>第4条</li><li style="color:red;">第5条</li></ul>'){
+    if(s1!=s2 || s1!='<ul><li style="color: red;">this is 1 </li><li>this is 2 </li><li style="color: red;">this is 3 </li><li>this is 4 </li><li style="color: red;">this is 5 </li></ul>'){
         return "xiyueta().selector err3";
     }
 
@@ -104,7 +103,7 @@ function test_selector(){
     $().parse(html);
     var s2=$("li:odd").css("color","red").print();
     // return s1;
-    if(s1!=s2 || s1!='<ul><li>第1条</li><li style="color:red;">第2条</li><li>第3条</li><li style="color:red;">第4条</li><li>第5条</li></ul>'){
+    if(s1!=s2 || s1!='<ul><li>this is 1 </li><li style="color: red;">this is 2 </li><li>this is 3 </li><li style="color: red;">this is 4 </li><li>this is 5 </li></ul>'){
         return "xiyueta().selector err4";
     }
 
@@ -133,11 +132,11 @@ function test_repair(){
     }
 
 
-    var html="<div>xiyueta\n<span>JS库</div>\n    <p>www.xiyueta.com\n</div>";
+    var html="<div>xiyueta\n<span> JS library</div>\n    <p>www.xiyueta.com\n</div>";
     $().parse(html);  
     $().repair();
     // return $().print()
-    if($().print()!="<div>xiyueta\n<span>JS库</span></div>\n    <p>www.xiyueta.com\n</p>"){
+    if($().print()!="<div>xiyueta\n<span> JS library</span></div>\n    <p>www.xiyueta.com\n</p>"){
         return "xiyueta().repair err2";
     }
 
@@ -160,48 +159,25 @@ function test_wrap(){
     }
     return "xiyueta().wrap().unwrap() TestOK";
 }
-//测试 xiyuetaASP().tophp()
-function test_asp(){
-    var asp='<'+'%\nresponse.write("aaa")\n%'+'>'
-    var php='<?'+"PHP\necho('aaa');\n?"+'>'
-    $asp().parse(asp);  
-    // $asp().debug()
-    // console.log(php)
-    // return $asp().tophp(); 
-
-
-
-    if($asp().tophp()!=php){
-        return "xiyuetaASP().tophp() err1";
-    }
-    var asp='<%\ndim s:s="a"\ndim c:c="c"\nfunction aa(byval s1,ByRef s2)\n    s1="s1"\n    s2="s2"\nend function\ncall aa(s,c)\nresponse.write("s=" & s)\nresponse.write("<br>c=" & c)\n%>'
-    var php="<?PHP\n$s='';$s='a';\n$c='';$c='c';\nfunction aa($s1,&$s2){\n    $aa='';\n    $s1='s1';\n    $s2='s2';\n    return @$aa;\n}\naa($s,$c);\necho('s='.$s);\necho('<br>c='.$c);\n?>";
-    $asp().parse(asp);
-    // return $asp().tophp()  
-
-    if($asp().tophp()!=php){
-        return "xiyuetaASP().tophp() err2";
-    }
-
-    return "xiyuetaASP().tophp() TestOK";
-}
+ 
 
 //测试 xiyueta().css()
 function test_css(){
     var html='<div>aaa</div><span style="font-size: 22px;color: red;">aaaa</span>';
     $().parse(html);  
     // $().debug()
-    // return $("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap() 
-    
-    if($("div").css("color","blue").htmlwrap()!='<div style="color:blue;">aaa</div>'){
+    // return $("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap()
+    if($("div").css("color","blue").htmlwrap()!='<div style="color: blue;">aaa</div>'){
         return "xiyueta().css() err1";
-    }else if($("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap()!='<span style="font-weight:bold;font-size: 33px;color: green;">aaaa</span>'){
+    }else if($("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap()!='<span style="font-size: 33px; color: green; font-weight: bold;">aaaa</span>'){
         return "xiyueta().css() err2";
-    }else if($("li:eq(1)").parse("<li>aaa</li><li>1111</li><li>ccc</li>").css({color:"red","font-size":"22px"}).print()!='<li>aaa</li><li style="font-size:22px;color:red;">1111</li><li>ccc</li>'){
+    }else if($("li:eq(1)").parse("<li>aaa</li><li>1111</li><li>ccc</li>").css({color:"red","font-size":"22px"}).print()!='<li>aaa</li><li style="color: red; font-size: 22px;">1111</li><li>ccc</li>'){
         return "xiyueta().css() err3";
     }
     return "xiyueta().css() TestOK";
 }
+
+
 
 //测试 xiyueta().item()
 function test_item(){
@@ -486,7 +462,7 @@ function test_find(){
     $().parse(html);  
 
     //     $().debug();
-    // return $("* li a")//.find("li a")
+    // return $("*").find("li a").length
 
     if($("*").find("li a").length!=3){
         return "xiyueta().find() err1";
