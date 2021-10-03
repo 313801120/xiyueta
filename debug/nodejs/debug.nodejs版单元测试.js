@@ -1,6 +1,5 @@
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="dist/xiyueta.min.js"></script>
-<script type="text/javascript">
+var $ = require('./../../dist/nodejs.xiyueta.min.js');
+//var $ = require('xiyueta');//本地存在则可以直接调用 使用方法:在CMD里输入 node debug.nodejs版单元测试.js
 
 //为了兼容在ASP里测试，少用中文或中文符号，会报错和乱码
 
@@ -60,7 +59,7 @@ function test_xiyuetaCSS(){
 //测试 xiyueta().show() xiyueta().hide()
 function test_showhide(){
     
-    var html='<span>xiyeuta</span><p style="display:none">js library</p>';
+    var html='<span>xiyueta</span><p style="display:none">js library</p>';
     $().parse(html);  
     // $().debug() 
     $("span").hide()
@@ -68,7 +67,7 @@ function test_showhide(){
 
     // return $().print()
     
-    if($().print()!='<span style="display: none;">xiyeuta</span><p>js library</p>'){
+    if($().print()!='<span style="display: none;">xiyueta</span><p>js library</p>'){
         return "xiyueta().show().hide() err1";
     }
     return "xiyueta().show().hide() TestOK";
@@ -203,6 +202,15 @@ function test_swap(){
     if($("ul").swap("div:eq(1)").print()!="<div>aaa</div><div><ul><li>1</li><li>2</li></ul></div>"){
         return "xiyueta().swap() err1";
     }
+
+    var html="开始<div>1</div> 中间 <span>2</span>结束"
+    $().parse(html);
+    
+    if($("div").swap("span").print()!="开始<span>2</span> 中间 <div>1</div>结束")return "xiyueta().swap() err2";
+
+
+
+
     return "xiyueta().swap() TestOK";
 }
 
@@ -532,5 +540,3 @@ function test_moreother(){
     }
     return "xiyueta().moreother() TestOK";
 }
-
-</script>

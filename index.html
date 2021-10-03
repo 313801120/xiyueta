@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>xiyueta JS库 API使用</title>
+    <title>xiyueta.js库 API使用</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     
   
@@ -18,13 +18,13 @@ var _hmt = _hmt || [];
 })();
 </script>
 </head>
-<!-- update time 2021-09-30 21:05:38 -->
+<!-- update time 2021-10-03 14:42:14 -->
 <body style="margin-bottom: 70px;">
     <div class="container">
         <div class="row">
             <div class="col-md-2"> 
 <ul class="list-group">
-<li class="list-group-item">属性 <span class="badge">73</span></li>
+<li class="list-group-item">属性 <span class="badge">78</span></li>
 <li class="list-group-item"><a href="#xiyuetafind" title="获取当前匹配元素集合中每个元素的后代" >xiyueta().find()</a></li>
 <li class="list-group-item"><a href="#xiyuetatext" title="获取匹配元素集合中每个元素的组合文本内容（包括它们的后代），或设置匹配元素的文本内容" >xiyueta().text()</a></li>
 <li class="list-group-item"><a href="#xiyuetahtml" title="获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容" >xiyueta().html()</a></li>
@@ -78,7 +78,7 @@ var _hmt = _hmt || [];
 <li class="list-group-item"><a href="#xiyuetanav" title="静态html生成CMS标签导航列表" >xiyueta().nav()</a></li>
 <li class="list-group-item"><a href="#xiyuetanews" title="静态html生成CMS标签文章列表" >xiyueta().news()</a></li>
 <li class="list-group-item"><a href="#xiyuetawebtpl" title="静态html自动生成CMS标签" >xiyueta().webtpl()</a></li>
-<li class="list-group-item"><a href="#xiyuetaASPtophp" title="ASP语言代码转PHP语言代码" >xiyuetaASP().tophp()</a></li>
+<li class="list-group-item"><a href="#404错误页面 - xiyueta" title="" >404错误页面 - xiyueta</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSStext" title="获取匹配元素集合中每个元素的组合文本内容（包括它们的后代），或设置匹配元素的文本内容" >xiyuetaCSS().text()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSShtml" title="获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容" >xiyuetaCSS().html()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSSbackground" title="css样式背景图片查找与替换" >xiyuetaCSS().background()</a></li>
@@ -98,15 +98,27 @@ var _hmt = _hmt || [];
 <li class="list-group-item"><a href="#xiyuetaCSSfirst" title="将匹配元素的集合减少到集合中的第一个" >xiyuetaCSS().first()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSSconfig" title="设置或修改配置" >xiyuetaCSS().config()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSScharset" title="修改和获得CSS样式文件编码" >xiyuetaCSS().charset()</a></li>
+<li class="list-group-item"><a href="#xiyuetaadd" title="创建一个新的 jQuery 对象，将元素添加到匹配的元素集中" >xiyueta().add()</a></li>
+<li class="list-group-item"><a href="#xiyuetachildren" title="获取匹配元素集中每个元素的子元素，可选地由选择器过滤" >xiyueta().children()</a></li>
+<li class="list-group-item"><a href="#xiyuetaclosest" title="描述：对于集合中的每个元素，通过测试元素本身并在 DOM 树中向上遍历其祖先来获取与选择器匹配的第一个元素" >xiyueta().closest()</a></li>
+<li class="list-group-item"><a href="#xiyuetahtmlColor" title="给html代码块着色" >xiyueta.htmlColor()</a></li>
+<li class="list-group-item"><a href="#xiyuetaresolve" title="为URL或 href 插入 或 替换原有的标签" >xiyueta.resolve()</a></li>
 
 </ul>
  
             </div>
             <div class="col-md-10">
                 <blockquote>
-                    xiyueta javascript库介绍
-                    <small>xiyueta - 是一个快速、小巧且功能丰富的 JavaScript 库。它通过易于使用的 API 使 HTML 文档遍历和操作等工作变得更加简单，该 API 可在多种浏览器上运行。 xiyueta里的大部分API同jQuery里的API调用方法一致。在jQuery里怎么使用，在xiyueta里同样可以使用，会jQuery会xiyueta。xiyueta库和jQuery库不同之处是，xiyuetaJS库是遍历和操作HTML网页源码，xiyuetaJS库可在WEB浏览器里使用，也可以在ASP语言里使用，也可以在nodejs里使用。 xiyueta设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。
-                        <br><a href="http://www.xiyueta.com">进入官网</a>
+                          xiyueta.js库介绍
+                    <small>xiyueta.js库是一个快速解析html字符串，遍历网页dom结构的JavaScript库。它通过与jQuery语法使用一致的 API 使 html文档遍历和处理更加简单。xiyueta.js库是先解析网页html文本再遍历html网页dom，xiyueta.js库可以在WEB浏览器里使用，也可以在ASP程序里使用，也可以在nodejs里使用。 xiyueta库在nodejs里使用比cheerio库性能更好，xiyueta库比cheerio库解析html字符串的速度快3至5倍。 xiyueta.js库设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。
+
+<link rel="stylesheet" href="debug/highlight.css"/>
+        <pre><code class="language-js"><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">xiyueta</span><span class="hl-1"> = </span><span class="hl-7">require</span><span class="hl-1">(</span><span class="hl-3">'xiyueta'</span><span class="hl-1">);</span><br><span class="hl-5">const</span><span class="hl-1"> </span><span class="hl-6">$</span><span class="hl-1"> = </span><span class="hl-2">xiyueta</span><span class="hl-1">.</span><span class="hl-7">load</span><span class="hl-1">(</span><span class="hl-3">'&lt;h2 class="Title"&gt;Hello world&lt;/h2&gt;'</span><span class="hl-1">);</span><br><br><span class="hl-7">$</span><span class="hl-1">(</span><span class="hl-3">'h2.title'</span><span class="hl-1">).</span><span class="hl-7">text</span><span class="hl-1">(</span><span class="hl-3">123</span><span class="hl-1">);</span><br><span class="hl-7">$</span><span class="hl-1">(</span><span class="hl-3">'h2'</span><span class="hl-1">).</span><span class="hl-7">addClass</span><span class="hl-1">(</span><span class="hl-3">'welcome'</span><span class="hl-1">);</span><br><br><span class="hl-2">$</span><span class="hl-1">.</span><span class="hl-7">html</span><span class="hl-1">();</span><br><span class="hl-4">//=&gt;&lt;h2 class="Title welcome"&gt;123!&lt;/h2&gt;</span>
+</code></pre> 
+
+    <br><a href="http://www.xiyueta.com">进入官网</a>
+     &nbsp;|&nbsp; 
+     <a href="examples/xiyueta.default.html">xiyueta.js库演示</a>
                     </small>
                 </blockquote>
 
@@ -375,10 +387,10 @@ var _hmt = _hmt || [];
                     <small>静态html自动生成CMS标签
                         <br><a href="examples/xiyueta.webtpl.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/webtpl/" target="_balnk">查看官方文档介绍>></a>
                     </small>
-                </blockquote><blockquote><a name="xiyuetaASPtophp"></a>
-                    xiyuetaASP().tophp()  api介绍
-                    <small>ASP语言代码转PHP语言代码
-                        <br><a href="examples/xiyuetaASP.tophp.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetaasp/tophp/" target="_balnk">查看官方文档介绍>></a>
+                </blockquote><blockquote><a name="404错误页面 - xiyueta"></a>
+                    404错误页面 - xiyueta  api介绍
+                    <small>
+                        <br><a href="examples/404错误页面 - xiyueta.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetaasp/tophp/" target="_balnk">查看官方文档介绍>></a>
                     </small>
                 </blockquote><blockquote><a name="xiyuetaCSStext"></a>
                     xiyuetaCSS().text()  api介绍
@@ -474,6 +486,31 @@ var _hmt = _hmt || [];
                     xiyuetaCSS().charset()  api介绍
                     <small>修改和获得CSS样式文件编码
                         <br><a href="examples/xiyuetaCSS.charset.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/charset/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
+                </blockquote><blockquote><a name="xiyuetaadd"></a>
+                    xiyueta().add()  api介绍
+                    <small>创建一个新的 jQuery 对象，将元素添加到匹配的元素集中
+                        <br><a href="examples/xiyueta.add.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/add/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
+                </blockquote><blockquote><a name="xiyuetachildren"></a>
+                    xiyueta().children()  api介绍
+                    <small>获取匹配元素集中每个元素的子元素，可选地由选择器过滤
+                        <br><a href="examples/xiyueta.children.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/children/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
+                </blockquote><blockquote><a name="xiyuetaclosest"></a>
+                    xiyueta().closest()  api介绍
+                    <small>描述：对于集合中的每个元素，通过测试元素本身并在 DOM 树中向上遍历其祖先来获取与选择器匹配的第一个元素
+                        <br><a href="examples/xiyueta.closest.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/closest/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
+                </blockquote><blockquote><a name="xiyuetahtmlColor"></a>
+                    xiyueta.htmlColor()  api介绍
+                    <small>给html代码块着色
+                        <br><a href="examples/xiyueta.htmlColor.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/htmlcolor/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
+                </blockquote><blockquote><a name="xiyuetaresolve"></a>
+                    xiyueta.resolve()  api介绍
+                    <small>为URL或 href 插入 或 替换原有的标签
+                        <br><a href="examples/xiyueta.resolve.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/resolve/" target="_balnk">查看官方文档介绍>></a>
                     </small>
                 </blockquote>
             </div>
