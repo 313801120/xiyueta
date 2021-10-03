@@ -40,7 +40,7 @@ console.log($("title").parse("<title>hello world!</title>").text());
 ```html
 //asp 里使用 xiyueta
 <script  language="javascript" runat="server" src="./dist/asp.xiyueta.min.js"></script> 
-&lt;%
+< %
 '这里需要运行一段ASP程序，下面才可以正常运行javascript程序，疑问？
 console.log(xiyueta("title").parse("<title>hello world!</title>").text()) 'ASP里不可以用 $ 直接用 xiyueta代替
 %>
