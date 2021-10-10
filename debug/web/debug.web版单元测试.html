@@ -167,7 +167,7 @@ function test_css(){
     var html='<div>aaa</div><span style="font-size: 22px;color: red;">aaaa</span>';
     $().parse(html);  
     // $().debug()
-    // return $("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap()
+    // return $("div").htmlwrap() 
     if($("div").css("color","blue").htmlwrap()!='<div style="color: blue;">aaa</div>'){
         return "xiyueta().css() err1";
     }else if($("span").css("font-size","33px").css("color","green").css("font-weight","bold").htmlwrap()!='<span style="font-size: 33px; color: green; font-weight: bold;">aaaa</span>'){
@@ -446,7 +446,7 @@ function test_html(){
     </ul>'
     $().parse(html);  
 
-    // return $("ul li:eq(1)").html()
+    // return $().html()
 
     if($().html()!=undefined){
         return "xiyueta().html() err1";
