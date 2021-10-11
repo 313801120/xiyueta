@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyuetacss().selector_element() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyuetacss()().config() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -65,15 +65,22 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析CSS
-.length     当前匹配的元素数量 
-$.log()     在浏览器里显示内容 == document.write()
+.parse()  解析HTML
+.config() 设置或修改配置
+$.log()   在浏览器里显示内容 == document.write()
 */
 
-var css='li{color:red}ul,li{font-size:12px;} .nav , li  {color:blue}';
+$.log( "图片目录="+xiyuetaCSS().config().imagesdir );
+$().config({serverurl:"http://www.xiyuetaCSS.com/api/"});
+$.log("上一级目录="+xiyuetaCSS().config().parentdir);
 
-xiyuetaCSS().parse(css);
-$.log(xiyuetaCSS(".nav,li").html());
+document.write("&lt;br>")
+xiyuetaCSS().config().imagesdir="img/"
+$.log( "修复后图片目录="+xiyuetaCSS().config().imagesdir );
+
+document.write("&lt;br>")
+xiyuetaCSS().config({imagesdir:"src/"})
+$.log( "修复后图片目录="+xiyuetaCSS().config().imagesdir );
 
 &lt;/script></textarea>
         </div>

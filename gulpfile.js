@@ -55,7 +55,7 @@ var task = {
             .pipe(gulp.dest('../xiyueta/js/'))
     }, //生成aspjs JS文件
     aspjs: function(ver) {
-        gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.css.js', src + 'url.js', src + 'handle.js', src + 'xiyueta.asp.js'])
+        gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.css.js', src + 'url.js', src + 'handle.js', src + 'tpl.js'])
             .pipe(replace('_xyt.info\(\);', ''))
             .pipe(concat('asp.xiyueta.min.js'))
             .pipe(uglify())

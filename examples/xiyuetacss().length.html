@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyuetacss().selector_element() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyuetacss()().length() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -65,15 +65,15 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析CSS
+.parse()    解析HTML
 .length     当前匹配的元素数量 
 $.log()     在浏览器里显示内容 == document.write()
 */
 
-var css='li{color:red}ul,li{font-size:12px;} .nav , li  {color:blue}';
-
-xiyuetaCSS().parse(css);
-$.log(xiyuetaCSS(".nav,li").html());
+var html='div{}div{}div{}';
+ 
+xiyuetaCSS().parse(html);
+$.log(xiyuetaCSS("div").length);
 
 &lt;/script></textarea>
         </div>

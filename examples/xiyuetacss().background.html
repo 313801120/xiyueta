@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyuetacss().selector_element() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyuetacss()().background() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -65,15 +65,28 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析CSS
-.length     当前匹配的元素数量 
-$.log()     在浏览器里显示内容 == document.write()
+.parse()    	解析CSS
+.background()   css样式背景图片查找与替换
+$.log()     	在浏览器里显示内容 == document.write()
+.debug()    	在浏览器调试面板里显示全部HTML结构
 */
 
-var css='li{color:red}ul,li{font-size:12px;} .nav , li  {color:blue}';
+xiyuetaCSS().parse("div{color:red}div{color : blu  e}div{color:green}.gds{background:url(  '/img/xiyueta.jpg '  );color:red}");
+$.log(xiyuetaCSS("(all)").background());
 
-xiyuetaCSS().parse(css);
-$.log(xiyuetaCSS(".nav,li").html());
+xiyuetaCSS("(all)").background("/img/logo.jpg");
+$.log(xiyuetaCSS("(all)").background());
+
+xiyuetaCSS("(all)").background("server=http://xiyueta.com/images/");
+$.log(xiyuetaCSS("(all)").background());
+
+
+xiyuetaCSS("(all)").background("nav.jpg");
+xiyuetaCSS("(all)").background("dir=../../images/");
+$.log(xiyuetaCSS("(all)").background());
+
+document.write("&lt;br>")
+$.log(xiyuetaCSS().print());
 
 &lt;/script></textarea>
         </div>

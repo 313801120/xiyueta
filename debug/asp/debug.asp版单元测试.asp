@@ -505,7 +505,7 @@ function test_text(){
 
     $().parse(html);  
     // $().debug()
-    // return $("ul *").length
+    // return $("li[class=news]").length
     if($().text()!=""){
         return "xiyueta().text() err1";
     }else if($("*").text()!=s1){

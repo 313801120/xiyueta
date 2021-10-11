@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyuetacss().selector_element() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyuetacss()().setsrc() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -66,14 +66,28 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 
 /*
 .parse()    解析CSS
-.length     当前匹配的元素数量 
+.setsrc()   设置CSS样式里资源地址
 $.log()     在浏览器里显示内容 == document.write()
+.debug()    在浏览器调试面板里显示全部HTML结构
 */
 
-var css='li{color:red}ul,li{font-size:12px;} .nav , li  {color:blue}';
 
-xiyuetaCSS().parse(css);
-$.log(xiyuetaCSS(".nav,li").html());
+var css="@font-face {\n\
+    font-family: layui-icon;\n\
+    src: url(../font/iconfont.eot?v=256);\n\
+    src: url(../font/iconfont.eot?v=256#iefix) format('embedded-opentype'), url(../font/iconfont.woff2?v=256) format('woff2'), url(../font/iconfont.woff?v=256) format('woff'), url(../font/iconfont.ttf?v=256) format('truetype'), url(../font/iconfont.svg?v=256#layui-icon) format('svg')\n\
+}.gds{background:url(  '/img/xiyueta.jpg '  );color:red}";
+
+xiyuetaCSS().parse(css); 
+
+document.write("&lt;br>")
+$.log( xiyuetaCSS("(all)").setsrc("server=http://www.bidu.com/aa/").print());
+
+document.write("&lt;br>")
+$.log( xiyuetaCSS("(all)").setsrc("dir=../../images/").print());
+
+document.write("&lt;br>")
+$.log( xiyuetaCSS("(all)").setsrc("").print());
 
 &lt;/script></textarea>
         </div>
