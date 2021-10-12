@@ -5,11 +5,9 @@
 </p>
 
 
-
-<code class="language-js">
+ <span color="red">aaa</font>
   <font color="#0000ff">const</font><font color="#000000"> </font><font color="#0070c1">xiyueta</fontn><font color="#000000"> = </font><font color="795e26">require</font><font color="#000000">(</font><font color="#a31515">'xiyueta'</font><font color="#000000">);</font><br><font color="#0000ff">const</font><font color="#000000"> </font><font color="#0070c1">$</font><font color="#000000"> = </font><font color="#001080">xiyueta</font><font color="#000000">.</font><font color="795e26">load</font><font color="#000000">(</font><font color="#a31515">'&lt;h2 class="Title"&gt;Hello world&lt;/h2&gt;'</font><font color="#000000">);</font><br><br><font color="795e26">$</font><font color="#000000">(</font><font color="#a31515">'h2'</font><font color="#000000">).</font><font color="795e26">text</font><font color="#000000">(</font><font color="#a31515">123</font><font color="#000000">);</font><br><font color="795e26">$</font><font color="#000000">(</font><font color="#a31515">'h2.title'</font><font color="#000000">).</font><font color="795e26">addClass</font><font color="#000000">(</font><font color="#a31515">'xyt'</font><font color="#000000">);</font><br><br><font color="#001080">$</font><font color="#000000">.</font><font color="795e26">html</font><font color="#000000">();</font><br><font class="hl-4">//=&gt;&lt;h2 class="Title xyt"&gt;123&lt;/h2&gt;</font>
-</code>
-
+ 
 <p align=center>
 
 xiyueta is a fast, small, and feature-rich JavaScript library<br>
