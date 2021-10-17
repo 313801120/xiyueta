@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyueta()().tplconfig() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyueta().findlv() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -65,15 +65,16 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-tplconfig()  设置或修改模板配置
-$.log()      在浏览器里显示内容 == document.write()
+.parse()   解析HTML
+.findlv()  将一组匹配元素减少到指定lv处的元素
+$.log()    在浏览器里显示内容 == document.write()
 */
 
-$.log($().tplconfig().type);
-
-document.write("&lt;br>");
-$().tplconfig({type:"dedecms",item:6});
-$.log($().tplconfig().type);
+var html='&lt;div>&lt;b>xiyueta.com&lt;br>&lt;/b>&lt;/div>&lt;br>';
+xiyueta().parse(html); 
+$.log( xiyueta("*").findlv(1).htmlwrap() );
+$.log( xiyueta("*").findlv(2).htmlwrap() );
+$.log( xiyueta("*").findlv(3).htmlwrap() );
 
 &lt;/script></textarea>
         </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyueta()().remove() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyueta().remove() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -75,13 +75,20 @@ var html='&lt;div>\n\
 &lt;ul>\n\
 &lt;li>xiyueta库&lt;/li>\n\
 &lt;li class="url">xiyueta.com&lt;/li>\n\
+&lt;li class="url">qq313801120&lt;/li>\n\
+&lt;li class="url">author:xiyueta&lt;/li>\n\
+&lt;li class="url">hello&lt;/li>\n\
+&lt;li class="url">aahello&lt;/li>\n\
+&lt;li class="url">hellobb&lt;/li>\n\
+&lt;li class="url">heLLO&lt;/li>\n\
 &lt;li>&lt;/li>\n\
 &lt;/ul>\n\
 &lt;/div>';
 
 $().parse(html);
-var s=$("li:eq(-1)").remove();
-$.log(s);
+$.log( $("li:eq(-1)").remove().length );
+$.log( $("li:eq(1)").remove(true).length );//true为删除对象上部分upHtml文本内容
+$.log( $("li").remove(":contains(hello)").length );//搜索
 
 document.write("&lt;br>");
 $.log($().print())

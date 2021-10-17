@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyueta(:first) 属性方法</title>
+    <title>测试 xiyueta.js库 xiyueta.config() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -65,17 +65,14 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析HTML
-:first	    将匹配元素的集合减少到集合中的第一个 等于.first()
-.css()      获取匹配元素集中第一个元素的CSS属性值，或者为每个匹配元素设置一个或多个CSS属性
-$.log()     在浏览器里显示内容 == document.write()
-.print()    打印HTML对象全部内容 format为格式化HTML
+.parse()   解析HTML
+$.config() 设置或修改配置
+$.log()    在浏览器里显示内容 == document.write()
 */
 
-var html='&lt;ul>&lt;li>xiyueta&lt;/li>&lt;li>xiyuetaJS库&lt;/li>&lt;li>javascript&lt;/li>&lt;li>js&lt;/li>&lt;li>www.xiyueta.com&lt;/li>&lt;/ul>';
-
-$().parse(html);
-$.log($("ul li:first").css("color","red").print("format"));
+$.log("服务器网址 "+$.config().serverurl)
+$.config({serverurl:"http://www.xiyueta.com/api/"});
+$.log("更新后的服务器网址 "+$.config().serverurl)
 
 &lt;/script></textarea>
         </div>
