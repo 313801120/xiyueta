@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyuetacss().charset() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyueta().prop() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -65,21 +65,17 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()          解析CSS
-.handlecssimg()   处理CSS样式里的背景图片
-$.log()           在浏览器里显示内容 == document.write()
-.debug()          在浏览器调试面板里显示全部HTML结构
+.parse()    解析HTML
+.prop()     获取匹配元素集中第一个元素的属性值，或为每个匹配元素设置一个或多个属性(会检测元素是否有指定属性)
+$.log()     在浏览器里显示内容 == document.write()
+.print()    打印HTML对象全部内容 format为格式化HTML
 */
 
+var html='&lt;div>&lt;/div>&lt;a>&lt;/a>&lt;img>';
 
-var css = '@charset "utf-8";\
-body{ color:#222;font: 14px/1.5 tahoma,arial,"Microsoft YaHei"; background:#ffffff;}'
-$css().parse(css); //解析html 
-var charset = xiyuetaCSS().charset();
-$.log(charset);
-
-$css().charset("GBK");
-$.log($css().print());
+$().parse(html);
+var s=$("*").prop("href","1.html").prop({"class":"test",'src':"1.jpg"}).print("format");
+$.log(s);
 
 &lt;/script></textarea>
         </div>

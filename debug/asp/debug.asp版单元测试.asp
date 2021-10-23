@@ -72,12 +72,14 @@ function test_xiyuetaCSS() {
         return "xiyuetacss() err2";
     } else if (xiyuetaCSS(".nav").text() != "font-size:12px;") {
         return "xiyuetacss() err3";
-    } else if (xiyuetaCSS("(all):eq(-1)").html() != "#news{color:blue}") {
+    } else if (xiyuetaCSS("(all):eq(-1)").html() != "color:blue") {
         return "xiyuetacss() err4";
     } else if ((xiyuetaCSS("div:eq(0)").text() != xiyuetaCSS("div").eq(0).text()) || (xiyuetaCSS("div:eq()").text() != xiyuetaCSS("div").eq().text()) || (xiyuetaCSS("div:eq('abc')").text() != xiyuetaCSS("div").eq('abc').text()) || (xiyuetaCSS("div:eq(-1)").text() != xiyuetaCSS("div").eq(-1).text())) {
         return "xiyuetacss() err5";
     } else if ((xiyuetaCSS("div:first").text() != xiyuetaCSS("div").first(0).text()) || (xiyuetaCSS("div:last").text() != xiyuetaCSS("div").last().text())) {
         return "xiyuetacss() err6";
+    } else if (xiyuetaCSS("(all):eq(-1)").htmlwrap() != "#news{color:blue}") {
+        return "xiyuetacss() err7";
     }
     return "xiyuetacss() TestOK";
 }
@@ -127,16 +129,18 @@ function test_selector() {
     var s1 = $("li").odd().css("color", "red").print();
     $().parse(html);
     var s2 = $("li:odd").css("color", "red").print();
-    // return s1;
-    if (s1 != s2 || s1 != '<ul><li>this is 1 </li><li style="color: red;">this is 2 </li><li>this is 3 </li><li style="color: red;">this is 4 </li><li>this is 5 </li></ul>') {
+    // return s1 +"\n"+ s2
+    if (s1 != s2 ) {
         return "xiyueta().selector err4";
+    }if (s1 != '<ul><li>this is 1 </li><li style="color: red;">this is 2 </li><li>this is 3 </li><li style="color: red;">this is 4 </li><li>this is 5 </li></ul>') {
+        return "xiyueta().selector err5";
     }
 
     $().parse(html);
 
-    // return ($("li:eq('abc')").text()+"\n[|]"+$("li").eq('abc').text())
+    // return $("li:eq(0)").text()+"\n"+$("li").eq(0).text()
     if (($("li:eq(0)").text() != $("li").eq(0).text()) || ($("li:eq()").text() != $("li").eq().text()) || ($("li:eq('abc')").text() != $("li").eq('abc').text()) || ($("li:eq(-1)").text() != $("li").eq(-1).text())) {
-        return "xiyueta().selector err4";
+        return "xiyueta().selector err6";
     }
 
 
@@ -340,14 +344,14 @@ function test_each() {
         c += $(obj).attr("href");
         if (index == 0) {
             $(obj).html("<b>new 2</b>").removeClass("redA")
-        } else if (index == 1) {
+        } else if (index == 1) { 
             $(obj).remove();
         } else if (index == 2) {
             $(obj).text("<b>new 3</b>").addClass('greenB')
         }
     })
 
-    // return $().print()
+    // return $().print()  + "\n"+ s1
 
 
     if (c != "1.asp,2.asp,3.asp") {
@@ -412,7 +416,7 @@ function test_val() {
     // $().debug()
 
 
-    // return "show="+$("#txt").val() 
+    // return xiyueta().val() 
 
     if ($("input").val() != "111") {
         return "xiyueta().val() err1";
@@ -488,7 +492,7 @@ function test_html() {
     </ul>'
     $().parse(html);
 
-    // return $().html()
+    // return $("ul").find("li:eq(2) a").html()
 
     if ($().html() != undefined) {
         return "xiyueta().html() err1";
@@ -514,7 +518,7 @@ function test_find() {
     $().parse(html);
 
     //     $().debug();
-    // return $("*").find("li a").length
+    // return $("ul").find("li[class=news] a").length
 
     if ($("*").find("li a").length != 3) {
         return "xiyueta().find() err1";
@@ -543,7 +547,7 @@ function test_text() {
 
     $().parse(html);
     // $().debug()
-    // return $("li[class=news]").length
+    // return $("ul *")
     if ($().text() != "") {
         return "xiyueta().text() err1";
     } else if ($("*").text() != s1) {
@@ -595,11 +599,11 @@ function test_moreother() {
 
     $().parse(html);
     // $().debug()
-    // return $("ul ,span").find("br")
+    // return $("ul *,span").length
     if ($("ul *,span").length != 5) {
-        return "xiyueta().text() err1";
+        return "xiyueta().text() test_moreother err1";
     } else if ($("ul ,span").find("br").length != 3) {
-        return "xiyueta().text() err2";
+        return "xiyueta().text() test_moreother err2";
     }
     return "xiyueta().moreother() TestOK";
 }

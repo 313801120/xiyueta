@@ -20,8 +20,10 @@ function test_jQuery() {
     if( $("#nav li").text(function(i){return "text"+i}).text()!='text0text1text2text3text4' )return 'this is err1';
     if( $("#nav li:eq(1)").text("xiyueta.com").text()!='xiyueta.com' )return 'this is err2';
     if( $("#nav li").text()!='text0xiyueta.comtext2text3text4' )return 'this is err3';
+    // console.log($("#nav li").html(function(i){return "html"+i}).html())
     if( $("#nav li").html(function(i){return "html"+i}).html()!='html0' )return 'this is err4';
     if( $("#nav li:eq(1)").html("xiyueta.com").html()!='xiyueta.com' )return 'this is err5';
+ 
     if( $("#nav li").html()!='html0' )return 'this is err6';
     if( $("#nav li").length!=5 )return 'this is err7';
     if(  $("#nav").find("li").css("color","green").end().html() !='\n    <li style="color: green;">html0</li>\n    <li style="color: green;">xiyueta.com</li>\n    <li style="color: green;">html2</li>\n    <li style="color: green;">html3</li>\n    <li style="color: green;">html4</li>\n' )return 'this is err8';
