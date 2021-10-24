@@ -1,6 +1,6 @@
 ﻿<script src="../dist/xiyueta.min.js"></script>
 <script type="text/javascript">
-var html = '<html><head></head><body>\n<div>\n    <ul>\n        <li>this is 1</li>\n        <li>this is 2</li>\n        <li>this is 3</li>\n        <li>this is 4</li>\n        <li>this is 5</li>\n    </ul>\n</div>\n\n<</body></html>'
+var html = '<html><head></head><body>\n<span>\n<div style="aa"></div>\n<div style="aa"></div>\n</span>\n</body></html>'
 //-------------------
 
 var startTime = new Date();
@@ -13,8 +13,7 @@ console.log("xiyueta", new Date() - startTime + ' ms');
 
 function test_jQuery() {
 
-    if(  $("div").index() !='' )return 'this is err1';
-    if(  $("div").index() !='' )return 'this is err2';
+    if(  $("span").empty().html()!='' )return 'this is err1';
 
     return 'test_jQuery OK';\n}\n\n//保存\nfunction save(content,html){\n\n    jQuery.ajax({\n        url: '?act=save',\n        type: 'POST',\n        data: {\n            'content': content,          \n            'html': html            \n        },\n        error: function(XMLHttpRequest, textStatus, errorThrown) {\n            alert(XMLHttpRequest)\n            alert(textStatus)\n            alert(errorThrown)\n        },\n        success: function(result) {\n            // console.log(result)\n        }\n    });\n\n}\n</script></body>' )return 'this is err18';
 

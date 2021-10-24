@@ -14,7 +14,7 @@ var zip = require('gulp-zip'); //打包
 
 //注释
 var note = [
-    '/*! xiyueta v<%=pkg.version %> | Author xiyueta Adream | MIT License By http://xiyueta.com/  */\n', { pkg: pkg }
+    '/*! xiyueta v<%=pkg.version %> | Author xiyueta Adream http://xiyueta.com/ | Released under the MIT license  */\n', { pkg: pkg }
 
 ]
 var nodejs = [`
@@ -55,8 +55,9 @@ var task = {
             .pipe(gulp.dest('../xiyueta/js/'))
     }, //生成aspjs JS文件
     aspjs: function(ver) {
-        gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.css.js', src + 'url.js', src + 'handle.js', src + 'tpl.js'])
+        gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.css.js', src + 'url.js', src + 'handle.js'])
             .pipe(replace('_xyt.info\(\);', ''))
+            .pipe(replace('document.write\(', 'response.write\('))
             .pipe(concat('asp.xiyueta.min.js'))
             .pipe(uglify())
             .pipe(header.apply(null, note))
@@ -90,7 +91,7 @@ var task = {
             .pipe(gulp.dest(dist + '../'))
         gulp.src([src + 'debug.xiyueta.js'])
             .pipe(concat('debug/nodejs/debug.nodejs版单元测试.js'))
-            .pipe(header.apply(null, ['var $ = require(\'./dist/nodejs.xiyueta.min.js\');\n//var $ = require(\'xiyueta\');//本地存在则可以直接调用 使用方法:在CMD里输入 node debug.nodejs版单元测试.js\n']))
+            .pipe(header.apply(null, ['var $ = require(\'./../../dist/nodejs.xiyueta.min.js\');\n//var $ = require(\'xiyueta\');//本地存在则可以直接调用 使用方法:在CMD里输入 node debug.nodejs版单元测试.js\n']))
             .pipe(gulp.dest(dist + '../'))
         gulp.src([src + 'debug.xiyueta.asp.head.asp', src + 'debug.xiyueta.js'])
             .pipe(concat('debug/asp/debug.asp版单元测试.asp'))

@@ -1,0 +1,185 @@
+﻿<div>
+    <ul>
+        <li>this is 1</li>
+        <li>this is 2</li>
+        <li>this is 3</li>
+        <li>this is 4</li>
+        <li>this is 5</li>
+    </ul>
+</div>
+<span>
+    <p>
+        <br>
+        <table>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </p>
+</span><img>
+<a></a>
+<ul>
+    <li></li>
+</ul>
+<ol>
+    <li></li>
+</ol>
+<abbr title="People's Republic of China">PRC</abbr><acronym title="World Wide Web">WWW</acronym>
+<map name="planetmap" id="planetmap">
+    <area shape="circle" coords="180,139,14" href="venus.html" alt="Venus" />
+    <area shape="circle" coords="129,161,10" href="mercur.html" alt="Mercury" />
+    <area shape="rect" coords="0,0,110,260" href="sun.html" alt="Sun" />
+</map>
+<article>
+    <h1>Internet Explorer 9</h1>
+    <p>Windows Internet Explorer 9（简称 IE9）于 2011 年 3 月 14 日发布.....</p>
+</article>
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>
+<h7></h7>
+<h8></h8>
+<h9></h9>
+<aside>
+    <h4>Epcot Center</h4>
+    The Epcot Center is a theme park in Disney World, Florida.
+</aside><audio src="someaudio.wav">
+    您的浏览器不支持 audio 标签。
+</audio>
+<p>这是普通文本 - <b>这是粗体文本</b>。</p>
+
+<head>
+    <base target="_blank" />
+    <title></title>
+    <basefont color="red" size="5" />
+</head>
+
+<body>
+    <img src="eg_smile.gif" />
+    <a href="http://www.w3school.com.cn">W3School</a>
+    <address></address>
+    <li>Username <bdi>Bill</bdi>:80 points</li>
+    <bdo dir="rtl">Here is some text</bdo>
+    <big></big>
+    <blockquote>
+        Here is a long quotation here is a long quotation here is a long quotation
+        here is a long quotation here is a long quotation here is a long quotation
+        here is a long quotation here is a long quotation here is a long quotation.
+    </blockquote>
+    <button type="button">Click Me!</button>
+    <canvas id="myCanvas"></canvas>
+    <table border="1">
+        <caption>Monthly savings</caption>
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$100</td>
+        </tr>
+    </table>
+    <center></center>
+    <cite></cite>
+    HTML <em></em> <strong></strong> <dfn></dfn> <code></code> <samp></samp> <kbd></kbd><var></var> <cite></cite>
+    <video src="movie.ogg" controls="controls">
+        您的浏览器不支持 video 标签。
+    </video>
+    <p>
+        如果想学习 AJAX，那么您必须熟悉 XML<wbr>Http<wbr>Request 对象。
+    </p>
+    <input type="text">
+    <select name="" id=""></select>
+    <form action=""></form>
+</body>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+// console.log($("div").prop("myname"))
+// console.log($("div").attr("myname"))
+
+var attrName = "id class name style src href title alt type loop width height background border bgcolor bordercolor aling cols rols scrolling noresize action method shape coords target color size"
+var arr = [];
+var splxx = "a abbr acronym address map area  ol ul li  img div span b p br table tr td article h1 h2 h3 h4 h5 h6 h7 h8 h9 aside audio head base body title basefont bdi bdo big blockquote button canvas table caption tr th td center cite em strong dfn code samp kbd var cite video wbr input select form".split(" ")
+for (var i = 0; i < splxx.length; i++) {
+    var tagName = splxx[i];
+    if (tagName != "") {
+        var s = getAttrList(tagName, attrName);
+        // console.log(tagName, s)
+        var isAdd = false;
+        for (var j = 0; j < arr.length; j++) {
+            if (arr[j].name.indexOf("|" + tagName + "|") > 0) { //存在退出，不要重复添加
+                isAdd = true;
+                break;
+            } else if (arr[j].value == s) { //相等
+                arr[j].name += tagName+"|";
+                arr[j].count++;
+                isAdd = true;
+                break;
+            }
+        }
+        if (isAdd == false) {
+            arr.push({ name: "|"+tagName+"|", value: s, count: 1 });
+        }
+    }
+}
+arr = ascArr(arr)
+console.log("arr", arr)
+
+
+// $("div").prop({id:"id",name:"name",style:"color:red",href:"1.html",src:"1.jpg",type:"input",loop:3,width:100,height:200,background:"2.jpg",border:"color",bgcolor:"red",borderclor:"yellow",aling:"center",cols:2,cols:3,scrolling:"yes",noresize:22,action:"url",method:"get/post"})
+
+function getAttrList(tagName, attrName) {
+    var c = "|";
+    var splstr = attrName.split(" ")
+    for (var i = 0; i < splstr.length; i++) {
+        var name = splstr[i];
+        if (name != "") {
+
+
+            try {
+                if ($(tagName).prop(name, "value").attr(name) != undefined) {
+                    if (c.indexOf("|" + name + "|") == -1) {
+                        c += name + "|";
+                    }
+                }
+            } catch (err) {}
+
+
+
+
+        }
+    }
+    // c = 'isTrue = "' + c + '".indexOf(paramName) > -1 ? true : false;'
+    return c;
+}
+
+
+
+function ascArr(domList) {
+    //排序 
+    var arr = []; //返回数组
+    for (var i = 0; i < domList.length; i++) {
+        var newObj = undefined;
+        var index;
+        for (var j = 0; j < domList.length; j++) {
+            var obj = domList[j];
+            if (obj != undefined) {
+                if (newObj == undefined) {
+                    newObj = obj;
+                    index = j;
+                } else if (obj.count < newObj.count) {
+                    newObj = obj;
+                    index = j;
+                } else {
+
+                }
+            }
+        }
+        arr.push(newObj);
+        domList[index] = undefined
+    }
+    return arr;
+}
+</script>

@@ -47,7 +47,7 @@ function test_jQuery() {
     if( $("#wrap").find("p:eq(0)").wrap("<span style=\"color:red\"></span>").end().html()!='<span style="color:red"><p>aaa</p></span><p>bbbb</p>' )return 'this is err32';
     if( $("#wrap").find("p:eq(0)").wrap("<span style=\"color:red\">111111</span>").end().html()!='<span style="color:red"><span style="color:red">111111<p>aaa</p></span></span><p>bbbb</p>' )return 'this is err33';
 
-console.log( $("#next").find("li:eq(0)").next().html() )
+// console.log( $("#next").find("li:eq(0)").next().html() )
 
     if( $("#next").find("li:eq(0)").next().html()!='2' )return 'this is err34';
     if( $("#next").find("li:eq(0)").nextAll().text()!='2345' )return 'this is err35';
