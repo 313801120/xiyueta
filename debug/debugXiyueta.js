@@ -1,7 +1,7 @@
 ﻿// var xiyueta = require('xiyueta');
 var xiyueta = require('./../dist/nodejs.xiyueta.min.js');
 
-var html = '<html><head></head><body>\n<span>\n<div style="aa"></div>\n<div style="aa"></div>\n</span>\n</body></html>'
+var html = '<html><head></head><body></body></html>'
 //-------------------
 
 
@@ -17,7 +17,8 @@ if (type.indexOf("x") != -1) {
 
 function test_jQuery() {
 
-    if(  $("span").empty().html()!='' )return 'this is err1';
+    if(  $("div ul li:eq(1)").text()!='2' )return 'this is err1';
+    if(  $("div>p").text()!='aaa' )return 'this is err2';
 
     return 'test_jQuery OK';
 }

@@ -4,7 +4,7 @@
   </a>
 </p>
 
-
+The latest version  v1.3.6<br>
 
 ```js
 const xiyueta = require('xiyueta');

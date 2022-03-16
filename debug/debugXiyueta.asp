@@ -6,7 +6,7 @@ dim s
 %>
 
 <script language="javascript" runat="server">
- var html = '<html><head></head><body>\n<div>\n    <ul>\n        <li>this is 1</li>\n        <li>this is 2</li>\n        <li>this is 3</li>\n        <li>this is 4</li>\n        <li>this is 5</li>\n    </ul>\n</div>\n\n<</body></html>'
+ var html = '<html><head></head><body></body></html>'
 //-------------------
  
 var startTime = new Date();
@@ -19,7 +19,8 @@ console.log("xiyueta",new Date() - startTime + ' ms');
 
 function test_jQuery() {
 
-    if(  $("div").index() !='' )return 'this is err1';
+    if(  $("div ul li:eq(1)").text()!='2' )return 'this is err1';
+    if(  $("div>p").text()!='aaa' )return 'this is err2';
 
     return 'test_jQuery OK';
 }
