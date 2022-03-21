@@ -18,13 +18,13 @@ var _hmt = _hmt || [];
 })();
 </script>
 </head>
-<!-- update time 2021-10-24 16:26:15 -->
+<!-- update time 2022-03-21 16:09:59 -->
 <body style="margin-bottom: 70px;">
     <div class="container">
         <div class="row">
             <div class="col-md-2"> 
 <ul class="list-group">
-<li class="list-group-item">属性 <span class="badge">95</span></li>
+<li class="list-group-item">属性 <span class="badge">100</span></li>
 <li class="list-group-item"><a href="#xiyuetatext" title="获取匹配元素集合中每个元素的组合文本内容（包括它们的后代），或设置匹配元素的文本内容" >xiyueta().text()</a></li>
 <li class="list-group-item"><a href="#xiyuetahtml" title="获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容" >xiyueta().html()</a></li>
 <li class="list-group-item"><a href="#xiyuetafind" title="获取当前匹配元素集合中每个元素的后代" >xiyueta().find()</a></li>
@@ -53,9 +53,11 @@ var _hmt = _hmt || [];
 <li class="list-group-item"><a href="#xiyuetachildren" title="获取匹配元素集中每个元素的子元素，可设置由选择器过滤" >xiyueta().children()</a></li>
 <li class="list-group-item"><a href="#xiyuetaclosest" title="描述：对于集合中的每个元素，通过测试元素本身并在 DOM 树中向上遍历其祖先来获取与选择器匹配的第一个元素" >xiyueta().closest()</a></li>
 <li class="list-group-item"><a href="#xiyuetaend" title="结束当前链中最近一次的过滤操作，将匹配的元素集合返回到之前的状态" >xiyueta().end()</a></li>
+<li class="list-group-item"><a href="#xiyuetadata" title="存储与指定元素关联的任意数据和/或返回设置的值" >xiyueta().data()</a></li>
 <li class="list-group-item"><a href="#xiyuetashow" title="显示匹配的元素" >xiyueta().show()</a></li>
 <li class="list-group-item"><a href="#xiyuetahide" title="隐藏匹配的元素" >xiyueta().hide()</a></li>
 <li class="list-group-item"><a href="#xiyuetaindex" title="从匹配的元素中搜索给定的元素" >xiyueta().index()</a></li>
+<li class="list-group-item"><a href="#xiyuetaget" title="检索与对象匹配的 DOM 元素" >xiyueta().get()</a></li>
 <li class="list-group-item"><a href="#xiyuetatoArray" title="检索包含在集合中的所有元素，作为一个数组" >xiyueta().toArray()</a></li>
 <li class="list-group-item"><a href="#xiyuetaempty" title="从 DOM 中移除匹配元素集的所有子节点" >xiyueta().empty()</a></li>
 <li class="list-group-item"><a href="#xiyuetaparse" title="解析HTML字符串内容，第一个参数为html内容，第二个参数为是否自动修复html" >xiyueta().parse()</a></li>
@@ -85,7 +87,9 @@ var _hmt = _hmt || [];
 <li class="list-group-item"><a href="#xiyuetarepair" title="HTML修复,如果缺少HTML结束标签块则追加，如果多结束标签块则删除" >xiyueta().repair()</a></li>
 <li class="list-group-item"><a href="#xiyuetafullurl" title="处理网址完整，当前网址与文件路径进行处理，得到一个完整网址" >xiyueta.fullurl()</a></li>
 <li class="list-group-item"><a href="#xiyuetagetUrlFileName" title="获得网址里文件名称" >xiyueta.getUrlFileName()</a></li>
+<li class="list-group-item"><a href="#xiyuetagetUrlDir" title="获得网址里文件名称" >xiyueta.getUrlDir()</a></li>
 <li class="list-group-item"><a href="#xiyuetagetDomain" title="提取网址里的域名部分" >xiyueta.getDomain()</a></li>
+<li class="list-group-item"><a href="#xiyuetatoType" title="获得对象类型" >xiyueta.toType()</a></li>
 <li class="list-group-item"><a href="#xiyuetahtmlColor 工具方法 - xiyuetajs库" title="给html代码块着色" >xiyueta.htmlColor() 工具方法 - xiyueta.js库</a></li>
 <li class="list-group-item"><a href="#xiyuetaconfig" title="设置或修改配置" >xiyueta.config()</a></li>
 <li class="list-group-item"><a href="#xiyuetacharset" title="修改和获得网页编码" >xiyueta.charset()</a></li>
@@ -109,6 +113,7 @@ var _hmt = _hmt || [];
 <li class="list-group-item"><a href="#xiyuetaCSSbefore" title="在被选元素之前插入内容" >xiyuetaCSS().before()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSShtmlwrap" title="获取匹配元素集中第一个元素的HTMLwrap内容，或设置每个匹配元素的HTMLwrap内容包括自身标签块" >xiyuetaCSS().htmlwrap()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSScss" title="css查找与替换" >xiyuetaCSS().css()</a></li>
+<li class="list-group-item"><a href="#xiyuetaCSSeach" title="遍历匹配元素，为每个匹配元素规定运行的函数，返回false为停止循环" >xiyuetaCSS().each()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSSdebug" title="在浏览器调试面板里显示全部CSS结构" >xiyuetaCSS().debug()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSSprint" title="打印CSS对象全部内容" >xiyuetaCSS().print()</a></li>
 <li class="list-group-item"><a href="#xiyuetaCSSlength" title="当前匹配的元素数量" >xiyuetaCSS().length</a></li>
@@ -280,6 +285,11 @@ var _hmt = _hmt || [];
                     <small>结束当前链中最近一次的过滤操作，将匹配的元素集合返回到之前的状态
                         <br><a href="examples/xiyueta().end.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/end/" target="_balnk">查看官方文档介绍>></a>
                     </small>
+                </blockquote><blockquote><a name="xiyuetadata"></a>
+                    xiyueta().data()  api介绍
+                    <small>存储与指定元素关联的任意数据和/或返回设置的值
+                        <br><a href="examples/xiyueta().data.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/data/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
                 </blockquote><blockquote><a name="xiyuetashow"></a>
                     xiyueta().show()  api介绍
                     <small>显示匹配的元素
@@ -294,6 +304,11 @@ var _hmt = _hmt || [];
                     xiyueta().index()  api介绍
                     <small>从匹配的元素中搜索给定的元素
                         <br><a href="examples/xiyueta().index.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/index/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
+                </blockquote><blockquote><a name="xiyuetaget"></a>
+                    xiyueta().get()  api介绍
+                    <small>检索与对象匹配的 DOM 元素
+                        <br><a href="examples/xiyueta().get.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/get/" target="_balnk">查看官方文档介绍>></a>
                     </small>
                 </blockquote><blockquote><a name="xiyuetatoArray"></a>
                     xiyueta().toArray()  api介绍
@@ -440,10 +455,20 @@ var _hmt = _hmt || [];
                     <small>获得网址里文件名称
                         <br><a href="examples/xiyueta.getUrlFileName.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.geturlfilename/" target="_balnk">查看官方文档介绍>></a>
                     </small>
+                </blockquote><blockquote><a name="xiyuetagetUrlDir"></a>
+                    xiyueta.getUrlDir()  api介绍
+                    <small>获得网址里文件名称
+                        <br><a href="examples/xiyueta.getUrlDir.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.geturldir/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
                 </blockquote><blockquote><a name="xiyuetagetDomain"></a>
                     xiyueta.getDomain()  api介绍
                     <small>提取网址里的域名部分
                         <br><a href="examples/xiyueta.getDomain.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.getdomain/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
+                </blockquote><blockquote><a name="xiyuetatoType"></a>
+                    xiyueta.toType()  api介绍
+                    <small>获得对象类型
+                        <br><a href="examples/xiyueta.toType.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.totype/" target="_balnk">查看官方文档介绍>></a>
                     </small>
                 </blockquote><blockquote><a name="xiyuetahtmlColor 工具方法 - xiyuetajs库"></a>
                     xiyueta.htmlColor() 工具方法 - xiyueta.js库  api介绍
@@ -559,6 +584,11 @@ var _hmt = _hmt || [];
                     xiyuetaCSS().css()  api介绍
                     <small>css查找与替换
                         <br><a href="examples/xiyuetaCSS().css.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/css/" target="_balnk">查看官方文档介绍>></a>
+                    </small>
+                </blockquote><blockquote><a name="xiyuetaCSSeach"></a>
+                    xiyuetaCSS().each()  api介绍
+                    <small>遍历匹配元素，为每个匹配元素规定运行的函数，返回false为停止循环
+                        <br><a href="examples/xiyuetaCSS().each.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/each/" target="_balnk">查看官方文档介绍>></a>
                     </small>
                 </blockquote><blockquote><a name="xiyuetaCSSdebug"></a>
                     xiyuetaCSS().debug()  api介绍
