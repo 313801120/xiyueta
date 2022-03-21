@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyueta().is() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyueta().get() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -66,15 +66,19 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 
 /*
 .parse()    解析HTML
-.is() 	    根据选择器、元素或 xiyueta 对象检查当前匹配的一组元素，true如果这些元素中至少有一个与给定的参数匹配，则返回
+.get()      检索与对象匹配的 DOM 元素
 $.log()     在浏览器里显示内容 == document.write()
+.print()    打印HTML对象全部内容 format为格式化HTML
 */
 
-
-var html='&lt;div>xiyueta.com&lt;/div>&lt;span>&lt;/span>';
+var html='&lt;ul>&lt;li>aaa&lt;/li>&lt;li>bbb&lt;/li>&lt;li>ccc&lt;/li>&lt;/ul>';
 $().parse(html);
-$.log( $("div,span").is("p") );
-$.log( $("div,span").is("span") );
+$.log( $("span").get() );
+$.log( $("span").get(1) );
+$.log( $("ul").get() );
+$.log( $("ul").get(0) );
+$.log( $("ul").get(1) );
+$.log( $("li").get(2) );
 
 &lt;/script></textarea>
         </div>

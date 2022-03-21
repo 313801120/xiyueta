@@ -6,7 +6,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat'); //合并文件
 var uglify = require('gulp-uglify'); //压缩js文件
 var header = require('gulp-header'); //添加标头
-var footer = require('gulp-footer'); //添加主部
+var footer = require('gulp-footer'); //添加底部
 var replace = require('gulp-replace'); //替换内容
 var zip = require('gulp-zip'); //打包
 
@@ -36,8 +36,9 @@ var task = {
             .pipe(uglify())
             .pipe(header.apply(null, note))
             .pipe(gulp.dest(dist))
-    }, //生成nodejs JS文件
-    nodejs: function(ver) {
+            .pipe(gulp.dest('../xiyueta/js/'))//再复制一份到js/目录里
+    }, 
+    nodejs: function(ver) {//生成nodejs JS文件
         gulp.src([src + 'xiyueta.css.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
             .pipe(replace('_xyt.info\(\);', ''))
             .pipe(concat('nodejs.xiyueta.min.js'))
@@ -45,16 +46,16 @@ var task = {
             .pipe(header.apply(null, note))
             .pipe(footer.apply(null, nodejs))
             .pipe(gulp.dest(dist))
-    }, //生成nodejs源码 JS文件
-    nodejsSource: function(ver) {
+    }, 
+    nodejsSource: function(ver) {//生成nodejs源码 JS文件
         gulp.src([src + 'xiyueta.css.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
             .pipe(replace('_xyt.info\(\);', ''))
             .pipe(concat('nodejs.xiyueta.source.js'))
             .pipe(header.apply(null, note))
             .pipe(footer.apply(null, nodejs))
             .pipe(gulp.dest('../xiyueta/js/'))
-    }, //生成aspjs JS文件
-    aspjs: function(ver) {
+    },
+    aspjs: function(ver) { //生成aspjs JS文件
         gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.css.js', src + 'url.js', src + 'handle.js'])
             .pipe(replace('_xyt.info\(\);', ''))
             .pipe(replace('document.write\(', 'response.write\('))
@@ -62,7 +63,7 @@ var task = {
             .pipe(uglify())
             .pipe(header.apply(null, note))
             .pipe(gulp.dest(dist))
-    }, //生成aspjs 2 JS文件
+    },
     sourcejs: function(ver) { //这个已经放到webjs里，这个不暂时放着
         gulp.src([src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'common.js', src + 'xiyueta.css.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'url.js', src + 'tpl.js'])
             .pipe(concat('xiyueta.source.js'))
@@ -102,17 +103,22 @@ var task = {
 };
 
 //完整任务 gulp
-gulp.task('auto', function() { //rc 版：gulp --rc
+gulp.task('auto', (cb) => { //rc 版：gulp --rc
     task.webjs();
     task.nodejs();
     task.aspjs();
     task.nodejsSource();
 
     // task.sourcejs();//可以不需要，在webjs里已经生成
+
+
+    cb();
 });
 //copy gulp
-gulp.task('debug', function() { //rc 版：gulp --rc
+gulp.task('debug', (cb) => { //rc 版：gulp --rc
     task.debug();
     task.copyjs();
     task.zip();
+
+    cb();
 });

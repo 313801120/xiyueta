@@ -82,6 +82,13 @@ $.log($("a").item());
 document.write("&lt;br>");
 $.log($("a").item("href"));
 
+document.write("&lt;br>");
+var arr=$("*").item("href");
+for(var i=0;i&lt;arr.length;i++){
+    $.log(i,arr[i].value);
+	document.write("&lt;br>");
+}
+
 &lt;/script></textarea>
         </div>
     </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyueta().is() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyuetacss().each() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -66,15 +66,15 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 
 /*
 .parse()    解析HTML
-.is() 	    根据选择器、元素或 xiyueta 对象检查当前匹配的一组元素，true如果这些元素中至少有一个与给定的参数匹配，则返回
+.each()     遍历匹配元素，为每个匹配元素规定运行的函数，返回false为停止循环
 $.log()     在浏览器里显示内容 == document.write()
 */
 
-
-var html='&lt;div>xiyueta.com&lt;/div>&lt;span>&lt;/span>';
-$().parse(html);
-$.log( $("div,span").is("p") );
-$.log( $("div,span").is("span") );
+xiyuetaCSS().parse("a{color:red}b{color:blue}p{color:green}");
+xiyuetaCSS("(all)").each(function(i,obj){
+	$.log(i+"、", xiyuetaCSS(this).css("color"));
+	document.write("&lt;br>")
+})
 
 &lt;/script></textarea>
         </div>
