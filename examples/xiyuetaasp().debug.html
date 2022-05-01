@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>测试 xiyueta.js库 xiyueta().nav() 属性方法</title>
+    <title>测试 xiyueta.js库 xiyuetaasp().debug() 属性方法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> 
@@ -65,23 +65,15 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()    解析HTML
-.nav()      静态html生成CMS标签导航列表
-$.log()     在浏览器里显示内容 == document.write()
-.print()    打印HTML对象全部内容 format为格式化HTML
+.parse()    解析ASP
+.debug()    在浏览器调试面板里显示全部HTML结构 
 */
 
-var html = '&lt;div id="nav">\n\
-    &lt;li>&lt;a href="">网站首页&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">公司介绍&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">新闻中心&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">产品展示&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">联系我们&lt;/a>&lt;/li>\n\
-&lt;/div>';
-
-$().parse(html);
-$("div[id=nav] li").nav({row:10});
-$.log(xiyueta().print())
+var asp='&lt;'+'%\nresponse.write("abc")\n%>'
+ 
+xiyuetaASP().parse(asp); 
+xiyuetaASP().debug();
+xiyuetaASP().debug(true);
 
 &lt;/script></textarea>
         </div>

@@ -66,30 +66,34 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 
 /*
 .parse()    解析HTML
-.webtpl()   静态html自动生成CMS标签
+.webtpl()   静态html自动生成CMS标签 
 $.log()     在浏览器里显示内容 == document.write()
 .print()    打印HTML对象全部内容 format为格式化HTML
+$(":lv(1)").webtpl({type:'dedecms',minrow:4},3);   minrow为多少条相同则为真，3为搜索层数
 */
 
 var html = '&lt;div id="nav">\n\
-    &lt;li>&lt;a href="">网站首页&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">公司介绍&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">新闻中心&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">产品展示&lt;/a>&lt;/li>\n\
-    &lt;li>&lt;a href="">联系我们&lt;/a>&lt;/li>\n\
+    &lt;span>&lt;a href="">网站首页&lt;/a>&lt;/span>\n\
+    &lt;span>&lt;a href="">公司介绍&lt;/a>&lt;/span>\n\
+    &lt;span>&lt;a href="">新闻中心&lt;/a>&lt;/span>\n\
+    &lt;span>&lt;a href="">产品展示&lt;/a>&lt;/span>\n\
+    &lt;span>&lt;a href="">联系我们&lt;/a>&lt;/span>\n\
 &lt;/div>\n\
-&lt;div id="news">\n\
+&lt;ul id="news">\n\
     &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
     &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
     &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
     &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
     &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
     &lt;li>&lt;a href="">1111&lt;/a>&lt;/li>\n\
-&lt;/div>';
+&lt;/ul>';
 
 $().parse(html);
-$(":lv(1)").webtpl({type:'dedecms',item:4},3);
+$().webtpl({type:'dedecms'});
 $.log(xiyueta().print())
+
+document.write("&lt;br>显示搜到对象数组&lt;br>")
+$.log(xiyueta.autoFindObjArr)
 
 &lt;/script></textarea>
         </div>
