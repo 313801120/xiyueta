@@ -1,11 +1,57 @@
-<p align=center>
-  <a href="http://www.xiyueta.com">
-    <img src="http://www.xiyueta.com/images/logo-2.png" alt="xiyueta" width="360">
-  </a>
-</p>
+# xiyuetaBuilds
+#### Packaged version of xiyueta.js
 
-The latest version  v1.3.6_3<br>
+#### xiyuetaBuilds为xiyueta打包发布的库文件，不包含源码。
+#### xiyueta，解析html网页、css样式、asp程序,使用jQuery语法来遍历操作dom结构。
 
+![image](http://www.xiyueta.com/images/xiyueta_demo.gif)
+
+<br/>
+
+### 立即体验
+[在线Demo](http://www.xiyueta.com/demo/)
+
+### 功能一览
+```
+> .text() 获取匹配全部文本
+> .html() 获取匹配第一个HTML
+> .find() 获取匹配元素后代
+> .add() 追加新的匹配元素
+> .not() 删除匹配元素
+> .is() 检测匹配元素
+> .prop() 检测获得元素属性值
+> .attr() 第一个元素的属性值
+> .removeAttr() 删除元素属性
+> .css() 设置CSS属性
+> .val() 表单元素的值
+> .remove() 删除回调一组列表
+> .each() 遍历匹配元素
+> .addClass() 类添加到元素中
+> .hasClass() 搜索元素中类
+> .removeClass() 移除元素类
+> .wrap() 包裹到元素周围
+> .unwrap() 移除元素父元素
+> .parse() 解析html字符串
+> .debug() 打印html结构
+> .print() 打印HTML内容...
+```
+### 浏览器兼容性
+```Chrome（及同内核的浏览器如QQ浏览器、360浏览器等等），Firefox，Safari，IE 11```
+
+<br/>
+
+#### 1. 安装包
+  ```bash
+  npm i xiyueta
+  ```
+或
+  ```bash
+  yarn add xiyueta
+  ```
+
+<br/>
+
+#### 2. 在nodejs里使用xiyueta
 ```js
 const xiyueta = require('xiyueta');
 const $ = xiyueta.load('<h2 class="Title">Hello world</h2>');
@@ -16,98 +62,49 @@ $('h2.title').addClass('xyt');
 $.html();
 //=><h2 class="Title xyt">123</h2>
 ```
+<br/>
 
-
-
-
-<p align=center>
-
-xiyueta is a fast, small, and feature-rich JavaScript library<br>
-
-xiyueta.js library is faster than cheerio library to parse html<br>
-
-Fast, flexible, and lean implementation of core jQuery designed specifically for the server.
-
-
-
-</p>
-
-
----
-
-xiyueta.js库是一个快速解析html字符串，遍历网页dom结构的JavaScript库。它通过与jQuery语法使用一致的 API 使 html文档遍历和处理更加简单。xiyueta.js库是先解析网页html文本再遍历html网页dom，xiyueta.js库可以在WEB浏览器里使用，也可以在ASP程序里使用，也可以在nodejs里使用。 xiyueta库在nodejs里使用比chreeio库性能更好，xiyueta库比chreeio库解析html字符串的速度快3至5倍。 xiyueta.js库设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。xiyueta的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口。
-
-
-
-
-```js
-//web 里使用 xiyueta
-alert($('title').parse("<title>hello world!</title>").text());//解析html并获得网页标题
+#### 3. 在网页里使用xiyueta
+```html
+<script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
+<script>
+var html='<span>xiyueta</span><span>JS库</span>';
+$().parse(html);
+$.log($("span").text());
+</script>
 ```
+<br/>
 
-
-```js
-//nodejs 里使用 xiyueta
-var $ = require('./dist/nodejs.xiyueta.min.js');
-//var $ = require('xiyueta');//本地存在则可以直接调用 使用方法:在CMD里输入 node demo.nodejs版.js
-console.log($("title").parse("<title>hello world!</title>").text());                        
-```
-
-
-```text
-//asp 里使用 xiyueta
-<script  language="javascript" runat="server" src="./dist/asp.xiyueta.min.js"></script> 
+#### 4. 在asp程序里使用xiyueta
+```html
+<script  language="javascript" runat="server" src="dist/asp.xiyueta.min.js"></script> 
 <%
-'这里需要运行一段ASP程序，下面才可以正常运行javascript程序，疑问？
+'这里需要运行一段ASP程序，下面才可以正常运行javascript程序，疑问？'
 console.log(xiyueta("title").parse("<title>hello world!</title>").text()) 'ASP里不可以用 $ 直接用 xiyueta代替
 %>
 
 <script language="javascript" runat="server">
   console.log($("title").parse("<title>hello world!</title>").text()); //上面要运行一段ASP程序，这里才不会报错，因为要用到ASP程序里的response.write输出函数
+  
+
 </script>
 ```
 
+<br/>
 
-没错，她具备jQuery的影子，与jQuery不一样的地方是，xiyueta是直接操作纯html网页文本。
+### 资源链接
+<hr>
 
+文档官网：<a href="http://www.xiyueta.com/doc/" target="_blank">http://www.xiyueta.com/doc/</a>
 
-## 快速上手
+在线演示：<a href="http://www.xiyueta.com/demo/" target="_blank">http://www.xiyueta.com/demo/</a>
 
-获得xiyueta后，将其完整地部署到你的项目目录（或静态资源服务器），你只需要引入下述一个JS文件：
+Gitee仓库：<a href="https://gitee.com/313801120/xiyueta" target="_blank">https://gitee.com/313801120/xiyueta</a>
 
-```
-./dist/xiyueta.min.js //xiyueta核心文件
-```
+Github仓库：<a href="https://github.com/313801120/xiyueta" target="_blank">https://github.com/313801120/xiyueta</a> 
 
-不用去管其它任何文件。像使用jQuery语法一样来使用xiyueta
+更新日志：<a href="http://xiyueta/doc/log/" target="_blank">http://xiyueta/doc/log/</a>
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Start using xiyueta JS Library</title>
-</head>
-<body>
- 
-<!-- Your HTML code -->
- 
-<script src="./dist/xiyueta.min.js"></script>
-<script>
-  $().parse('<title>hello world!</title>'); //Parsing HTML
-  $("title").text("xiyueta.com"); //Set page title
-  alert($().print())
-</script> 
-</body>
-</html>
-```
+技术交流群：扫如下二维码加群
 
-## [阅读文档](http://www.xiyueta.com/doc/)
-从现在开始，尽情地拥抱 xiyueta 吧！但愿她能成为你长远的开发伴侣，化作你方寸屏幕前的亿万字节！
-
-## [教程案例](http://www.xiyueta.com/demo/)
-提供大量对xiyueta的属性方法使用教程
-
-## 相关
-[官网](http://www.xiyueta.com/)、[更新日志](http://www.xiyueta.com/doc/changelog.asp)
+![image](http://www.xiyueta.com/images/qq_qrcode.png)
