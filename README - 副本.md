@@ -1,5 +1,8 @@
-# xiyueta.js
-#### 解析html网页、css样式、asp程序,使用jQuery语法来遍历操作dom结构。
+# xiyuetaBuilds
+#### Packaged version of xiyueta.js
+
+#### xiyuetaBuilds为xiyueta打包发布的库文件，不包含源码。
+#### xiyueta，解析html网页、css样式、asp程序,使用jQuery语法来遍历操作dom结构。
 
 ![image](http://www.xiyueta.com/images/xiyueta_demo.gif)
 
