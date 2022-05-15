@@ -104,4 +104,4 @@ Github仓库：<a href="https://github.com/313801120/xiyueta" target="_blank">ht
 
 技术交流群：扫如下二维码加群
 
-![image](http://www.xiyueta.com/images/qq_qrcode.png)
+![image](http://www.xiyueta.com/images/qq2_qrcode.png)
