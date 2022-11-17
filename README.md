@@ -6,31 +6,31 @@
 <br/>
 
 ### 立即体验
-[在线Demo](https://www.xiyueta.com/demo/)
+<a href="https://www.xiyueta.com/demo/" target="_blank">在线Demo</a>
 
-### 功能一览
+### 常用功能一览
 ```
-> .text() 获取匹配全部文本
-> .html() 获取匹配第一个HTML
-> .find() 获取匹配元素后代
-> .add() 追加新的匹配元素
-> .not() 删除匹配元素
-> .is() 检测匹配元素
-> .prop() 检测获得元素属性值
-> .attr() 第一个元素的属性值
-> .removeAttr() 删除元素属性
-> .css() 设置CSS属性
-> .val() 表单元素的值
-> .remove() 删除回调一组列表
-> .each() 遍历匹配元素
-> .addClass() 类添加到元素中
-> .hasClass() 搜索元素中类
-> .removeClass() 移除元素类
-> .wrap() 包裹到元素周围
-> .unwrap() 移除元素父元素
-> .parse() 解析html字符串
-> .debug() 打印html结构
-> .print() 打印HTML内容...
+> xiyueta().text() 获取匹配全部文本
+> xiyueta().html() 获取匹配第一个HTML
+> xiyueta().find() 获取匹配元素后代
+> xiyueta().add() 追加新的匹配元素
+> xiyueta().not() 删除匹配元素
+> xiyueta().is() 检测匹配元素
+> xiyueta().prop() 检测获得元素属性值
+> xiyueta().attr() 第一个元素的属性值
+> xiyueta().removeAttr() 删除元素属性
+> xiyueta().css() 设置CSS属性
+> xiyueta().val() 表单元素的值
+> xiyueta().remove() 删除回调一组列表
+> xiyueta().each() 遍历匹配元素
+> xiyueta().addClass() 类添加到元素中
+> xiyueta().hasClass() 搜索元素中类
+> xiyueta().removeClass() 移除元素类
+> xiyueta().wrap() 包裹到元素周围
+> xiyueta().unwrap() 移除元素父元素
+> xiyueta().parse() 解析html字符串
+> xiyueta().debug() 打印html结构
+> xiyueta().print() 打印HTML内容...
 ```
 ### 浏览器兼容性
 ```Chrome（及同内核的浏览器如QQ浏览器、360浏览器等等），Firefox，Safari，IE 11```
@@ -100,7 +100,7 @@ Gitee仓库：<a href="https://gitee.com/313801120/xiyueta" target="_blank">http
 
 Github仓库：<a href="https://github.com/313801120/xiyueta" target="_blank">https://github.com/313801120/xiyueta</a> 
 
-更新日志：<a href="https://xiyueta/doc/log/" target="_blank">https://xiyueta/doc/log/</a>
+更新日志：<a href="https://www.xiyueta.com/doc/log/" target="_blank">https://www.xiyueta.com/doc/log/</a>
 
 技术交流群：扫如下二维码加群
 
