@@ -61,7 +61,7 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v2">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v14">&lt;/script>
 &lt;script>
 
 /*
@@ -71,9 +71,10 @@ $.log()     在浏览器里显示内容 == document.write()
 .print()    打印HTML对象全部内容 format为格式化HTML
 */
 
-var html='&lt;span>xiyuetaJS库&lt;/span>';
+var html='&lt;div>&lt;span>xiyuetaJS库&lt;/span>&lt;p>xiyuetaJS库&lt;/p>&lt;/div>';
 $().parse(html);
-$.log( $("span").index() );
+$.log( $("*").index()  );
+$.log( $("*").index("span") );
 
 &lt;/script></textarea>
         </div>

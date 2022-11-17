@@ -1,12 +1,12 @@
 # xiyueta.js
 #### 解析html网页、css样式、asp程序,使用jQuery语法来遍历操作dom结构。
 
-![image](http://www.xiyueta.com/images/xiyueta_demo.gif)
+![image](https://www.xiyueta.com/images/xiyueta_demo.gif)
 
 <br/>
 
 ### 立即体验
-[在线Demo](http://www.xiyueta.com/demo/)
+[在线Demo](https://www.xiyueta.com/demo/)
 
 ### 功能一览
 ```
@@ -63,7 +63,7 @@ $.html();
 
 #### 3. 在网页里使用xiyueta
 ```html
-<script src="http://www.xiyueta.com/js/xiyueta.min.js"></script>
+<script src="https://www.xiyueta.com/js/xiyueta.min.js"></script>
 <script>
 var html='<span>xiyueta</span><span>JS库</span>';
 $().parse(html);
@@ -92,16 +92,16 @@ console.log(xiyueta("title").parse("<title>hello world!</title>").text()) 'ASP�
 ### 资源链接
 <hr>
 
-文档官网：<a href="http://www.xiyueta.com/doc/" target="_blank">http://www.xiyueta.com/doc/</a>
+文档官网：<a href="https://www.xiyueta.com/doc/" target="_blank">https://www.xiyueta.com/doc/</a>
 
-在线演示：<a href="http://www.xiyueta.com/demo/" target="_blank">http://www.xiyueta.com/demo/</a>
+在线演示：<a href="https://www.xiyueta.com/demo/" target="_blank">https://www.xiyueta.com/demo/</a>
 
 Gitee仓库：<a href="https://gitee.com/313801120/xiyueta" target="_blank">https://gitee.com/313801120/xiyueta</a>
 
 Github仓库：<a href="https://github.com/313801120/xiyueta" target="_blank">https://github.com/313801120/xiyueta</a> 
 
-更新日志：<a href="http://xiyueta/doc/log/" target="_blank">http://xiyueta/doc/log/</a>
+更新日志：<a href="https://xiyueta/doc/log/" target="_blank">https://xiyueta/doc/log/</a>
 
 技术交流群：扫如下二维码加群
 
-![image](http://www.xiyueta.com/images/qq2_qrcode.png)
+![image](https://www.xiyueta.com/images/qq2_qrcode.png)

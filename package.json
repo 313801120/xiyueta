@@ -1,17 +1,25 @@
 {
   "name": "xiyueta",
-  "version": "1.3.4",
-  "description": "xiyueta.js库可以快速解析html字符串，遍历网页dom结构的JavaScript库。它通过与jQuery语法使用一致的 API 使 html文档遍历和处理更加简单。xiyueta.js库是先解析网页html文本再遍历html网页dom，xiyueta.js库可以在WEB浏览器里使用，也可以在ASP程序里使用，也可以在nodejs里使用",
+  "title": "xiyueta.js",
+  "version": "1.3.8",
+  "description": "JavaScript library for html string  operations",
+  "license": "MIT",
+  "scripts": {
+    "test": "node debug/nodejs/test.js"
+  },
   "author": {
     "name": "xiyueta",
     "email": "313801120@qq.com",
     "url": "http://xiyueta.com"
   },
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/313801120/xiyueta.git"
+  },
   "keywords": [
     "xiyueta",
     "xiyueta.js",
-    "xiyuetaJS库",
+    "xiyuetaJS library",
     "cheerio",
     "htmlparser",
     "jquery",
@@ -20,18 +28,11 @@
     "parser",
     "html"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/313801120/xiyueta.git"
-  },
   "bugs": {
     "url": "https://github.com/313801120/xiyueta/issues"
   },
   "homepage": "https://xiyueta.js.org/",
   "main": "dist/nodejs.xiyueta.min.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
   }
 }

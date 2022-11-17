@@ -61,7 +61,7 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v2">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v14">&lt;/script>
 &lt;script>
 
 /*
@@ -70,6 +70,21 @@ $.log()   	   在浏览器里显示内容 == document.write()
 */
 
 var s=$.getDomain("http://www.xiyueta.com/css/style.css");
+$.log(s);
+
+var s=$.getDomain("http://www.xiyueta.com/css/style.css",true);
+$.log(s); 
+
+var s=$.getDomain("https://xiyueta.com/case/?page=1",true);
+$.log(s); 
+
+var s=$.getDomain("ftp://xiyueta.com/1.asp",true);
+$.log(s); 
+
+var s=$.getDomain("1.jpg",true);
+$.log(s); 
+
+var s=$.getDomain("//xiyueta.com/1.asp",true);
 $.log(s);
 
 &lt;/script></textarea>

@@ -1,5 +1,6 @@
 
 # 更新日志
-  * [1.2.x](http://www.xiyueta.com/doc/changelog.asp#1-2-0)
-  * [1.1.x](http://www.xiyueta.com/doc/changelog.asp#1-1-0)
-  * [1.0.x](http://www.xiyueta.com/doc/changelog.asp#1-0-0)
+  * [1.3.x](https://www.xiyueta.com/doc/log/#1-3-0)
+  * [1.2.x](https://www.xiyueta.com/doc/log/#1-2-0)
+  * [1.1.x](https://www.xiyueta.com/doc/log/#1-1-0)
+  * [1.0.x](https://www.xiyueta.com/doc/log/#1-0-0)

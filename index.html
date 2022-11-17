@@ -23,113 +23,105 @@ var _hmt = _hmt || [];
     <div class="container">
         <div class="row">
             <div class="col-md-2"> 
-<ul class="list-group">
-<li class="list-group-item">属性 <span class="badge">101</span></li>
-<li class="list-group-item"><a href="#xiyuetatext" title="获取匹配元素集合中每个元素的组合文本内容（包括它们的后代），或设置匹配元素的文本内容" >xiyueta().text()</a></li>
-<li class="list-group-item"><a href="#xiyuetahtml" title="获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容" >xiyueta().html()</a></li>
-<li class="list-group-item"><a href="#xiyuetafind" title="获取当前匹配元素集合中每个元素的后代" >xiyueta().find()</a></li>
-<li class="list-group-item"><a href="#xiyuetaadd" title="创建一个新的 xiyueta 对象，将元素添加到匹配的元素集中" >xiyueta().add()</a></li>
-<li class="list-group-item"><a href="#xiyuetanot" title="从匹配的元素集中删除元素" >xiyueta().not()</a></li>
-<li class="list-group-item"><a href="#xiyuetais" title="根据选择器、元素或 xiyueta 对象检查当前匹配的一组元素，true如果这些元素中至少有一个与给定的参数匹配，则返回" >xiyueta().is()</a></li>
-<li class="list-group-item"><a href="#xiyuetaprop" title="获取匹配元素集中第一个元素的属性值，或为每个匹配元素设置一个或多个属性(会检测元素是否有指定属性)" >xiyueta().prop()</a></li>
-<li class="list-group-item"><a href="#xiyuetaattr" title="获取匹配元素集中第一个元素的属性值，或为每个匹配元素设置一个或多个属性" >xiyueta().attr()</a></li>
-<li class="list-group-item"><a href="#xiyuetaremoveAttr" title="从匹配元素集中的每个元素中删除一个属性" >xiyueta().removeAttr()</a></li>
-<li class="list-group-item"><a href="#xiyuetacss" title="获取匹配元素集中第一个元素的CSS属性值，或者为每个匹配元素设置一个或多个CSS属性" >xiyueta().css()</a></li>
-<li class="list-group-item"><a href="#xiyuetaval" title="获取input,select和textarea等表单元素的值" >xiyueta().val()</a></li>
-<li class="list-group-item"><a href="#xiyuetaremove" title="从DOM中删除匹配的元素集" >xiyueta().remove()</a></li>
-<li class="list-group-item"><a href="#xiyuetaeach" title="遍历匹配元素，为每个匹配元素规定运行的函数，返回false为停止循环" >xiyueta().each()</a></li>
-<li class="list-group-item"><a href="#xiyuetaaddClass" title="将指定的类添加到匹配元素集中的每个元素" >xiyueta().addClass()</a></li>
-<li class="list-group-item"><a href="#xiyuetahasClass" title="确定是否有任何匹配的元素被分配给给定的类" >xiyueta().hasClass()</a></li>
-<li class="list-group-item"><a href="#xiyuetaremoveClass" title="从匹配元素集中的每个元素中删除单个类、多个类或所有类" >xiyueta().removeClass()</a></li>
-<li class="list-group-item"><a href="#xiyuetawrap" title="将 HTML 结构包裹在匹配元素集中的每个元素周围" >xiyueta().wrap()</a></li>
-<li class="list-group-item"><a href="#xiyuetaunwrap" title="从 DOM 中移除匹配元素集的父元素，将匹配元素留在原处" >xiyueta().unwrap()</a></li>
-<li class="list-group-item"><a href="#xiyuetanext" title="获取匹配元素集中每个元素的紧随其后的兄弟元素。如果提供了选择器，则仅当它与该选择器匹配时才检索下一个兄弟" >xiyueta().next()</a></li>
-<li class="list-group-item"><a href="#xiyuetanextAll" title="获取匹配元素集中每个元素的所有后续同级元素，可选择由选择器过滤" >xiyueta().nextAll()</a></li>
-<li class="list-group-item"><a href="#xiyuetaprev" title="获取匹配元素集中每个元素的前一个兄弟元素。如果提供了选择器，则仅当它与该选择器匹配时才检索前一个兄弟" >xiyueta().prev()</a></li>
-<li class="list-group-item"><a href="#xiyuetaprevAll" title="获取匹配元素集中每个元素的所有先前同级元素，可设置由选择器过滤" >xiyueta().prevAll()</a></li>
-<li class="list-group-item"><a href="#xiyuetasiblings" title="获取匹配元素集中每个元素的兄弟元素，可设置由选择器过滤" >xiyueta().siblings()</a></li>
-<li class="list-group-item"><a href="#xiyuetaparent" title="获取当前匹配元素集合中每个元素的父元素，可设置由选择器过滤" >xiyueta().parent()</a></li>
-<li class="list-group-item"><a href="#xiyuetaparents" title="获取当前匹配元素集合中每个元素的祖先，可设置由选择器过滤" >xiyueta().parents()</a></li>
-<li class="list-group-item"><a href="#xiyuetachildren" title="获取匹配元素集中每个元素的子元素，可设置由选择器过滤" >xiyueta().children()</a></li>
-<li class="list-group-item"><a href="#xiyuetaclosest" title="描述：对于集合中的每个元素，通过测试元素本身并在 DOM 树中向上遍历其祖先来获取与选择器匹配的第一个元素" >xiyueta().closest()</a></li>
-<li class="list-group-item"><a href="#xiyuetaend" title="结束当前链中最近一次的过滤操作，将匹配的元素集合返回到之前的状态" >xiyueta().end()</a></li>
-<li class="list-group-item"><a href="#xiyuetadata" title="存储与指定元素关联的任意数据和/或返回设置的值" >xiyueta().data()</a></li>
-<li class="list-group-item"><a href="#xiyuetashow" title="显示匹配的元素" >xiyueta().show()</a></li>
-<li class="list-group-item"><a href="#xiyuetahide" title="隐藏匹配的元素" >xiyueta().hide()</a></li>
-<li class="list-group-item"><a href="#xiyuetaindex" title="从匹配的元素中搜索给定的元素" >xiyueta().index()</a></li>
-<li class="list-group-item"><a href="#xiyuetaget" title="检索与对象匹配的 DOM 元素" >xiyueta().get()</a></li>
-<li class="list-group-item"><a href="#xiyuetatoArray" title="检索包含在集合中的所有元素，作为一个数组" >xiyueta().toArray()</a></li>
-<li class="list-group-item"><a href="#xiyuetaempty" title="从 DOM 中移除匹配元素集的所有子节点" >xiyueta().empty()</a></li>
-<li class="list-group-item"><a href="#xiyuetaparse" title="解析HTML字符串内容，第一个参数为html内容，第二个参数为是否自动修复html" >xiyueta().parse()</a></li>
-<li class="list-group-item"><a href="#xiyuetadebug" title="在浏览器调试面板里显示全部HTML结构" >xiyueta().debug()</a></li>
-<li class="list-group-item"><a href="#xiyuetaprint" title="打印HTML对象全部内容" >xiyueta().print()</a></li>
-<li class="list-group-item"><a href="#xiyuetalength" title="当前匹配的元素数量" >xiyueta().length</a></li>
-<li class="list-group-item"><a href="#xiyueta 选择器" title="xiyueta 参考手册 - 选择器" >xiyueta 选择器</a></li>
-<li class="list-group-item"><a href="#xiyuetaeq" title="将一组匹配元素减少到指定索引处的元素" >xiyueta().eq()</a></li>
-<li class="list-group-item"><a href="#xiyuetafirst" title="将匹配元素的集合减少到集合中的第一个" >xiyueta().first()</a></li>
-<li class="list-group-item"><a href="#xiyuetalast" title="将匹配元素的集合减少到集合中的最后一个" >xiyueta().last()</a></li>
-<li class="list-group-item"><a href="#xiyuetaeven" title="将匹配元素的集合减少到集合中的偶数，从零开始编号" >xiyueta().even()</a></li>
-<li class="list-group-item"><a href="#xiyuetaodd" title="将匹配元素的集合减少到集合中的奇数元素，从零开始编号" >xiyueta().odd()</a></li>
-<li class="list-group-item"><a href="#xiyuetaslice" title="将匹配元素集缩减为由一系列索引指定的子集" >xiyueta().slice()</a></li>
-<li class="list-group-item"><a href="#xiyuetaappend" title="在被选元素的结尾插入内容" >xiyueta().append()</a></li>
-<li class="list-group-item"><a href="#xiyuetaprepend" title="在被选元素的开头插入内容" >xiyueta().prepend()</a></li>
-<li class="list-group-item"><a href="#xiyuetaafter" title="在被选元素之后插入内容" >xiyueta().after()</a></li>
-<li class="list-group-item"><a href="#xiyuetabefore" title="在被选元素之前插入内容" >xiyueta().before()</a></li>
-<li class="list-group-item"><a href="#xiyuetareplaceWith" title="用提供的新内容替换匹配元素集中的每个元素，并返回被删除的元素集" >xiyueta().replaceWith()</a></li>
-<li class="list-group-item"><a href="#xiyuetahtmlwrap" title="获得匹配元素块内容，包括当前双标记开始和结束部分,出现多个时，只显示第一条" >xiyueta().htmlwrap()</a></li>
-<li class="list-group-item"><a href="#xiyuetadom" title="获取匹配元素集中第一个元素的HTML结构，与jQuery不同，jQuery没有这个方法，这个方法是为了找相似块标签而创建" >xiyueta().dom()</a></li>
-<li class="list-group-item"><a href="#xiyuetaswap" title="让两个HTML标记块之间互换位置，与jQuery不同，jQuery没有这个方法，这个方法是为了两个标签块之间互换位置" >xiyueta().swap()</a></li>
-<li class="list-group-item"><a href="#xiyuetafindlv" title="将一组匹配元素减少到指定lv处的元素" >xiyueta().findlv()</a></li>
-<li class="list-group-item"><a href="#xiyuetagetlabel" title="获取匹配元素集中第一个元素的label标签名" >xiyueta().getlabel()</a></li>
-<li class="list-group-item"><a href="#xiyuetagetlv" title="获取匹配元素集中第一个元素的lv层级数" >xiyueta().getlv()</a></li>
-<li class="list-group-item"><a href="#xiyuetaitem" title="遍历匹配元素，获得元素对象和指定属性值" >xiyueta().item()</a></li>
-<li class="list-group-item"><a href="#xiyuetafindWithItem" title="找相同dom结束元素" >xiyueta().findWithItem()</a></li>
-<li class="list-group-item"><a href="#xiyuetarepair" title="HTML修复,如果缺少HTML结束标签块则追加，如果多结束标签块则删除" >xiyueta().repair()</a></li>
-<li class="list-group-item"><a href="#xiyuetafullurl" title="处理网址完整，当前网址与文件路径进行处理，得到一个完整网址" >xiyueta.fullurl()</a></li>
-<li class="list-group-item"><a href="#xiyuetagetUrlFileName" title="获得网址里文件名称" >xiyueta.getUrlFileName()</a></li>
-<li class="list-group-item"><a href="#xiyuetagetUrlToFileName" title="获得网址对应的文件名称" >xiyueta.getUrlToFileName()</a></li>
-<li class="list-group-item"><a href="#xiyuetagetUrlDir" title="获得网址里文件名称" >xiyueta.getUrlDir()</a></li>
-<li class="list-group-item"><a href="#xiyuetagetDomain" title="提取网址里的域名部分" >xiyueta.getDomain()</a></li>
-<li class="list-group-item"><a href="#xiyuetatoType" title="获得对象类型" >xiyueta.toType()</a></li>
-<li class="list-group-item"><a href="#xiyuetahtmlColor" title="给html代码块着色" >xiyueta.htmlColor()</a></li>
-<li class="list-group-item"><a href="#xiyuetaconfig" title="设置或修改配置" >xiyueta.config()</a></li>
-<li class="list-group-item"><a href="#xiyuetacharset" title="修改和获得网页编码" >xiyueta.charset()</a></li>
-<li class="list-group-item"><a href="#$tplconfig" title="设置或修改模板配置" >$.tplconfig()</a></li>
-<li class="list-group-item"><a href="#$autoFindTpl" title="自动寻找需要生成cms模板标签元素" >$.autoFindTpl()</a></li>
-<li class="list-group-item"><a href="#xiyuetahandle" title="处理匹配遍历xiyueta对象，返回数组对象" >xiyueta().handle()</a></li>
-<li class="list-group-item"><a href="#xiyuetascan" title="扫描网页以获得更多当前网页信息" >xiyueta().scan()</a></li>
-<li class="list-group-item"><a href="#xiyuetacutlabel" title="提取网页标记块HTML内容及CSS部分，两部分合在一起" >xiyueta().cutlabel()</a></li>
-<li class="list-group-item"><a href="#xiyuetanav" title="静态html生成CMS标签导航列表" >xiyueta().nav()</a></li>
-<li class="list-group-item"><a href="#xiyuetanews" title="静态html生成CMS标签文章列表" >xiyueta().news()</a></li>
-<li class="list-group-item"><a href="#xiyuetawebtpl" title="静态html自动生成CMS标签" >xiyueta().webtpl()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSStext" title="获取匹配元素集合中每个元素的组合文本内容（包括它们的后代），或设置匹配元素的文本内容" >xiyuetaCSS().text()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSShtml" title="获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容" >xiyuetaCSS().html()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSbackground" title="css样式背景图片查找与替换" >xiyuetaCSS().background()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSgetsrc" title="获得CSS样式里资源地址" >xiyuetaCSS().getsrc()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSsetsrc" title="设置CSS样式里资源地址" >xiyuetaCSS().setsrc()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSremove" title="从回调列表中删除一个回调或一组回调" >xiyuetaCSS().remove()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSeq" title="将一组匹配元素减少到指定索引处的元素" >xiyuetaCSS().eq()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSlast" title="将匹配元素的集合减少到集合中的最后一个" >xiyuetaCSS().last()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSafter" title="在被选元素之后插入内容" >xiyuetaCSS().after()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSbefore" title="在被选元素之前插入内容" >xiyuetaCSS().before()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSShtmlwrap" title="获取匹配元素集中第一个元素的HTMLwrap内容，或设置每个匹配元素的HTMLwrap内容包括自身标签块" >xiyuetaCSS().htmlwrap()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSScss" title="css查找与替换" >xiyuetaCSS().css()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSeach" title="遍历匹配元素，为每个匹配元素规定运行的函数，返回false为停止循环" >xiyuetaCSS().each()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSdebug" title="在浏览器调试面板里显示全部CSS结构" >xiyuetaCSS().debug()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSprint" title="打印CSS对象全部内容" >xiyuetaCSS().print()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSlength" title="当前匹配的元素数量" >xiyuetaCSS().length</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSS 选择器" title="xiyuetaCSS 参考手册 - 选择器" >xiyuetaCSS 选择器</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSfirst" title="将匹配元素的集合减少到集合中的第一个" >xiyuetaCSS().first()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSconfig" title="设置或修改CSS配置" >xiyuetaCSS.config()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSScharset" title="修改和获得CSS样式文件编码" >xiyuetaCSS.charset()</a></li>
-<li class="list-group-item"><a href="#xiyuetaCSSlv" title="获得CSS遍历后最后的lv层级数" >xiyuetaCSS.lv()</a></li>
-<li class="list-group-item"><a href="#xiyuetaload" title="加载并解析html,与cheerio库里使用一致" >xiyueta.load()</a></li>
-<li class="list-group-item"><a href="#xiyuetahtml" title="打印HTML对象全部内容,与cheerio库里使用一致" >xiyueta.html()</a></li>
-<li class="list-group-item"><a href="#xiyuetaresolve" title="为URL或 href 插入 或 替换原有的标签" >xiyueta.resolve()</a></li>
 
+<!--list start--><ul class="list-group">
+<li class="list-group-item">xiyueta<br>对象属性<span class="badge">1</span></li>
+<li class="list-group-item"><a href="#xiyueta().length" >xiyueta().length</a></li>
 </ul>
+<ul class="list-group">
+<li class="list-group-item">xiyueta<br>属性方法<span class="badge">66</span></li>
+<li class="list-group-item"><a href="#xiyueta().text()" >xiyueta().text()</a></li>
+<li class="list-group-item"><a href="#xiyueta().html()" >xiyueta().html()</a></li>
+<li class="list-group-item"><a href="#xiyueta().find()" >xiyueta().find()</a></li>
+<li class="list-group-item"><a href="#xiyueta().add()" >xiyueta().add()</a></li>
+<li class="list-group-item"><a href="#xiyueta().not()" >xiyueta().not()</a></li>
+<li class="list-group-item"><a href="#xiyueta().is()" >xiyueta().is()</a></li>
+<li class="list-group-item"><a href="#xiyueta().prop()" >xiyueta().prop()</a></li>
+<li class="list-group-item"><a href="#xiyueta().attr()" >xiyueta().attr()</a></li>
+<li class="list-group-item"><a href="#xiyueta().removeAttr()" >xiyueta().removeAttr()</a></li>
+<li class="list-group-item"><a href="#xiyueta().css()" >xiyueta().css()</a></li>
+<li class="list-group-item"><a href="#xiyueta().val()" >xiyueta().val()</a></li>
+<li class="list-group-item"><a href="#xiyueta().remove()" >xiyueta().remove()</a></li>
+<li class="list-group-item"><a href="#xiyueta().each()" >xiyueta().each()</a></li>
+<li class="list-group-item"><a href="#xiyueta().addClass()" >xiyueta().addClass()</a></li>
+<li class="list-group-item"><a href="#xiyueta().hasClass()" >xiyueta().hasClass()</a></li>
+<li class="list-group-item"><a href="#xiyueta().removeClass()" >xiyueta().removeClass()</a></li>
+<li class="list-group-item"><a href="#xiyueta().wrap()" >xiyueta().wrap()</a></li>
+<li class="list-group-item"><a href="#xiyueta().unwrap()" >xiyueta().unwrap()</a></li>
+<li class="list-group-item"><a href="#xiyueta().next()" >xiyueta().next()</a></li>
+<li class="list-group-item"><a href="#xiyueta().nextAll()" >xiyueta().nextAll()</a></li>
+<li class="list-group-item"><a href="#xiyueta().prev()" >xiyueta().prev()</a></li>
+<li class="list-group-item"><a href="#xiyueta().prevAll()" >xiyueta().prevAll()</a></li>
+<li class="list-group-item"><a href="#xiyueta().siblings()" >xiyueta().siblings()</a></li>
+<li class="list-group-item"><a href="#xiyueta().parent()" >xiyueta().parent()</a></li>
+<li class="list-group-item"><a href="#xiyueta().parents()" >xiyueta().parents()</a></li>
+<li class="list-group-item"><a href="#xiyueta().children()" >xiyueta().children()</a></li>
+<li class="list-group-item"><a href="#xiyueta().closest()" >xiyueta().closest()</a></li>
+<li class="list-group-item"><a href="#xiyueta().end()" >xiyueta().end()</a></li>
+<li class="list-group-item"><a href="#xiyueta().data()" >xiyueta().data()</a></li>
+<li class="list-group-item"><a href="#xiyueta().show()" >xiyueta().show()</a></li>
+<li class="list-group-item"><a href="#xiyueta().hide()" >xiyueta().hide()</a></li>
+<li class="list-group-item"><a href="#xiyueta().get()" >xiyueta().get()</a></li>
+<li class="list-group-item"><a href="#xiyueta().toArray()" >xiyueta().toArray()</a></li>
+<li class="list-group-item"><a href="#xiyueta().empty()" >xiyueta().empty()</a></li>
+<li class="list-group-item"><a href="#xiyueta().parse()" >xiyueta().parse()</a></li>
+<li class="list-group-item"><a href="#xiyueta().debug()" >xiyueta().debug()</a></li>
+<li class="list-group-item"><a href="#xiyueta().print()" >xiyueta().print()</a></li>
+<li class="list-group-item"><a href="#xiyueta().eq()" >xiyueta().eq()</a></li>
+<li class="list-group-item"><a href="#xiyueta().first()" >xiyueta().first()</a></li>
+<li class="list-group-item"><a href="#xiyueta().last()" >xiyueta().last()</a></li>
+<li class="list-group-item"><a href="#xiyueta().even()" >xiyueta().even()</a></li>
+<li class="list-group-item"><a href="#xiyueta().odd()" >xiyueta().odd()</a></li>
+<li class="list-group-item"><a href="#xiyueta().slice()" >xiyueta().slice()</a></li>
+<li class="list-group-item"><a href="#xiyueta().append()" >xiyueta().append()</a></li>
+<li class="list-group-item"><a href="#xiyueta().prepend()" >xiyueta().prepend()</a></li>
+<li class="list-group-item"><a href="#xiyueta().after()" >xiyueta().after()</a></li>
+<li class="list-group-item"><a href="#xiyueta().before()" >xiyueta().before()</a></li>
+<li class="list-group-item"><a href="#xiyueta().index()" >xiyueta().index()</a></li>
+<li class="list-group-item"><a href="#xiyueta().replaceWith()" >xiyueta().replaceWith()</a></li>
+<li class="list-group-item"><a href="#xiyueta().htmlwrap()" >xiyueta().htmlwrap()</a></li>
+<li class="list-group-item"><a href="#xiyueta().dom()" >xiyueta().dom()</a></li>
+<li class="list-group-item"><a href="#xiyueta().swap()" >xiyueta().swap()</a></li>
+<li class="list-group-item"><a href="#xiyueta().findlv()" >xiyueta().findlv()</a></li>
+<li class="list-group-item"><a href="#xiyueta().getlabel()" >xiyueta().getlabel()</a></li>
+<li class="list-group-item"><a href="#xiyueta().getlv()" >xiyueta().getlv()</a></li>
+<li class="list-group-item"><a href="#xiyueta().item()" >xiyueta().item()</a></li>
+<li class="list-group-item"><a href="#xiyueta().findWithItem()" >xiyueta().findWithItem()</a></li>
+<li class="list-group-item"><a href="#xiyueta().repair()" >xiyueta().repair()</a></li>
+<li class="list-group-item"><a href="#xiyueta().getLabelParamList()" >xiyueta().getLabelParamList()</a></li>
+<li class="list-group-item"><a href="#xiyueta().handle()" >xiyueta().handle()</a></li>
+<li class="list-group-item"><a href="#xiyueta().scan()" >xiyueta().scan()</a></li>
+<li class="list-group-item"><a href="#xiyueta().cutlabel()" >xiyueta().cutlabel()</a></li>
+<li class="list-group-item"><a href="#xiyueta().nav()" >xiyueta().nav()</a></li>
+<li class="list-group-item"><a href="#xiyueta().news()" >xiyueta().news()</a></li>
+<li class="list-group-item"><a href="#xiyueta().link()" >xiyueta().link()</a></li>
+<li class="list-group-item"><a href="#xiyueta().webtpl()" >xiyueta().webtpl()</a></li>
+</ul>
+<ul class="list-group">
+<li class="list-group-item">xiyueta<br>工具方法<span class="badge">19</span></li>
+<li class="list-group-item"><a href="#xiyueta.fullurl()" >xiyueta.fullurl()</a></li>
+<li class="list-group-item"><a href="#xiyueta.getUrlFileName()" >xiyueta.getUrlFileName()</a></li>
+<li class="list-group-item"><a href="#xiyueta.getFileExt()" >xiyueta.getFileExt()</a></li>
+<li class="list-group-item"><a href="#xiyueta.getUrlToFileName()" >xiyueta.getUrlToFileName()</a></li>
+<li class="list-group-item"><a href="#xiyueta.getUrlDir()" >xiyueta.getUrlDir()</a></li>
+<li class="list-group-item"><a href="#xiyueta.getDomain()" >xiyueta.getDomain()</a></li>
+<li class="list-group-item"><a href="#xiyueta.getUrlParam()" >xiyueta.getUrlParam()</a></li>
+<li class="list-group-item"><a href="#xiyueta.toType()" >xiyueta.toType()</a></li>
+<li class="list-group-item"><a href="#xiyueta.htmlColor()" >xiyueta.htmlColor()</a></li>
+<li class="list-group-item"><a href="#xiyueta.config()" >xiyueta.config()</a></li>
+<li class="list-group-item"><a href="#xiyueta.charset()" >xiyueta.charset()</a></li>
+<li class="list-group-item"><a href="#xiyueta.tplconfig()" >xiyueta.tplconfig()</a></li>
+<li class="list-group-item"><a href="#xiyueta.autoFindTpl()" >xiyueta.autoFindTpl()</a></li>
+<li class="list-group-item"><a href="#xiyueta.log()" >xiyueta.log()</a></li>
+<li class="list-group-item"><a href="#xiyueta.getQueryString()" >xiyueta.getQueryString()</a></li>
+<li class="list-group-item"><a href="#xiyueta.resolve()" >xiyueta.resolve()</a></li>
+<li class="list-group-item"><a href="#xiyueta.getlog()" >xiyueta.getlog()</a></li>
+<li class="list-group-item"><a href="#xiyueta.load()" >xiyueta.load()</a></li>
+<li class="list-group-item"><a href="#xiyueta.html()" >xiyueta.html()</a></li>
+<!--list end-->
  
             </div>
+
             <div class="col-md-10">
                 <blockquote>
                           xiyueta.js库介绍
@@ -138,525 +130,450 @@ var _hmt = _hmt || [];
 <pre><font color="#0000ff">const</font><font color="#000000"> </font><font color="#0070c1">xiyueta</fontn><font color="#000000"> = </font><font color="795e26">require</font><font color="#000000">(</font><font color="#a31515">'xiyueta'</font><font color="#000000">);</font><br><font color="#0000ff">const</font><font color="#000000"> </font><font color="#0070c1">$</font><font color="#000000"> = </font><font color="#001080">xiyueta</font><font color="#000000">.</font><font color="795e26">load</font><font color="#000000">(</font><font color="#a31515">'&lt;h2 class="Title"&gt;Hello world&lt;/h2&gt;'</font><font color="#000000">);</font><br><br><font color="795e26">$</font><font color="#000000">(</font><font color="#a31515">'h2'</font><font color="#000000">).</font><font color="795e26">text</font><font color="#000000">(</font><font color="#a31515">123</font><font color="#000000">);</font><br><font color="795e26">$</font><font color="#000000">(</font><font color="#a31515">'h2.title'</font><font color="#000000">).</font><font color="795e26">addClass</font><font color="#000000">(</font><font color="#a31515">'xyt'</font><font color="#000000">);</font><br><br><font color="#001080">$</font><font color="#000000">.</font><font color="795e26">html</font><font color="#000000">();</font><br><font color="#008000">//=&gt;&lt;h2 class="Title xyt"&gt;123&lt;/h2&gt;</font>
 </pre>
 
-    <br><a href="http://www.xiyueta.com">进入官网</a>
+    <br><a href="https://www.xiyueta.com">进入官网</a>
      &nbsp;|&nbsp; 
      <a href="https://github.com/313801120/xiyueta">github</a>
      &nbsp;|&nbsp; 
      <a href="examples/xiyueta().default.html">xiyueta.js库演示</a>
                     </small>
                 </blockquote>
-
-                <blockquote><a name="xiyuetatext"></a>
-                    xiyueta().text()  api介绍
-                    <small>获取匹配元素集合中每个元素的组合文本内容（包括它们的后代），或设置匹配元素的文本内容
-                        <br><a href="examples/xiyueta().text.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/text/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetahtml"></a>
-                    xiyueta().html()  api介绍
-                    <small>获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容
-                        <br><a href="examples/xiyueta().html.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/html/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetafind"></a>
-                    xiyueta().find()  api介绍
-                    <small>获取当前匹配元素集合中每个元素的后代
-                        <br><a href="examples/xiyueta().find.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/find/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaadd"></a>
-                    xiyueta().add()  api介绍
-                    <small>创建一个新的 xiyueta 对象，将元素添加到匹配的元素集中
-                        <br><a href="examples/xiyueta().add.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/add/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetanot"></a>
-                    xiyueta().not()  api介绍
-                    <small>从匹配的元素集中删除元素
-                        <br><a href="examples/xiyueta().not.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/not/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetais"></a>
-                    xiyueta().is()  api介绍
-                    <small>根据选择器、元素或 xiyueta 对象检查当前匹配的一组元素，true如果这些元素中至少有一个与给定的参数匹配，则返回
-                        <br><a href="examples/xiyueta().is.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/is/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaprop"></a>
-                    xiyueta().prop()  api介绍
-                    <small>获取匹配元素集中第一个元素的属性值，或为每个匹配元素设置一个或多个属性(会检测元素是否有指定属性)
-                        <br><a href="examples/xiyueta().prop.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/prop/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaattr"></a>
-                    xiyueta().attr()  api介绍
-                    <small>获取匹配元素集中第一个元素的属性值，或为每个匹配元素设置一个或多个属性
-                        <br><a href="examples/xiyueta().attr.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/attr/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaremoveAttr"></a>
-                    xiyueta().removeAttr()  api介绍
-                    <small>从匹配元素集中的每个元素中删除一个属性
-                        <br><a href="examples/xiyueta().removeAttr.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/removeattr/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetacss"></a>
-                    xiyueta().css()  api介绍
-                    <small>获取匹配元素集中第一个元素的CSS属性值，或者为每个匹配元素设置一个或多个CSS属性
-                        <br><a href="examples/xiyueta().css.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/css/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaval"></a>
-                    xiyueta().val()  api介绍
-                    <small>获取input,select和textarea等表单元素的值
-                        <br><a href="examples/xiyueta().val.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/val/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaremove"></a>
-                    xiyueta().remove()  api介绍
-                    <small>从DOM中删除匹配的元素集
-                        <br><a href="examples/xiyueta().remove.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/remove/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaeach"></a>
-                    xiyueta().each()  api介绍
-                    <small>遍历匹配元素，为每个匹配元素规定运行的函数，返回false为停止循环
-                        <br><a href="examples/xiyueta().each.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/each/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaaddClass"></a>
-                    xiyueta().addClass()  api介绍
-                    <small>将指定的类添加到匹配元素集中的每个元素
-                        <br><a href="examples/xiyueta().addClass.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/addclass/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetahasClass"></a>
-                    xiyueta().hasClass()  api介绍
-                    <small>确定是否有任何匹配的元素被分配给给定的类
-                        <br><a href="examples/xiyueta().hasClass.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/hasclass/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaremoveClass"></a>
-                    xiyueta().removeClass()  api介绍
-                    <small>从匹配元素集中的每个元素中删除单个类、多个类或所有类
-                        <br><a href="examples/xiyueta().removeClass.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/removeclass/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetawrap"></a>
-                    xiyueta().wrap()  api介绍
-                    <small>将 HTML 结构包裹在匹配元素集中的每个元素周围
-                        <br><a href="examples/xiyueta().wrap.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/wrap/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaunwrap"></a>
-                    xiyueta().unwrap()  api介绍
-                    <small>从 DOM 中移除匹配元素集的父元素，将匹配元素留在原处
-                        <br><a href="examples/xiyueta().unwrap.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/unwrap/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetanext"></a>
-                    xiyueta().next()  api介绍
-                    <small>获取匹配元素集中每个元素的紧随其后的兄弟元素。如果提供了选择器，则仅当它与该选择器匹配时才检索下一个兄弟
-                        <br><a href="examples/xiyueta().next.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/next/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetanextAll"></a>
-                    xiyueta().nextAll()  api介绍
-                    <small>获取匹配元素集中每个元素的所有后续同级元素，可选择由选择器过滤
-                        <br><a href="examples/xiyueta().nextAll.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/nextall/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaprev"></a>
-                    xiyueta().prev()  api介绍
-                    <small>获取匹配元素集中每个元素的前一个兄弟元素。如果提供了选择器，则仅当它与该选择器匹配时才检索前一个兄弟
-                        <br><a href="examples/xiyueta().prev.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/prev/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaprevAll"></a>
-                    xiyueta().prevAll()  api介绍
-                    <small>获取匹配元素集中每个元素的所有先前同级元素，可设置由选择器过滤
-                        <br><a href="examples/xiyueta().prevAll.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/prevall/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetasiblings"></a>
-                    xiyueta().siblings()  api介绍
-                    <small>获取匹配元素集中每个元素的兄弟元素，可设置由选择器过滤
-                        <br><a href="examples/xiyueta().siblings.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/siblings/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaparent"></a>
-                    xiyueta().parent()  api介绍
-                    <small>获取当前匹配元素集合中每个元素的父元素，可设置由选择器过滤
-                        <br><a href="examples/xiyueta().parent.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/parent/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaparents"></a>
-                    xiyueta().parents()  api介绍
-                    <small>获取当前匹配元素集合中每个元素的祖先，可设置由选择器过滤
-                        <br><a href="examples/xiyueta().parents.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/parents/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetachildren"></a>
-                    xiyueta().children()  api介绍
-                    <small>获取匹配元素集中每个元素的子元素，可设置由选择器过滤
-                        <br><a href="examples/xiyueta().children.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/children/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaclosest"></a>
-                    xiyueta().closest()  api介绍
-                    <small>描述：对于集合中的每个元素，通过测试元素本身并在 DOM 树中向上遍历其祖先来获取与选择器匹配的第一个元素
-                        <br><a href="examples/xiyueta().closest.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/closest/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaend"></a>
-                    xiyueta().end()  api介绍
-                    <small>结束当前链中最近一次的过滤操作，将匹配的元素集合返回到之前的状态
-                        <br><a href="examples/xiyueta().end.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/end/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetadata"></a>
-                    xiyueta().data()  api介绍
-                    <small>存储与指定元素关联的任意数据和/或返回设置的值
-                        <br><a href="examples/xiyueta().data.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/data/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetashow"></a>
-                    xiyueta().show()  api介绍
-                    <small>显示匹配的元素
-                        <br><a href="examples/xiyueta().show.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/show/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetahide"></a>
-                    xiyueta().hide()  api介绍
-                    <small>隐藏匹配的元素
-                        <br><a href="examples/xiyueta().hide.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/hide/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaindex"></a>
-                    xiyueta().index()  api介绍
-                    <small>从匹配的元素中搜索给定的元素
-                        <br><a href="examples/xiyueta().index.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/index/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaget"></a>
-                    xiyueta().get()  api介绍
-                    <small>检索与对象匹配的 DOM 元素
-                        <br><a href="examples/xiyueta().get.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/get/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetatoArray"></a>
-                    xiyueta().toArray()  api介绍
-                    <small>检索包含在集合中的所有元素，作为一个数组
-                        <br><a href="examples/xiyueta().toArray.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/toarray/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaempty"></a>
-                    xiyueta().empty()  api介绍
-                    <small>从 DOM 中移除匹配元素集的所有子节点
-                        <br><a href="examples/xiyueta().empty.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/empty/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaparse"></a>
-                    xiyueta().parse()  api介绍
-                    <small>解析HTML字符串内容，第一个参数为html内容，第二个参数为是否自动修复html
-                        <br><a href="examples/xiyueta().parse.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/parse/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetadebug"></a>
-                    xiyueta().debug()  api介绍
-                    <small>在浏览器调试面板里显示全部HTML结构
-                        <br><a href="examples/xiyueta().debug.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/debug/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaprint"></a>
-                    xiyueta().print()  api介绍
-                    <small>打印HTML对象全部内容
-                        <br><a href="examples/xiyueta().print.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/print/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetalength"></a>
-                    xiyueta().length  api介绍
+<!--detail start-->                <blockquote><a name="xiyueta().length"></a>xiyueta().length 对象属性
                     <small>当前匹配的元素数量
-                        <br><a href="examples/xiyueta().length.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/length/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyueta 选择器"></a>
-                    xiyueta 选择器  api介绍
-                    <small>xiyueta 参考手册 - 选择器
-                        <br><a href="examples/xiyueta.selector_all.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/selector/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaeq"></a>
-                    xiyueta().eq()  api介绍
-                    <small>将一组匹配元素减少到指定索引处的元素
-                        <br><a href="examples/xiyueta().eq.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/eq/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetafirst"></a>
-                    xiyueta().first()  api介绍
-                    <small>将匹配元素的集合减少到集合中的第一个
-                        <br><a href="examples/xiyueta().first.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/first/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetalast"></a>
-                    xiyueta().last()  api介绍
-                    <small>将匹配元素的集合减少到集合中的最后一个
-                        <br><a href="examples/xiyueta().last.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/last/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaeven"></a>
-                    xiyueta().even()  api介绍
-                    <small>将匹配元素的集合减少到集合中的偶数，从零开始编号
-                        <br><a href="examples/xiyueta().even.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/even/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaodd"></a>
-                    xiyueta().odd()  api介绍
-                    <small>将匹配元素的集合减少到集合中的奇数元素，从零开始编号
-                        <br><a href="examples/xiyueta().odd.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/odd/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaslice"></a>
-                    xiyueta().slice()  api介绍
-                    <small>将匹配元素集缩减为由一系列索引指定的子集
-                        <br><a href="examples/xiyueta().slice.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/slice/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaappend"></a>
-                    xiyueta().append()  api介绍
-                    <small>在被选元素的结尾插入内容
-                        <br><a href="examples/xiyueta().append.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/append/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaprepend"></a>
-                    xiyueta().prepend()  api介绍
-                    <small>在被选元素的开头插入内容
-                        <br><a href="examples/xiyueta().prepend.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/prepend/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaafter"></a>
-                    xiyueta().after()  api介绍
-                    <small>在被选元素之后插入内容
-                        <br><a href="examples/xiyueta().after.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/after/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetabefore"></a>
-                    xiyueta().before()  api介绍
-                    <small>在被选元素之前插入内容
-                        <br><a href="examples/xiyueta().before.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/before/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetareplaceWith"></a>
-                    xiyueta().replaceWith()  api介绍
-                    <small>用提供的新内容替换匹配元素集中的每个元素，并返回被删除的元素集
-                        <br><a href="examples/xiyueta().replaceWith.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/replacewith/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetahtmlwrap"></a>
-                    xiyueta().htmlwrap()  api介绍
-                    <small>获得匹配元素块内容，包括当前双标记开始和结束部分,出现多个时，只显示第一条
-                        <br><a href="examples/xiyueta().htmlwrap.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/htmlwrap/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetadom"></a>
-                    xiyueta().dom()  api介绍
-                    <small>获取匹配元素集中第一个元素的HTML结构，与jQuery不同，jQuery没有这个方法，这个方法是为了找相似块标签而创建
-                        <br><a href="examples/xiyueta().dom.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/dom/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaswap"></a>
-                    xiyueta().swap()  api介绍
-                    <small>让两个HTML标记块之间互换位置，与jQuery不同，jQuery没有这个方法，这个方法是为了两个标签块之间互换位置
-                        <br><a href="examples/xiyueta().swap.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/swap/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetafindlv"></a>
-                    xiyueta().findlv()  api介绍
-                    <small>将一组匹配元素减少到指定lv处的元素
-                        <br><a href="examples/xiyueta().findlv.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/findlv/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetagetlabel"></a>
-                    xiyueta().getlabel()  api介绍
-                    <small>获取匹配元素集中第一个元素的label标签名
-                        <br><a href="examples/xiyueta().getlabel.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/getlabel/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetagetlv"></a>
-                    xiyueta().getlv()  api介绍
-                    <small>获取匹配元素集中第一个元素的lv层级数
-                        <br><a href="examples/xiyueta().getlv.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/getlv/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaitem"></a>
-                    xiyueta().item()  api介绍
-                    <small>遍历匹配元素，获得元素对象和指定属性值
-                        <br><a href="examples/xiyueta().item.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/item/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetafindWithItem"></a>
-                    xiyueta().findWithItem()  api介绍
-                    <small>找相同dom结束元素
-                        <br><a href="examples/xiyueta().findWithItem.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/findwithitem/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetarepair"></a>
-                    xiyueta().repair()  api介绍
-                    <small>HTML修复,如果缺少HTML结束标签块则追加，如果多结束标签块则删除
-                        <br><a href="examples/xiyueta().repair.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/repair/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetafullurl"></a>
-                    xiyueta.fullurl()  api介绍
-                    <small>处理网址完整，当前网址与文件路径进行处理，得到一个完整网址
-                        <br><a href="examples/xiyueta.fullurl.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.fullurl/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetagetUrlFileName"></a>
-                    xiyueta.getUrlFileName()  api介绍
-                    <small>获得网址里文件名称
-                        <br><a href="examples/xiyueta.getUrlFileName.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.geturlfilename/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetagetUrlToFileName"></a>
-                    xiyueta.getUrlToFileName()  api介绍
-                    <small>获得网址对应的文件名称
-                        <br><a href="examples/xiyueta.getUrlToFileName.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.geturltofilename/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetagetUrlDir"></a>
-                    xiyueta.getUrlDir()  api介绍
-                    <small>获得网址里文件名称
-                        <br><a href="examples/xiyueta.getUrlDir.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.geturldir/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetagetDomain"></a>
-                    xiyueta.getDomain()  api介绍
-                    <small>提取网址里的域名部分
-                        <br><a href="examples/xiyueta.getDomain.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.getdomain/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetatoType"></a>
-                    xiyueta.toType()  api介绍
-                    <small>获得对象类型
-                        <br><a href="examples/xiyueta.toType.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.totype/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetahtmlColor"></a>
-                    xiyueta.htmlColor()  api介绍
-                    <small>给html代码块着色
-                        <br><a href="examples/xiyueta.htmlColor.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.htmlcolor/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaconfig"></a>
-                    xiyueta.config()  api介绍
-                    <small>设置或修改配置
-                        <br><a href="examples/xiyueta.config.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.config/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetacharset"></a>
-                    xiyueta.charset()  api介绍
-                    <small>修改和获得网页编码
-                        <br><a href="examples/xiyueta.charset.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.charset/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="$tplconfig"></a>
-                    $.tplconfig()  api介绍
-                    <small>设置或修改模板配置
-                        <br><a href="examples/xiyueta.tplconfig.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.tplconfig/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="$autoFindTpl"></a>
-                    $.autoFindTpl()  api介绍
-                    <small>自动寻找需要生成cms模板标签元素
-                        <br><a href="examples/xiyueta.autoFindTpl.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.autofindtpl/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetahandle"></a>
-                    xiyueta().handle()  api介绍
-                    <small>处理匹配遍历xiyueta对象，返回数组对象
-                        <br><a href="examples/xiyueta().handle.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/handle/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetascan"></a>
-                    xiyueta().scan()  api介绍
-                    <small>扫描网页以获得更多当前网页信息
-                        <br><a href="examples/xiyueta().scan.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/scan/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetacutlabel"></a>
-                    xiyueta().cutlabel()  api介绍
-                    <small>提取网页标记块HTML内容及CSS部分，两部分合在一起
-                        <br><a href="examples/xiyueta().cutlabel.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/cutlabel/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetanav"></a>
-                    xiyueta().nav()  api介绍
-                    <small>静态html生成CMS标签导航列表
-                        <br><a href="examples/xiyueta().nav.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/nav/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetanews"></a>
-                    xiyueta().news()  api介绍
-                    <small>静态html生成CMS标签文章列表
-                        <br><a href="examples/xiyueta().news.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/news/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetawebtpl"></a>
-                    xiyueta().webtpl()  api介绍
-                    <small>静态html自动生成CMS标签
-                        <br><a href="examples/xiyueta().webtpl.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta/webtpl/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSStext"></a>
-                    xiyuetaCSS().text()  api介绍
-                    <small>获取匹配元素集合中每个元素的组合文本内容（包括它们的后代），或设置匹配元素的文本内容
-                        <br><a href="examples/xiyuetaCSS().text.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/text/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSShtml"></a>
-                    xiyuetaCSS().html()  api介绍
-                    <small>获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容
-                        <br><a href="examples/xiyuetaCSS().html.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/html/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSbackground"></a>
-                    xiyuetaCSS().background()  api介绍
-                    <small>css样式背景图片查找与替换
-                        <br><a href="examples/xiyuetaCSS().background.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/background/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSgetsrc"></a>
-                    xiyuetaCSS().getsrc()  api介绍
-                    <small>获得CSS样式里资源地址
-                        <br><a href="examples/xiyuetaCSS().getsrc.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/getsrc/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSsetsrc"></a>
-                    xiyuetaCSS().setsrc()  api介绍
-                    <small>设置CSS样式里资源地址
-                        <br><a href="examples/xiyuetaCSS().setsrc.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/setsrc/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSremove"></a>
-                    xiyuetaCSS().remove()  api介绍
-                    <small>从回调列表中删除一个回调或一组回调
-                        <br><a href="examples/xiyuetaCSS().remove.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/remove/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSeq"></a>
-                    xiyuetaCSS().eq()  api介绍
-                    <small>将一组匹配元素减少到指定索引处的元素
-                        <br><a href="examples/xiyuetaCSS().eq.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/eq/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSlast"></a>
-                    xiyuetaCSS().last()  api介绍
-                    <small>将匹配元素的集合减少到集合中的最后一个
-                        <br><a href="examples/xiyuetaCSS().last.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/last/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSafter"></a>
-                    xiyuetaCSS().after()  api介绍
-                    <small>在被选元素之后插入内容
-                        <br><a href="examples/xiyuetaCSS().after.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/after/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSbefore"></a>
-                    xiyuetaCSS().before()  api介绍
-                    <small>在被选元素之前插入内容
-                        <br><a href="examples/xiyuetaCSS().before.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/before/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSShtmlwrap"></a>
-                    xiyuetaCSS().htmlwrap()  api介绍
-                    <small>获取匹配元素集中第一个元素的HTMLwrap内容，或设置每个匹配元素的HTMLwrap内容包括自身标签块
-                        <br><a href="examples/xiyuetaCSS().htmlwrap.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/htmlwrap/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSScss"></a>
-                    xiyuetaCSS().css()  api介绍
-                    <small>css查找与替换
-                        <br><a href="examples/xiyuetaCSS().css.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/css/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSeach"></a>
-                    xiyuetaCSS().each()  api介绍
-                    <small>遍历匹配元素，为每个匹配元素规定运行的函数，返回false为停止循环
-                        <br><a href="examples/xiyuetaCSS().each.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/each/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSdebug"></a>
-                    xiyuetaCSS().debug()  api介绍
-                    <small>在浏览器调试面板里显示全部CSS结构
-                        <br><a href="examples/xiyuetaCSS().debug.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/debug/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSprint"></a>
-                    xiyuetaCSS().print()  api介绍
-                    <small>打印CSS对象全部内容
-                        <br><a href="examples/xiyuetaCSS().print.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/print/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSlength"></a>
-                    xiyuetaCSS().length  api介绍
-                    <small>当前匹配的元素数量
-                        <br><a href="examples/xiyuetaCSS().length.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/length/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSS 选择器"></a>
-                    xiyuetaCSS 选择器  api介绍
-                    <small>xiyuetaCSS 参考手册 - 选择器
-                        <br><a href="examples/xiyuetacss.selector_all.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/selector/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSfirst"></a>
-                    xiyuetaCSS().first()  api介绍
-                    <small>将匹配元素的集合减少到集合中的第一个
-                        <br><a href="examples/xiyuetaCSS().first.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/first/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSconfig"></a>
-                    xiyuetaCSS.config()  api介绍
-                    <small>设置或修改CSS配置
-                        <br><a href="examples/xiyuetaCSS.config.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/xiyuetacss.config/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSScharset"></a>
-                    xiyuetaCSS.charset()  api介绍
-                    <small>修改和获得CSS样式文件编码
-                        <br><a href="examples/xiyuetaCSS.charset.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/xiyuetacss.charset/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaCSSlv"></a>
-                    xiyuetaCSS.lv()  api介绍
-                    <small>获得CSS遍历后最后的lv层级数
-                        <br><a href="examples/xiyuetaCSS.lv.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyuetacss/xiyuetacss.lv/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaload"></a>
-                    xiyueta.load()  api介绍
-                    <small>加载并解析html,与cheerio库里使用一致
-                        <br><a href="examples/xiyueta.load.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.load/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetahtml"></a>
-                    xiyueta.html()  api介绍
-                    <small>打印HTML对象全部内容,与cheerio库里使用一致
-                        <br><a href="examples/xiyueta.html.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.html/" target="_balnk">查看官方文档介绍>></a>
-                    </small>
-                </blockquote><blockquote><a name="xiyuetaresolve"></a>
-                    xiyueta.resolve()  api介绍
-                    <small>为URL或 href 插入 或 替换原有的标签
-                        <br><a href="examples/xiyueta.resolve.html" target="_balnk">尝试一下>></a> | <a href="http://www.xiyueta.com/api/xiyueta.resolve/" target="_balnk">查看官方文档介绍>></a>
+                        <br><a href="examples/xiyueta().length.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/length/" target="_balnk">官方文档>></a>
                     </small>
                 </blockquote>
+                <blockquote><a name="xiyueta().text()"></a>xiyueta().text() 属性方法
+                    <small>获取匹配元素集合中每个元素的组合文本内容（包括它们的后代），或设置匹配元素的文本内容
+                        <br><a href="examples/xiyueta().text.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/text/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().html()"></a>xiyueta().html() 属性方法
+                    <small>获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容
+                        <br><a href="examples/xiyueta().html.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/html/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().find()"></a>xiyueta().find() 属性方法
+                    <small>获取当前匹配元素集合中每个元素的后代
+                        <br><a href="examples/xiyueta().find.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/find/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().add()"></a>xiyueta().add() 属性方法
+                    <small>创建一个新的 xiyueta 对象，将元素添加到匹配的元素集中
+                        <br><a href="examples/xiyueta().add.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/add/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().not()"></a>xiyueta().not() 属性方法
+                    <small>从匹配的元素集中删除元素
+                        <br><a href="examples/xiyueta().not.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/not/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().is()"></a>xiyueta().is() 属性方法
+                    <small>根据选择器、元素或 xiyueta 对象检查当前匹配的一组元素，如果这些元素中至少有一个与给定的参数匹配，则返回true
+                        <br><a href="examples/xiyueta().is.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/is/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().prop()"></a>xiyueta().prop() 属性方法
+                    <small>获取匹配元素集中第一个元素的属性值，或为每个匹配元素设置一个或多个属性(会检测元素是否有指定属性)
+                        <br><a href="examples/xiyueta().prop.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/prop/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().attr()"></a>xiyueta().attr() 属性方法
+                    <small>获取匹配元素集中第一个元素的属性值，或为每个匹配元素设置一个或多个属性
+                        <br><a href="examples/xiyueta().attr.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/attr/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().removeAttr()"></a>xiyueta().removeAttr() 属性方法
+                    <small>从匹配元素集中的每个元素中删除一个属性
+                        <br><a href="examples/xiyueta().removeAttr.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/removeAttr/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().css()"></a>xiyueta().css() 属性方法
+                    <small>获取匹配元素集中第一个元素的CSS属性值，或者为每个匹配元素设置一个或多个CSS属性
+                        <br><a href="examples/xiyueta().css.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/css/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().val()"></a>xiyueta().val() 属性方法
+                    <small>获取input,select和textarea等表单元素的值
+                        <br><a href="examples/xiyueta().val.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/val/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().remove()"></a>xiyueta().remove() 属性方法
+                    <small>从DOM中删除匹配的元素集
+                        <br><a href="examples/xiyueta().remove.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/remove/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().each()"></a>xiyueta().each() 属性方法
+                    <small>遍历匹配元素，为每个匹配元素规定运行的函数，返回false为停止循环
+                        <br><a href="examples/xiyueta().each.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/each/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().addClass()"></a>xiyueta().addClass() 属性方法
+                    <small>将指定的类添加到匹配元素集中的每个元素
+                        <br><a href="examples/xiyueta().addClass.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/addClass/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().hasClass()"></a>xiyueta().hasClass() 属性方法
+                    <small>确定是否有任何匹配的元素被分配给给定的类
+                        <br><a href="examples/xiyueta().hasClass.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/hasClass/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().removeClass()"></a>xiyueta().removeClass() 属性方法
+                    <small>从匹配元素集中的每个元素中删除单个类、多个类或所有类
+                        <br><a href="examples/xiyueta().removeClass.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/removeClass/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().wrap()"></a>xiyueta().wrap() 属性方法
+                    <small>将 HTML 结构包裹在匹配元素集中的每个元素周围
+                        <br><a href="examples/xiyueta().wrap.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/wrap/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().unwrap()"></a>xiyueta().unwrap() 属性方法
+                    <small>从 DOM 中移除匹配元素集的父元素，将匹配元素留在原处
+                        <br><a href="examples/xiyueta().unwrap.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/unwrap/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().next()"></a>xiyueta().next() 属性方法
+                    <small>获取匹配元素集中每个元素的紧随其后的兄弟元素。如果提供了选择器，则仅当它与该选择器匹配时才检索下一个兄弟
+                        <br><a href="examples/xiyueta().next.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/next/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().nextAll()"></a>xiyueta().nextAll() 属性方法
+                    <small>获取匹配元素集中每个元素的所有后续同级元素，可选择由选择器过滤
+                        <br><a href="examples/xiyueta().nextAll.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/nextAll/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().prev()"></a>xiyueta().prev() 属性方法
+                    <small>获取匹配元素集中每个元素的前一个兄弟元素。如果提供了选择器，则仅当它与该选择器匹配时才检索前一个兄弟
+                        <br><a href="examples/xiyueta().prev.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/prev/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().prevAll()"></a>xiyueta().prevAll() 属性方法
+                    <small>获取匹配元素集中每个元素的所有先前同级元素，可设置由选择器过滤
+                        <br><a href="examples/xiyueta().prevAll.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/prevAll/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().siblings()"></a>xiyueta().siblings() 属性方法
+                    <small>获取匹配元素集中每个元素的兄弟元素，可设置由选择器过滤
+                        <br><a href="examples/xiyueta().siblings.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/siblings/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().parent()"></a>xiyueta().parent() 属性方法
+                    <small>获取当前匹配元素集合中每个元素的父元素，可设置由选择器过滤
+                        <br><a href="examples/xiyueta().parent.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/parent/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().parents()"></a>xiyueta().parents() 属性方法
+                    <small>获取当前匹配元素集合中每个元素的祖先，可设置由选择器过滤
+                        <br><a href="examples/xiyueta().parents.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/parents/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().children()"></a>xiyueta().children() 属性方法
+                    <small>获取匹配元素集中每个元素的子元素，可设置由选择器过滤
+                        <br><a href="examples/xiyueta().children.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/children/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().closest()"></a>xiyueta().closest() 属性方法
+                    <small>描述：对于集合中的每个元素，通过测试元素本身并在 DOM 树中向上遍历其祖先来获取与选择器匹配的第一个元素
+                        <br><a href="examples/xiyueta().closest.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/closest/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().end()"></a>xiyueta().end() 属性方法
+                    <small>结束当前链中最近一次的过滤操作，将匹配的元素集合返回到之前的状态
+                        <br><a href="examples/xiyueta().end.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/end/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().data()"></a>xiyueta().data() 属性方法
+                    <small>存储与指定元素关联的任意数据和/或返回设置的值
+                        <br><a href="examples/xiyueta().data.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/data/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().show()"></a>xiyueta().show() 属性方法
+                    <small>显示匹配的元素
+                        <br><a href="examples/xiyueta().show.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/show/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().hide()"></a>xiyueta().hide() 属性方法
+                    <small>隐藏匹配的元素
+                        <br><a href="examples/xiyueta().hide.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/hide/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().get()"></a>xiyueta().get() 属性方法
+                    <small>检索与对象匹配的 DOM 元素
+                        <br><a href="examples/xiyueta().get.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/get/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().toArray()"></a>xiyueta().toArray() 属性方法
+                    <small>检索包含在集合中的所有元素，作为一个数组
+                        <br><a href="examples/xiyueta().toArray.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/toArray/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().empty()"></a>xiyueta().empty() 属性方法
+                    <small>从 DOM 中移除匹配元素集的所有子节点
+                        <br><a href="examples/xiyueta().empty.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/empty/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().parse()"></a>xiyueta().parse() 属性方法
+                    <small>解析HTML字符串内容，第一个参数为html内容，第二个参数为是否自动修复html
+                        <br><a href="examples/xiyueta().parse.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/parse/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().debug()"></a>xiyueta().debug() 属性方法
+                    <small>在浏览器调试面板里显示全部HTML结构
+                        <br><a href="examples/xiyueta().debug.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/debug/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().print()"></a>xiyueta().print() 属性方法
+                    <small>打印HTML对象全部内容
+                        <br><a href="examples/xiyueta().print.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/print/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().eq()"></a>xiyueta().eq() 属性方法
+                    <small>将一组匹配元素减少到指定索引处的元素
+                        <br><a href="examples/xiyueta().eq.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/eq/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().first()"></a>xiyueta().first() 属性方法
+                    <small>将匹配元素的集合减少到集合中的第一个
+                        <br><a href="examples/xiyueta().first.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/first/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().last()"></a>xiyueta().last() 属性方法
+                    <small>将匹配元素的集合减少到集合中的最后一个
+                        <br><a href="examples/xiyueta().last.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/last/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().even()"></a>xiyueta().even() 属性方法
+                    <small>将匹配元素的集合减少到集合中的偶数，从零开始编号
+                        <br><a href="examples/xiyueta().even.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/even/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().odd()"></a>xiyueta().odd() 属性方法
+                    <small>将匹配元素的集合减少到集合中的奇数元素，从零开始编号
+                        <br><a href="examples/xiyueta().odd.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/odd/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().slice()"></a>xiyueta().slice() 属性方法
+                    <small>将匹配元素集缩减为由一系列索引指定的子集
+                        <br><a href="examples/xiyueta().slice.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/slice/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().append()"></a>xiyueta().append() 属性方法
+                    <small>在被选元素的结尾插入内容
+                        <br><a href="examples/xiyueta().append.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/append/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().prepend()"></a>xiyueta().prepend() 属性方法
+                    <small>在被选元素的开头插入内容
+                        <br><a href="examples/xiyueta().prepend.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/prepend/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().after()"></a>xiyueta().after() 属性方法
+                    <small>在被选元素之后插入内容
+                        <br><a href="examples/xiyueta().after.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/after/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().before()"></a>xiyueta().before() 属性方法
+                    <small>在被选元素之前插入内容
+                        <br><a href="examples/xiyueta().before.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/before/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().index()"></a>xiyueta().index() 属性方法
+                    <small>从匹配的元素中搜索给定的元素
+                        <br><a href="examples/xiyueta().index.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/index/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().replaceWith()"></a>xiyueta().replaceWith() 属性方法
+                    <small>用提供的新内容替换匹配元素集中的每个元素，并返回被删除的元素集
+                        <br><a href="examples/xiyueta().replaceWith.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/replaceWith/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().htmlwrap()"></a>xiyueta().htmlwrap() 属性方法
+                    <small>获得匹配元素块内容，包括当前双标记开始和结束部分,出现多个时，只显示第一条
+                        <br><a href="examples/xiyueta().htmlwrap.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/htmlwrap/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().dom()"></a>xiyueta().dom() 属性方法
+                    <small>获取匹配元素集中第一个元素的HTML结构，与jQuery不同，jQuery没有这个方法，这个方法是为了找相似块标签而创建
+                        <br><a href="examples/xiyueta().dom.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/dom/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().swap()"></a>xiyueta().swap() 属性方法
+                    <small>让两个HTML标记块之间互换位置，与jQuery不同，jQuery没有这个方法，这个方法是为了两个标签块之间互换位置
+                        <br><a href="examples/xiyueta().swap.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/swap/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().findlv()"></a>xiyueta().findlv() 属性方法
+                    <small>将一组匹配元素减少到指定lv处的元素
+                        <br><a href="examples/xiyueta().findlv.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/findlv/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().getlabel()"></a>xiyueta().getlabel() 属性方法
+                    <small>获取匹配元素集中第一个元素的label标签名
+                        <br><a href="examples/xiyueta().getlabel.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/getlabel/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().getlv()"></a>xiyueta().getlv() 属性方法
+                    <small>获取匹配元素集中第一个元素的lv层级数
+                        <br><a href="examples/xiyueta().getlv.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/getlv/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().item()"></a>xiyueta().item() 属性方法
+                    <small>遍历匹配元素，获得元素对象和指定属性值
+                        <br><a href="examples/xiyueta().item.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/item/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().findWithItem()"></a>xiyueta().findWithItem() 属性方法
+                    <small>找相同dom结束元素
+                        <br><a href="examples/xiyueta().findWithItem.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/findWithItem/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().repair()"></a>xiyueta().repair() 属性方法
+                    <small>HTML修复,如果缺少HTML结束标签块则追加，如果多结束标签块则删除
+                        <br><a href="examples/xiyueta().repair.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/repair/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().getLabelParamList()"></a>xiyueta().getLabelParamList() 属性方法
+                    <small>获得匹配元素集中的第一个元素中标签参数列表
+                        <br><a href="examples/xiyueta().getLabelParamList.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/getLabelParamList/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().handle()"></a>xiyueta().handle() 属性方法
+                    <small>处理匹配遍历xiyueta对象，返回数组对象
+                        <br><a href="examples/xiyueta().handle.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/handle/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().scan()"></a>xiyueta().scan() 属性方法
+                    <small>扫描网页以获得更多当前网页信息
+                        <br><a href="examples/xiyueta().scan.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/scan/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().cutlabel()"></a>xiyueta().cutlabel() 属性方法
+                    <small>提取网页标记块HTML内容及CSS部分，两部分合在一起
+                        <br><a href="examples/xiyueta().cutlabel.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/cutlabel/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().nav()"></a>xiyueta().nav() 属性方法
+                    <small>静态html生成CMS标签导航列表
+                        <br><a href="examples/xiyueta().nav.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/nav/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().news()"></a>xiyueta().news() 属性方法
+                    <small>静态html生成CMS标签文章列表
+                        <br><a href="examples/xiyueta().news.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/news/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().link()"></a>xiyueta().link() 属性方法
+                    <small>静态html生成CMS标签友情链接列表
+                        <br><a href="examples/xiyueta().link.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/link/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().webtpl()"></a>xiyueta().webtpl() 属性方法
+                    <small>静态html自动生成CMS标签
+                        <br><a href="examples/xiyueta().webtpl.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/webtpl/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.fullurl()"></a>xiyueta.fullurl() 工具方法
+                    <small>处理网址完整，当前网址与文件路径进行处理，得到一个完整网址，如果第2个参数(文件路径)为空则返回空，如果第2个参数(文件路径)为一个完整的网址，则返回第2个参数(文件路径)网址
+                        <br><a href="examples/xiyueta.fullurl.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.fullurl/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.getUrlFileName()"></a>xiyueta.getUrlFileName() 工具方法
+                    <small>获得网址里文件名称
+                        <br><a href="examples/xiyueta.getUrlFileName.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.getUrlFileName/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.getFileExt()"></a>xiyueta.getFileExt() 工具方法
+                    <small>获得网址里文件扩展名
+                        <br><a href="examples/xiyueta.getFileExt.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.getFileExt/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.getUrlToFileName()"></a>xiyueta.getUrlToFileName() 工具方法
+                    <small>获得网址对应的文件名称
+                        <br><a href="examples/xiyueta.getUrlToFileName.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.getUrlToFileName/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.getUrlDir()"></a>xiyueta.getUrlDir() 工具方法
+                    <small>获得网址里文件名称
+                        <br><a href="examples/xiyueta.getUrlDir.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.getUrlDir/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.getDomain()"></a>xiyueta.getDomain() 工具方法
+                    <small>提取网址里的域名部分
+                        <br><a href="examples/xiyueta.getDomain.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.getDomain/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.getUrlParam()"></a>xiyueta.getUrlParam() 工具方法
+                    <small>获取URL中指定参数值
+                        <br><a href="examples/xiyueta.getUrlParam.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.getUrlParam/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.toType()"></a>xiyueta.toType() 工具方法
+                    <small>获得对象类型
+                        <br><a href="examples/xiyueta.toType.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.toType/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.htmlColor()"></a>xiyueta.htmlColor() 工具方法
+                    <small>给html代码块着色
+                        <br><a href="examples/xiyueta.htmlColor.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.htmlColor/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.config()"></a>xiyueta.config() 工具方法
+                    <small>设置或修改配置
+                        <br><a href="examples/xiyueta.config.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.config/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.charset()"></a>xiyueta.charset() 工具方法
+                    <small>修改和获得网页编码
+                        <br><a href="examples/xiyueta.charset.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.charset/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.tplconfig()"></a>xiyueta.tplconfig() 工具方法
+                    <small>设置或修改模板配置
+                        <br><a href="examples/xiyueta.tplconfig.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.tplconfig/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.autoFindTpl()"></a>xiyueta.autoFindTpl() 工具方法
+                    <small>自动寻找需要生成cms模板标签元素
+                        <br><a href="examples/xiyueta.autoFindTpl.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.autoFindTpl/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.log()"></a>xiyueta.log() 工具方法
+                    <small>将内容输出在浏览器中，方便查看调试。可以有N个参数，在JS页可以输出对象和数组，在ASP里不能解析对象和数组。
+                        <br><a href="examples/xiyueta.log.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.log/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.getQueryString()"></a>xiyueta.getQueryString() 工具方法
+                    <small>获取URL中指定参数值(第2种)
+                        <br><a href="examples/xiyueta.getQueryString.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.getQueryString/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.resolve()"></a>xiyueta.resolve() 工具方法
+                    <small>为URL或 href 插入 或 替换原有的标签
+                        <br><a href="examples/xiyueta.resolve.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.resolve/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.getlog()"></a>xiyueta.getlog() 工具方法
+                    <small>获得打印参数内容，可以有N个参数。在JS页可以输出对象和数组，在ASP里不能解析对象和数组。
+                        <br><a href="examples/xiyueta.getlog.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.getlog/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.load()"></a>xiyueta.load() 工具方法
+                    <small>加载并解析html,与cheerio库里使用一致
+                        <br><a href="examples/xiyueta.load.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.load/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta.html()"></a>xiyueta.html() 工具方法
+                    <small>打印HTML对象全部内容,与cheerio库里使用一致
+                        <br><a href="examples/xiyueta.html.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta.html/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+<!--detail end-->
+
             </div>
         </div>
         <nav class="navbar navbar-default navbar-fixed-bottom"> 
             <div style="text-align:center">
-                Copyright © 2021 <a href="http://www.xiyueta.com/" title="xiyueta官网">xiyueta.com</a> MIT Licensed
+                Copyright © 2021 <a href="https://www.xiyueta.com/" title="xiyueta官网">xiyueta.com</a> MIT Licensed
                 <br>email:313801120@qq.com
             </div>
         </nav>
