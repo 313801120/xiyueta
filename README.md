@@ -92,15 +92,15 @@ console.log(xiyueta("title").parse("<title>hello world!</title>").text()) 'ASP�
 ### 资源链接
 <hr>
 
-文档官网：<a href="https://www.xiyueta.com/doc/" target="_blank">https://www.xiyueta.com/doc/</a>
+文档官网：<a href="https://www.xiyueta.com/doc/" target="_blank">xiyueta.com/doc/</a>
 
-在线演示：<a href="https://www.xiyueta.com/demo/" target="_blank">https://www.xiyueta.com/demo/</a>
+在线演示：<a href="https://www.xiyueta.com/demo/" target="_blank">xiyueta.com/demo/</a>
 
-Gitee仓库：<a href="https://gitee.com/313801120/xiyueta" target="_blank">https://gitee.com/313801120/xiyueta</a>
+Gitee仓库：<a href="https://gitee.com/313801120/xiyueta" target="_blank">gitee.com/313801120/xiyueta</a>
 
-Github仓库：<a href="https://github.com/313801120/xiyueta" target="_blank">https://github.com/313801120/xiyueta</a> 
+Github仓库：<a href="https://github.com/313801120/xiyueta" target="_blank">github.com/313801120/xiyueta</a> 
 
-更新日志：<a href="https://www.xiyueta.com/doc/log/" target="_blank">https://www.xiyueta.com/doc/log/</a>
+更新日志：<a href="https://www.xiyueta.com/doc/log/" target="_blank">xiyueta.com/doc/log/</a>
 
 技术交流群：扫如下二维码加群
 
