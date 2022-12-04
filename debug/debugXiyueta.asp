@@ -8,14 +8,36 @@ response.addheader "Content-Type", "text/html; charset=utf-8"%>
 
 
 'call xiyueta.log("ASP test",[1,2,3,4],11,"dd")       '在ASP程序里，只能是数字和字符串，对象或数组判断不出来'
+'  100n  长字符，在asp里不行'
 dim s 
 %>
 
 <script language="javascript" runat="server">
- var html = ''
-console.log('Update time 2022/11/16 9:17:54')
+ var html = '<html><head></head><body>\n<div class=\"left\" Style=\"color:red;\">\n    <span id=\" news\">dd</span>\n     \n</div>\n<div>aabbcc<br></div>\n<input id=\"nav\" Value=\"this is xx\" />\n</body></html>'
 //-------------------
  
+    var fun=function(n){
+        if(n==undefined)n=1;
+        return n;
+    }    
+    var funtrue=function(){
+        return true;
+    }    
+    var funfalse=function(){
+        return false;
+    }
+    var funstr=function(){
+        return "str";
+    }
+    var funnumb=function(){
+        return 123;
+    }
+    var funarray=function(){
+        return [1,2,"a",false,true];
+    }
+    var funobj=function(){
+        return {"a":"11","bb":"22","ccc":"333"};
+    }
 var startTime = new Date();
 
 $().parse(html);
@@ -26,12 +48,7 @@ console.log("xiyueta",new Date() - startTime + ' ms');
 
 function test_jQuery() {
 
-    if( $.getDomain("http://www.xiyueta.com/css/style.css")!='www.xiyueta.com' )return 'this is err1';
-    if( $.getDomain("http://www.xiyueta.com/css/style.css",true)!='http://www.xiyueta.com' )return 'this is err2';
-    if( $.getDomain("https://xiyueta.com/case/?page=1",true)!='https://xiyueta.com' )return 'this is err3';
-    if( $.getDomain("ftp://xiyueta.com/1.asp",true)!='ftp://xiyueta.com' )return 'this is err4';
-    if( $.getDomain("1.jpg",true)!='' )return 'this is err5';
-    if( $.getDomain("//xiyueta.com/1.asp",true)!='xiyueta.com' )return 'this is err6';
+    if(  $("span[id=news]").html()!=undefined )return 'this is err1';
 
     return 'test_jQuery OK';
 }
