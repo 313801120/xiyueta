@@ -430,7 +430,7 @@ function test_val() {
     // $().debug()
 
 
-    // return xiyueta().val() 
+     // return $(".sel").val()
 
     if ($("input").val() != "111") {
         return "xiyueta().val() err1";
@@ -575,7 +575,7 @@ function test_text() {
     } else if ($("*").length != 7) {
         return "xiyueta().text() err6";
     } else if ($("ul *").length != 6) {
-        return "xiyueta().text() err7";
+        return "xiyueta().text() err7"; 
     } else if ($("li[class=news]").length != 2) {
         return "xiyueta().text() err8";
     } else if ($(" ul li[class=news]:eq(1) *").length != 1) {
