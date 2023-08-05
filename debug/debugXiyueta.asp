@@ -13,7 +13,7 @@ dim s
 %>
 
 <script language="javascript" runat="server">
- var html = '<html><head></head><body>\n<div class=\"left\" Style=\"color:red;\">\n    <span id=\" news\">dd</span>\n     \n</div>\n<div>aabbcc<br></div>\n<input id=\"nav\" Value=\"this is xx\" />\n</body></html>'
+ var html = '<html><head></head><body>\n\n<div style="text-align:center;">\n<img src="1.jpg" /><img src="2.jpg"/>\n</div>\n\n</body></html>'
 //-------------------
  
     var fun=function(n){
@@ -40,7 +40,7 @@ dim s
     }
 var startTime = new Date();
 
-$().parse(html);
+$().parse(html,true);
 console.log(test_jQuery());
 
 console.log("xiyueta",new Date() - startTime + ' ms');
@@ -48,7 +48,6 @@ console.log("xiyueta",new Date() - startTime + ' ms');
 
 function test_jQuery() {
 
-    if(  $("span[id=news]").html()!=undefined )return 'this is err1';
 
     return 'test_jQuery OK';
 }

@@ -57,7 +57,7 @@ $('h2').text(123);
 $('h2.title').addClass('xyt');
 
 $.html();
-//=><h2 class="Title xyt">123</h2>
+//=> <h2 class="Title xyt">123</h2>
 ```
 <br/>
 
@@ -65,25 +65,28 @@ $.html();
 ```html
 <script src="https://www.xiyueta.com/js/xiyueta.min.js"></script>
 <script>
-var html='<span>xiyueta</span><span>JS库</span>';
-$().parse(html);
+var html='<span>xiyueta.js</span><span> library</span>'; 
+$.load(html);
 $.log($("span").text());
+//=> xiyueta.js library
 </script>
 ```
 <br/>
 
 #### 4. 在asp程序里使用xiyueta
 ```html
-<script  language="javascript" runat="server" src="dist/asp.xiyueta.min.js"></script> 
+<script  language="javascript" runat="server" src="app/dist/asp.xiyueta.min.js"></script> 
 <%
 '这里需要运行一段ASP程序，下面才可以正常运行javascript程序，疑问？'
-console.log(xiyueta("title").parse("<title>hello world!</title>").text()) 'ASP里不可以用 $ 直接用 xiyueta代替
+xiyueta.load("<title>hello world!</title>")
+console.log(xiyueta("title").text()) 'ASP里不可以用 $ 直接用 xiyueta代替
+'=> hello world!
 %>
 
 <script language="javascript" runat="server">
-  console.log($("title").parse("<title>hello world!</title>").text()); //上面要运行一段ASP程序，这里才不会报错，因为要用到ASP程序里的response.write输出函数
-  
-
+$.load("<title>hello world!</title>")
+console.log($("title").text()); //上面要运行一段ASP程序，这里才不会报错，因为要用到ASP程序里的response.write输出函数
+//=> hello world! 
 </script>
 ```
 

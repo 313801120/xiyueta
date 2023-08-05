@@ -1,7 +1,7 @@
 ﻿// var xiyueta = require('xiyueta');
 var xiyueta = require('./../dist/nodejs.xiyueta.min.js');
 
-var html = '<html><head></head><body>\n<div class=\"left\" Style=\"color:red;\">\n    <span id=\" news\">dd</span>\n     \n</div>\n<div>aabbcc<br></div>\n<input id=\"nav\" Value=\"this is xx\" />\n</body></html>'
+var html = '<html><head></head><body>\n\n<div style="text-align:center;">\n<img src="1.jpg" /><img src="2.jpg"/>\n</div>\n\n</body></html>'
 //-------------------
 
     var fun=function(n){
@@ -30,7 +30,7 @@ var html = '<html><head></head><body>\n<div class=\"left\" Style=\"color:red;\">
 var type="x"
 if (type.indexOf("x") != -1) {
     var startTime = new Date();
-    var $ = xiyueta.load(html);
+    var $ = xiyueta.load(html,true);
     console.log(test_jQuery());
     console.log("xiyueta", new Date() - startTime + ' ms');
 }
@@ -38,7 +38,6 @@ if (type.indexOf("x") != -1) {
 
 function test_jQuery() {
 
-    if(  $("span[id=news]").html()!=undefined )return 'this is err1';
 
     return 'test_jQuery OK';
 }

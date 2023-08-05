@@ -29,7 +29,7 @@ var dist = '../xiyueta/app/dist/'
 var task = {
     //生成网页 JS文件
     webjs: function(ver) {
-        gulp.src([src + 'xiyueta.js', src + 'xiyueta.css.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
+        gulp.src([src + 'xiyueta.js', src + 'xiyueta.css.js', src + 'xiyueta.asp.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
             .pipe(concat('xiyueta.source.js'))
             .pipe(gulp.dest('../xiyueta/js/'))
             .pipe(concat('xiyueta.min.js'))
@@ -39,7 +39,7 @@ var task = {
             .pipe(gulp.dest('../xiyueta/js/'))//再复制一份到js/目录里
     }, 
     nodejs: function(ver) {//生成nodejs JS文件
-        gulp.src([src + 'xiyueta.css.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
+        gulp.src([src + 'xiyueta.asp.js',src + 'xiyueta.css.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
             .pipe(replace('_xyt.info\(\);', ''))
             .pipe(concat('nodejs.xiyueta.min.js'))
             .pipe(uglify())
@@ -48,7 +48,7 @@ var task = {
             .pipe(gulp.dest(dist))
     }, 
     nodejsSource: function(ver) {//生成nodejs源码 JS文件
-        gulp.src([src + 'xiyueta.css.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
+        gulp.src([src + 'xiyueta.asp.js', src + 'xiyueta.css.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'common.js', src + 'url.js', src + 'tpl.js'])
             .pipe(replace('_xyt.info\(\);', ''))
             .pipe(concat('nodejs.xiyueta.source.js'))
             .pipe(header.apply(null, note))
@@ -56,7 +56,7 @@ var task = {
             .pipe(gulp.dest('../xiyueta/js/'))
     },
     aspjs: function(ver) { //生成aspjs JS文件
-        gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.css.js', src + 'url.js', src + 'handle.js'])
+        gulp.src([src + 'asp.header.js', src + 'common.js', src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'xiyueta.css.js', src + 'xiyueta.asp.js', src + 'url.js', src + 'handle.js'])
             .pipe(replace('_xyt.info\(\);', ''))
             .pipe(replace('document.write\(', 'response.write\('))
             .pipe(concat('asp.xiyueta.min.js'))
@@ -65,7 +65,7 @@ var task = {
             .pipe(gulp.dest(dist))
     },
     sourcejs: function(ver) { //这个已经放到webjs里，这个不暂时放着
-        gulp.src([src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'common.js', src + 'xiyueta.css.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'url.js', src + 'tpl.js'])
+        gulp.src([src + 'xiyueta.js', src + 'xiyueta.more.js', src + 'common.js', src + 'xiyueta.asp.js', src + 'xiyueta.css.js', src + 'xiyueta.debug.js', src + 'handle.js', src + 'url.js', src + 'tpl.js'])
             .pipe(concat('xiyueta.source.js'))
             // .pipe(uglify({
             //     mangle: false, //类型：Boolean 默认：true， 是否修改变量名

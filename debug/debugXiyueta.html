@@ -1,6 +1,6 @@
 ﻿<script src="../dist/xiyueta.min.js"></script>
 <script type="text/javascript">
-var html = '<html><head></head><body>\n<div class=\"left\" Style=\"color:red;\">\n    <span id=\" news\">dd</span>\n     \n</div>\n<div>aabbcc<br></div>\n<input id=\"nav\" Value=\"this is xx\" />\n</body></html>'
+var html = '<html><head></head><body>\n\n<div style="text-align:center;">\n<img src="1.jpg" /><img src="2.jpg"/>\n</div>\n\n</body></html>'
 //-------------------
 
 var startTime = new Date();
@@ -28,7 +28,7 @@ var startTime = new Date();
     var funobj=function(){
         return {"a":"11","bb":"22","ccc":"333"};
     }
-$().parse(html);
+$().parse(html,true);
 xiyueta.log(test_jQuery());
 
 xiyueta.log("xiyueta", new Date() - startTime + ' ms');
@@ -37,7 +37,6 @@ xiyueta.log("xiyueta", new Date() - startTime + ' ms');
 
 function test_jQuery() {
 
-    if(  $("span[id=news]").html()!=undefined )return 'this is err1';
 
     return 'test_jQuery OK';
 }
