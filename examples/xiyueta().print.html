@@ -62,20 +62,28 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v23">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v31">&lt;/script>
 &lt;script>
 
 /*
 .parse()    解析HTML
-.print()    打印HTML对象全部内容 format为格式化HTML
+.print()    打印匹配元素集中第一个元素的HTML内容 format为格式化HTML
 */
 
 var html = "&lt;body>aaa&lt;div>xiyueta&lt;div>\n作者&lt;div style='color:red'>小云\n&lt;/div>&lt;/div>&lt;/div>&lt;div>网址：xiyueta.com&lt;/div>bbbb&lt;/body>"
 $().parse(html); //解析html
-console.log($().print("format"));
-$.log($().print("format"));
+// console.log($().print("format"));  //浏览器控制台输出  undefined
 
-document.write("&lt;br>" + $.html("format | color"))
+
+
+
+$.log($.html()); //$().printall()  //相等
+
+document.write("&lt;br>")
+document.write($("div:eq(1)").print("format|color"));
+
+document.write("&lt;br>")
+$.log($().print("format")); //  返回undefined 之前为打印全部html 等于 $().printall()  改为这种
 
 &lt;/script></textarea>
         </div>

@@ -62,22 +62,25 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v23">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v31">&lt;/script>
 &lt;script>
 
 /*
 .parse()    解析HTML
+$.load()  加载并解析html,与cheerio库里使用一致
 .add() 	    创建一个新的 jQuery 对象，将元素添加到匹配的元素集中
 $.log()     在浏览器里显示内容 == document.write()
 */
 
 
-var html='&lt;div>xiyueta.com&lt;/div>&lt;span>&lt;/span>';
-$().parse(html);
+var html = '&lt;div>xiyueta.com&lt;/div>&lt;span>&lt;/span>';
+$.load(html);
 $.log($("div").add("span").length);
 $.log($("div").add("div").length);
 $.log($("div").add($("div")).length);
 $.log($("div").add(1).length);
+
+$.log($("div").parse("&lt;span>&lt;/span>&lt;span>&lt;/span>&lt;span>&lt;/span>").add("span").length);//解析html后获得元素文本  简单快速方法
 
 &lt;/script></textarea>
         </div>

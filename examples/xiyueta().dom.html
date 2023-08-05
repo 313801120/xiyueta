@@ -62,7 +62,7 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v23">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v31">&lt;/script>
 &lt;script>
 
 /*
@@ -76,7 +76,7 @@ $.log()     在浏览器里显示内容 == document.write()
 
 var html='&lt;div>\n\
 &lt;ul id="nav">\n\
-&lt;li name="x">xiyueta库&lt;/li>\n\
+&lt;li name="x">xiyueta库&lt;br>&lt;img src="1.jpg" alt="">&lt;/br>&lt;/li>\n\
 &lt;li class="url">xiyueta.com&lt;/li>\n\
 &lt;li>&lt;/li>\n\
 &lt;/ul>\n\
@@ -95,6 +95,12 @@ $.log($("ul").domlabel());
 
 document.write("&lt;br>")
 $.log($("ul").domlabelwrap());
+
+document.write("&lt;br>")
+$.log($("ul").domlabel(1));
+
+document.write("&lt;br>")
+$.log($("ul").domlabel(1,"src"));
 
 &lt;/script></textarea>
         </div>

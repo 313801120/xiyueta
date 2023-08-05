@@ -62,20 +62,23 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v23">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v31">&lt;/script>
 &lt;script>
 
 /*
 .parse()    解析HTML
+$.load()  加载并解析html,与cheerio库里使用一致
 .is() 	    根据选择器、元素或 xiyueta 对象检查当前匹配的一组元素，true如果这些元素中至少有一个与给定的参数匹配，则返回
 $.log()     在浏览器里显示内容 == document.write()
 */
 
 
-var html='&lt;div>xiyueta.com&lt;/div>&lt;span>&lt;/span>';
-$().parse(html);
-$.log( $("div,span").is("p") );
-$.log( $("div,span").is("span") );
+var html = '&lt;div>xiyueta.com&lt;/div>&lt;span>&lt;/span>';
+$.load(html);
+$.log($("div,span").is("p"));
+$.log($("div,span").is("span"));
+
+$.log($("*").parse(html).is("div,span")); //解析html后继续操作  简单快速方法
 
 &lt;/script></textarea>
         </div>

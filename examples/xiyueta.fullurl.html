@@ -62,7 +62,7 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v23">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v31">&lt;/script>
 &lt;script>
 
 /*
@@ -70,8 +70,15 @@ $.fullurl()  处理网址完整，当前网址与文件路径进行处理，得�
 $.log()   	 在浏览器里显示内容 == document.write()
 */
 
-var s=$.fullurl("http://www.xiyueta.com/css/style.css","../1.jpg");
+var s=$.fullurl("http://www.xiyueta.com/admin/css/style.css","/1.jpg");
 $.log(s);
+
+var s=$.fullurl("http://www.xiyueta.com/css/style.css","../2.jpg");
+$.log(s);
+
+var s=$.fullurl("http://www.xiyueta.com/css/style.css","../../../../../3.jpg");
+$.log(s);
+ 
 
 var s=$.fullurl("http://www.xiyueta.com/tool/qqshow/qqshow.asp?act=33","?act=freeRegistration");
 $.log(s);
@@ -80,6 +87,9 @@ var s=$.fullurl("http://www.xiyueta.com","/api/scan/demo/002/?cxid=0016018935079
 $.log(s);
 
 var s=$.fullurl("http://www.xiyueta.com/1.asp","") ;
+$.log(s);
+
+var s=$.fullurl("","http://www.xiyueta.com/1.asp") ;
 $.log(s);
 
 &lt;/script></textarea>

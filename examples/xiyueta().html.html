@@ -62,11 +62,12 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v23">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v31">&lt;/script>
 &lt;script>
 
 /*
 .parse()    解析HTML
+$.load()    加载并解析html,与cheerio库里使用一致
 .html()     获取匹配元素集中第一个元素的HTML内容，或设置每个匹配元素的HTML内容
 .htmlwrap() 获取匹配元素集中第一个元素的HTML内容和外包裹，或设置每个匹配元素的HTML内容和外包裹
 $.log()     在浏览器里显示内容 == document.write()
@@ -74,7 +75,13 @@ $.log()     在浏览器里显示内容 == document.write()
 */
 
 
-var html='&lt;div>\n\
+var html = '&lt;div>&lt;p>xiyuetaJS库&lt;/p>&lt;/div>';
+$.load(html);
+$.log($("div").html());
+$.log($("div").parse(html).html()); //解析html后获得元素内容  简单快速方法
+
+
+var html = '&lt;div>\n\
 &lt;ul>\n\
 &lt;li>xiyueta库&lt;/li>\n\
 &lt;li>xiyueta.com&lt;/li>\n\
@@ -83,7 +90,7 @@ var html='&lt;div>\n\
 &lt;/div>';
 
 $("li:eq(-1)").parse(html).html("author:&lt;b>xiyueta&lt;/b>");
-$.log($("ul").html()); 
+$.log($("ul").html());
 
 document.write("&lt;br>");
 $.log($("li").htmlwrap());

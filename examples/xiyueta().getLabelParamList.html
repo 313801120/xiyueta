@@ -62,18 +62,22 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v23">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v31">&lt;/script>
 &lt;script>
 
 /*
 .parse()              解析HTML
-.getLabelParamList()  获得匹配元素集中的第一个元素中标签参数列表
+.getLabelParamList()  获得匹配元素集中的第一个元素中标签属性名数组列表
 $.log()               在浏览器里显示内容 == document.write()
 */
 
-var html="&lt;div id='nav' class='classname' name='ttt'>&lt;/div>&lt;div id='news' class='classname2' style='color:red'>&lt;/div>"
+var html="&lt;div id='nav' hidden class='classname' name='ttt'>&lt;/div>&lt;div id='news' class='classname2' style='color:red'>&lt;/div>"
 xiyueta.load(html)
 xiyueta.log( xiyueta("div").getLabelParamList() )
+
+document.write("&lt;br>");
+
+xiyueta.log( xiyueta("div").getLabelParamList("value") )
 
 &lt;/script></textarea>
         </div>

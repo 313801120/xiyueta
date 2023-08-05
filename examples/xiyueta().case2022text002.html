@@ -62,7 +62,7 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
             </form>
         </div>
         <div class="panel-body">
-            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v23">&lt;/script>
+            <textarea class="form-control"  id="textareaCode" name="textareaCode">&lt;script src="../dist/xiyueta.min.js?v31">&lt;/script>
 &lt;script>
 
 /*
@@ -71,17 +71,19 @@ $.load()    加载解析HTML
 $.html      打印HTML对象全部内容,与cheerio库里使用一致
 $.log()     在浏览器里显示内容 == document.write()
 */
- 
-var html='&lt;style>\n\
-  p {\n\
-    color: blue;\n\
-    margin: 8px;\n\
-  }\n\
-  &lt;/style>\n\
-  &lt;p>Test Paragraph.&lt;/p>'
+
+var html = [
+    '&lt;style>',
+    '  p {',
+    '    color: blue;',
+    '    margin: 8px;',
+    '  }',
+    '  &lt;/style>',
+    '  &lt;p>Test Paragraph.&lt;/p>'
+].join("\n");
 
 $.load(html)
-$( "p" ).text( "&lt;b>Some&lt;/b> new text." );
+$("p").text("&lt;b>Some&lt;/b> new text.");
 
 $.log($.html())
 document.write($.html())
