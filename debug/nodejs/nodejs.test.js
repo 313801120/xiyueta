@@ -1,3 +1,4 @@
+console.log("2023-08-07 11:08:24"); 
 var $ = xiyueta = require('./../../dist/nodejs.xiyueta.min.js');
 //var $ = require('xiyueta');//本地存在则可以直接调用 使用方法:在CMD里输入 node debug.nodejs版单元测试.js
 //为了兼容在ASP里测试，少用中文或中文符号，会报错和乱码

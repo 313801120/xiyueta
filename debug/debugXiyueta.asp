@@ -13,7 +13,7 @@ dim s
 %>
 
 <script language="javascript" runat="server">
- var html = '<html><head></head><body>\n\n<div style="text-align:center;">\n<img src="1.jpg" /><img src="2.jpg"/>\n</div>\n\n</body></html>'
+ var html = '<html><head></head><body>\n\n<div>\n    <ul>\n        <li>aa</li>\n        <li>bb</li>\n        <li>cc</li>\n    </ul>\n</div>\n\n</body></html>'
 //-------------------
  
     var fun=function(n){
@@ -48,6 +48,7 @@ console.log("xiyueta",new Date() - startTime + ' ms');
 
 function test_jQuery() {
 
+    if(  $(":eq(0)").length!=1 )return 'this is err1';
 
     return 'test_jQuery OK';
 }

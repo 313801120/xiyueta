@@ -1,9 +1,10 @@
 <script language="javascript" runat="server" src="./../../dist/asp.xiyueta.min.js"></script>
 <%
 '单元测试如果出错了，请查看文件是否为gbk JS文件与ASP文件都要为GBK编码'
-console.log(xiyueta("p").parse("<p class='nav'>xiyueta<br>bbb</p>").css("color","red").htmlwrap())
+xiyueta.load("<p class='nav'>xiyueta<br>bbb</p>")
+console.log(xiyueta("p").css("color","red").htmlwrap())
 %>
-
+<title>2023-08-07 11:08:24</title>
 <script  language="javascript" runat="server">
 //为了兼容在ASP里测试，少用中文或中文符号，会报错和乱码
 
