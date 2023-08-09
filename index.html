@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>xiyueta.js库 API使用</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+    
     
   
 <script>
@@ -29,7 +31,7 @@ var _hmt = _hmt || [];
 <li class="list-group-item"><a href="#xiyueta().length" >xiyueta().length</a></li>
 </ul>
 <ul class="list-group">
-<li class="list-group-item">xiyueta<br>属性方法<span class="badge">83</span></li>
+<li class="list-group-item">xiyueta<br>属性方法<span class="badge">86</span></li>
 <li class="list-group-item"><a href="#xiyueta().text()" >xiyueta().text()</a></li>
 <li class="list-group-item"><a href="#xiyueta().html()" >xiyueta().html()</a></li>
 <li class="list-group-item"><a href="#xiyueta().find()" >xiyueta().find()</a></li>
@@ -85,6 +87,9 @@ var _hmt = _hmt || [];
 <li class="list-group-item"><a href="#xiyueta().doublelabel()" >xiyueta().doublelabel()</a></li>
 <li class="list-group-item"><a href="#xiyueta().htmlwrap()" >xiyueta().htmlwrap()</a></li>
 <li class="list-group-item"><a href="#xiyueta().dom()" >xiyueta().dom()</a></li>
+<li class="list-group-item"><a href="#xiyueta().domwrap()" >xiyueta().domwrap()</a></li>
+<li class="list-group-item"><a href="#xiyueta().domlabel()" >xiyueta().domlabel()</a></li>
+<li class="list-group-item"><a href="#xiyueta().domlabelwrap()" >xiyueta().domlabelwrap()</a></li>
 <li class="list-group-item"><a href="#xiyueta().swap()" >xiyueta().swap()</a></li>
 <li class="list-group-item"><a href="#xiyueta().findlv()" >xiyueta().findlv()</a></li>
 <li class="list-group-item"><a href="#xiyueta().getlabel()" >xiyueta().getlabel()</a></li>
@@ -438,6 +443,21 @@ var _hmt = _hmt || [];
                         <br><a href="examples/xiyueta().dom.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/dom/" target="_balnk">官方文档>></a>
                     </small>
                 </blockquote>
+                <blockquote><a name="xiyueta().domwrap()"></a>xiyueta().domwrap() 属性方法
+                    <small>获取匹配元素集中第一个元素的HTML结构，包括元素本身标签块
+                        <br><a href="examples/xiyueta().domwrap.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/domwrap/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().domlabel()"></a>xiyueta().domlabel() 属性方法
+                    <small>获取匹配元素集中第一个元素的HTML结构标签部分
+                        <br><a href="examples/xiyueta().domlabel.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/domlabel/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
+                <blockquote><a name="xiyueta().domlabelwrap()"></a>xiyueta().domlabelwrap() 属性方法
+                    <small>获取匹配元素集中第一个元素的HTML结构标签部分，并且包括标签块
+                        <br><a href="examples/xiyueta().domlabelwrap.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/domlabelwrap/" target="_balnk">官方文档>></a>
+                    </small>
+                </blockquote>
                 <blockquote><a name="xiyueta().swap()"></a>xiyueta().swap() 属性方法
                     <small>让两个HTML标记块之间互换位置，与jQuery不同，jQuery没有这个方法，这个方法是为了两个标签块之间互换位置
                         <br><a href="examples/xiyueta().swap.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/swap/" target="_balnk">官方文档>></a>
@@ -479,7 +499,7 @@ var _hmt = _hmt || [];
                     </small>
                 </blockquote>
                 <blockquote><a name="xiyueta().findWithItem()"></a>xiyueta().findWithItem() 属性方法
-                    <small>找相同dom结束元素
+                    <small>找相同dom结构元素
                         <br><a href="examples/xiyueta().findWithItem.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/findWithItem/" target="_balnk">官方文档>></a>
                     </small>
                 </blockquote>
@@ -504,7 +524,7 @@ var _hmt = _hmt || [];
                     </small>
                 </blockquote>
                 <blockquote><a name="xiyueta().puretext()"></a>xiyueta().puretext() 属性方法
-                    <small>获取匹配元素集合中每个元素的组合无子元素文本内容（包括它们的后代），或设置匹配元素的无子元素文本内容
+                    <small>获取匹配元素集中第一个元素的无子元素文本内容，或设置每个匹配元素的无子元素文本内容
                         <br><a href="examples/xiyueta().puretext.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/puretext/" target="_balnk">官方文档>></a>
                     </small>
                 </blockquote>
@@ -514,7 +534,7 @@ var _hmt = _hmt || [];
                     </small>
                 </blockquote>
                 <blockquote><a name="xiyueta().puretextarr()"></a>xiyueta().puretextarr() 属性方法
-                    <small>获取匹配元素集合中每个元素的组合无子元素文本内容数组（包括它们的后代），或设置匹配元素的无子元素文本内容数组
+                    <small>获取匹配元素集中第一个元素的无子元素文本内容数组，或设置每个匹配元素的无子元素文本内容数组
                         <br><a href="examples/xiyueta().puretextarr.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/puretextarr/" target="_balnk">官方文档>></a>
                     </small>
                 </blockquote>
@@ -524,12 +544,12 @@ var _hmt = _hmt || [];
                     </small>
                 </blockquote>
                 <blockquote><a name="xiyueta().inside()"></a>xiyueta().inside() 属性方法
-                    <small>获取匹配元素集在查找元素内部
+                    <small>查找元素集在匹配第一个元素内部
                         <br><a href="examples/xiyueta().inside.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/inside/" target="_balnk">官方文档>></a>
                     </small>
                 </blockquote>
                 <blockquote><a name="xiyueta().outside()"></a>xiyueta().outside() 属性方法
-                    <small>获取匹配元素集在查找元素外部
+                    <small>查找元素集在匹配第一个元素外部
                         <br><a href="examples/xiyueta().outside.html" target="_balnk">尝试一下>></a> | <a href="https://www.xiyueta.com/api/xiyueta/outside/" target="_balnk">官方文档>></a>
                     </small>
                 </blockquote>
@@ -706,7 +726,7 @@ var _hmt = _hmt || [];
 
     </div>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

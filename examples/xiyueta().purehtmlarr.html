@@ -66,30 +66,19 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()      解析HTML
-$.load()      加载并解析html,与cheerio库里使用一致
+.parse()         解析HTML
+$.load()         加载并解析html,与cheerio库里使用一致
 .purehtmlarr()   获取匹配元素集中第一个元素的无子元素HTML内容数组，或设置每个匹配元素的无子元素HTML内容数组
-$.log()       在浏览器里显示内容 == document.write()
+$.log()          在浏览器里显示内容 == document.write()
 */
 
-
-var html = '11&lt;div>aa&lt;span>xiyueta&lt;/span>bb&lt;span>JS库&lt;/span>cc&lt;/div>22';
+var html = '11&lt;div>aa&lt;span>xiyueta&lt;/span>bb&lt;span>JS库&lt;/span>cc&lt;/div>22&lt;p>&lt;span>aabbcc&lt;/span>&lt;/p>';
 $.load(html); //解析html
 $.log($("div").purehtmlarr()); //获得元素文本
-$.log($("div").purehtmlarr("&lt;p>你好&lt;/p>").printall()); //解析html后获得元素文本  简单快速方法
+$.log($("div").purehtmlarr("你好").print()); //解析html后获得元素文本  简单快速方法
 
-
-$.log("\n----------\n")
-
-xiyueta.load("&lt;a>&lt;/a> &lt;a>11&lt;/a>"); 
-xiyueta("a:eq(0)").purehtmlarr("&lt;p>你好&lt;/p>")
-xiyueta("a:eq(1)").purehtmlarr("&lt;p>在嘛&lt;/p>")
-$.log(xiyueta.html())
-
-xiyueta.load("&lt;a>&lt;/a> &lt;a>11&lt;/a>"); 
-xiyueta("a:eq(0)").purehtmlarr("&lt;p>你好&lt;/p>",false)
-xiyueta("a:eq(1)").purehtmlarr("&lt;p>在嘛&lt;/p>",false)
-$.log(xiyueta.html())
+$.log($("div").purehtmlarr(['xiyueta.js','xiyueta.com','hello world']).print()); //解析html后获得元素文本  简单快速方法
+$.log($("p").purehtmlarr("&lt;b>你好&lt;/b>",1).print());
 
 &lt;/script></textarea>
         </div>

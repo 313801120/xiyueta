@@ -73,22 +73,13 @@ $.log()       在浏览器里显示内容 == document.write()
 */
 
 
-var html = '11&lt;div>aa&lt;span>xiyueta&lt;/span>bb&lt;span>JS库&lt;/span>cc&lt;/div>22';
+var html = '11&lt;div>aa&lt;span>xiyueta&lt;/span>bb&lt;span>JS库&lt;/span>cc&lt;/div>22&lt;p>&lt;span>aabbcc&lt;/span>&lt;/p>';
 $.load(html); //解析html
 $.log($("div").purehtml()); //获得元素文本
-$.log($("div").purehtml("&lt;p>你好&lt;/p>").printall()); //解析html后获得元素文本  简单快速方法
+$.log($("div").purehtml("你好").print()); //解析html后获得元素文本  简单快速方法
 
-$.log("\n----------\n")
-
-xiyueta.load("&lt;a>&lt;/a> &lt;a>11&lt;/a>"); 
-xiyueta("a:eq(0)").purehtml("&lt;p>你好&lt;/p>")
-xiyueta("a:eq(1)").purehtml("&lt;p>在嘛&lt;/p>")
-$.log(xiyueta.html())
-
-xiyueta.load("&lt;a>&lt;/a> &lt;a>11&lt;/a>"); 
-xiyueta("a:eq(0)").purehtml("&lt;p>你好&lt;/p>",false)
-xiyueta("a:eq(1)").purehtml("&lt;p>在嘛&lt;/p>",false)
-$.log(xiyueta.html())
+$.log($("div").purehtml(['xiyueta.js','xiyueta.com','hello world']).print()); //解析html后获得元素文本  简单快速方法
+$.log($("p").purehtml("&lt;b>你好&lt;/b>",1).print());
 
 &lt;/script></textarea>
         </div>
