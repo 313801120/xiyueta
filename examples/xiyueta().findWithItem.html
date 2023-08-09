@@ -72,9 +72,12 @@ $.log()          在浏览器里显示内容 == document.write()
 */
 
 var html='&lt;ul>&lt;li>&lt;p>1&lt;/p>&lt;/li>&lt;li>2&lt;/li>&lt;li>3&lt;/li>&lt;/ul>';
-$().parse(html);
+xiyueta.load(html);
 $.log($("ul li").findWithItem().length);
 $.log($("ul li").findWithItem(2).length);
+
+$.log($("ul li").findWithItem("table|p|div",2).length);
+$.log($("ul li").findWithItem("table|p|div|li",2).length);
 
 &lt;/script></textarea>
         </div>

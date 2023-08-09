@@ -4,7 +4,7 @@
 xiyueta.load("<p class='nav'>xiyueta<br>bbb</p>")
 console.log(xiyueta("p").css("color","red").htmlwrap())
 %>
-<title>2023-08-07 11:08:24</title>
+<title>2023-08-08 11:44:14</title>
 <script  language="javascript" runat="server">
 //为了兼容在ASP里测试，少用中文或中文符号，会报错和乱码
 

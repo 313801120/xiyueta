@@ -13,7 +13,7 @@ dim s
 %>
 
 <script language="javascript" runat="server">
- var html = '<html><head></head><body>\n\n<div>\n    <ul>\n        <li>aa</li>\n        <li>bb</li>\n        <li>cc</li>\n    </ul>\n</div>\n\n</body></html>'
+ var html = '<html><head></head><body>\n\n<div>\n    <ul>\n        <li><a href="">11</a></li>\n        <li><a href="">22</a></li>\n        <li><a href="">33</a></li>\n        <li><a href="">44</a></li>\n        <li><a href="">55</a></li>\n        <li><a href="">66</a></li>\n        <li><a href="">77</a></li>\n        <li><a href="">88</a></li>\n    </ul>\n</div>\n\n<'+'script type="text/javascript" src="debugJquery.js"></'+'script></body></html>'
 //-------------------
  
     var fun=function(n){
@@ -48,7 +48,7 @@ console.log("xiyueta",new Date() - startTime + ' ms');
 
 function test_jQuery() {
 
-    if(  $(":eq(0)").length!=1 )return 'this is err1';
+    if(  $("*").length!=22 )return 'this is err1';
 
     return 'test_jQuery OK';
 }

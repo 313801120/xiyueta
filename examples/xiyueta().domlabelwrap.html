@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"> 
-    <title>xiyueta().dom() 属性方法  xiyueta.js库</title>
+    <title>xiyueta().domlabelwrap() 属性方法  xiyueta.js库</title>
     <meta name="keywords" content="xiyuetaJS库案例,xiyueta测试案例,xiyueta.js测试案例,xiyueta.js测试CASE,xiyueta在线调试,xiyueta在线测试">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -66,18 +66,29 @@ body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%
 &lt;script>
 
 /*
-.parse()        解析HTML
-.dom()          获取匹配元素集中第一个元素的HTML结构
-$.log()         在浏览器里显示内容 == document.write()
+.parse()          解析HTML
+.domlabelwrap()   获取匹配元素集中第一个元素的HTML结构标签部分，并且包括标签块
+$.log()           在浏览器里显示内容 == document.write()
 */
 
-var html="&lt;body>context &lt;div>xiyueta&lt;div>\nauthor&lt;div style='color:red'>xiyueta\n&lt;/div>&lt;br>&lt;H1>&lt;/div>&lt;/div>&lt;div>url：xiyueta.com&lt;/div>bbbb&lt;/body>";
- 
-xiyueta.load(html); // 解析html
-$.log(xiyueta("body").dom()); // 默认提取单双标签
-$.log(xiyueta("body").dom(1)); // 提取单标签
-$.log(xiyueta("body").dom(2)); // 提取双标签
-$.log(xiyueta("br").dom()); // 提取单标签br里的单标签，所以为空
+var html='&lt;div>\n\
+&lt;ul id="nav">\n\
+&lt;Li name="x">xiyueta库&lt;BR>&lt;a href="1.asp" target="_blank">&lt;img src="1.jpg" alt="">&lt;/a>&lt;/br>&lt;/li>\n\
+&lt;li class="url">xiyueta.com&lt;/li>\n\
+&lt;li>&lt;/li>\n\
+&lt;/ul>\n\
+&lt;a href="1.html">1.html&lt;/a>\n\
+&lt;a href="2.html">2.html&lt;/a>\n\
+&lt;/div>';
+
+xiyueta.load(html) 
+
+$.log($("ul").domlabelwrap()); // 默认提取单双标签
+$.log($("ul").domlabelwrap(1));  // 提取单标签
+$.log($("ul").domlabelwrap(2)); // 提取双标签 
+
+$.log( $("ul").domlabelwrap("href,src") ); // 获得标签结构里全部标签，并且取标签里有href,src属性块
+$.log( $("ul").domlabelwrap(1,"href,src") ); // 获得标签结构里单标签，并且取标签里有href,src属性块
 
 &lt;/script></textarea>
         </div>
