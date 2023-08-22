@@ -99,9 +99,13 @@ console.log($("title").text()); //上面要运行一段ASP程序，这里才不�
 
 在线演示：<a href="https://www.xiyueta.com/demo/" target="_blank">xiyueta.com/demo/</a>
 
+Github仓库：<a href="https://github.com/313801120/xiyueta" target="_blank">github.com/313801120/xiyueta</a> 
+
 Gitee仓库：<a href="https://gitee.com/313801120/xiyueta" target="_blank">gitee.com/313801120/xiyueta</a>
 
-Github仓库：<a href="https://github.com/313801120/xiyueta" target="_blank">github.com/313801120/xiyueta</a> 
+Gitcode仓库：<a href="https://gitcode.net/qq313801120/xiyueta" target="_blank">gitcode.net/qq313801120/xiyueta</a> 
+
+npm仓库：<a href="https://www.npmjs.com/package/xiyueta" target="_blank">npmjs.com/package/xiyueta</a> 
 
 更新日志：<a href="https://www.xiyueta.com/doc/log/" target="_blank">xiyueta.com/doc/log/</a>
 

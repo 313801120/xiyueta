@@ -1,7 +1,7 @@
 ﻿// var xiyueta = require('xiyueta');
 var xiyueta = require('./../dist/nodejs.xiyueta.min.js');
 
-var html = '<html><head></head><body>\n\n<div>\n    <ul>\n        <li><a href="">11</a></li>\n        <li><a href="">22</a></li>\n        <li><a href="">33</a></li>\n        <li><a href="">44</a></li>\n        <li><a href="">55</a></li>\n        <li><a href="">66</a></li>\n        <li><a href="">77</a></li>\n        <li><a href="">88</a></li>\n    </ul>\n</div>\n\n<'+'script type="text/javascript" src="debugJquery.js"></'+'script></body></html>'
+var html = '<html><head></head><body>\n<span style=""></span>\n<div style="display: none;color:red;">aaa</div>\n\n<p style=""></p>\n<a style="display: none;color:red;">aaa</a>\n\n<br style=""> \n<br style="display: none;color:red;"> \n\n<hr style=""> \n<hr style="display: none;color:red;"> \n\n\n\n<'+'script type="text/javascript" src="debugJquery.js"></'+'script></body></html>'
 //-------------------
 
     var fun=function(n){
@@ -38,7 +38,14 @@ if (type.indexOf("x") != -1) {
 
 function test_jQuery() {
 
-    if(  $("*").length!=22 )return 'this is err1';
+    if(  $("span").hide().attr("style")!='display: none;' )return 'this is err1';
+    if(  $("div").show().attr("style")!='color: red;' )return 'this is err2';
+    if(  $("p").toggle().attr("style")!='display: none;' )return 'this is err3';
+    if(  $("a").toggle().attr("style")!='color: red;' )return 'this is err4';
+    if(  $("br:eq(0)").toggle().attr("style")!='display: none;' )return 'this is err5';
+    if(  $("br:eq(1)").toggle().attr("style")!='color: red;' )return 'this is err6';
+    if(  $("hr:eq(0)").hide().attr("style")!='display: none;' )return 'this is err7';
+    if(  $("hr:eq(1)").show().attr("style")!='color: red;' )return 'this is err8';
 
     return 'test_jQuery OK';
 }
