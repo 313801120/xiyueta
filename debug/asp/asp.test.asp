@@ -4,7 +4,7 @@
 xiyueta.load("<p class='nav'>xiyueta<br>bbb</p>")
 console.log(xiyueta("p").css("color","red").htmlwrap())
 %>
-<title>2023-08-09 09:07:32</title>
+<title>2023-09-10 10:29:51</title>
 <script  language="javascript" runat="server">
 //为了兼容在ASP里测试，少用中文或中文符号，会报错和乱码
 
@@ -462,14 +462,14 @@ function test_print() {
 
     var html = '<<<span name="aa">aa1122bb</span>'
     $().parse(html);
-    if ($().printall() != '<<<span name="aa">aa1122bb</span>') {
+    if ($().printHtml() != '<<<span name="aa">aa1122bb</span>') {
         return "xiyueta().print() err1";
     }
 
     var html = '< aa aa<div name="aa">aa1122bb</div> <<div></div>>'
     $().parse(html);
 
-    if ($().printall() != html) {
+    if ($().printHtml() != html) {
         return "xiyueta().print() err2";
     }
 
@@ -510,9 +510,9 @@ function test_showhide() {
     $("span").hide()
     $("p").show()
 
-    // return $().printall()
+    // return $().printHtml()
 
-    if ($().printall() != '<span style="display: none;">xiyueta</span><p>js library</p>') {
+    if ($().printHtml() != '<span style="display: none;">xiyueta</span><p>js library</p>') {
         return "xiyueta().show().hide() err1";
     }
     return "xiyueta().show().hide() OK";
@@ -527,26 +527,26 @@ function test_selector() {
     // $().debug()
     // return $("h2.title").text('Hello there!').print()
 
-    if ($("h2.title").text('Hello there!').printall() != '<h2 class="title">Hello there!</h2><h2>Hello world</h2>') {
+    if ($("h2.title").text('Hello there!').printHtml() != '<h2 class="title">Hello there!</h2><h2>Hello world</h2>') {
         return "xiyueta().selector err1";
-    } else if ($("*.title").text('xiyueta.com').printall() != '<h2 class="title">xiyueta.com</h2><h2>Hello world</h2>') {
+    } else if ($("*.title").text('xiyueta.com').printHtml() != '<h2 class="title">xiyueta.com</h2><h2>Hello world</h2>') {
         return "xiyueta().selector err2";
     }
 
     var html = '<ul><li>this is 1 </li><li>this is 2 </li><li>this is 3 </li><li>this is 4 </li><li>this is 5 </li></ul>';
     $().parse(html);
-    var s1 = $("li").even().css("color", "red").printall();
+    var s1 = $("li").even().css("color", "red").printHtml();
     $().parse(html);
-    var s2 = $("li:even").css("color", "red").printall();
+    var s2 = $("li:even").css("color", "red").printHtml();
     // return s1 +"\n"+ s2
     if (s1 != s2 || s1 != '<ul><li style="color: red;">this is 1 </li><li>this is 2 </li><li style="color: red;">this is 3 </li><li>this is 4 </li><li style="color: red;">this is 5 </li></ul>') {
         return "xiyueta().selector err3";
     }
 
     $().parse(html);
-    var s1 = $("li").odd().css("color", "red").printall();
+    var s1 = $("li").odd().css("color", "red").printHtml();
     $().parse(html);
-    var s2 = $("li:odd").css("color", "red").printall();
+    var s2 = $("li:odd").css("color", "red").printHtml();
     // return s1 +"\n"+ s2
     if (s1 != s2) {
         return "xiyueta().selector err4";
@@ -585,9 +585,9 @@ function test_repair() {
     $().parse(html);
     $().repair();
     // $().debug()
-    // return $().printall();
+    // return $().printHtml();
 
-    if ($().printall() != "<div><ul><li></li></ul></div>") {
+    if ($().printHtml() != "<div><ul><li></li></ul></div>") {
         return "xiyueta().repair err1";
     }
 
@@ -595,8 +595,8 @@ function test_repair() {
     var html = "<div>xiyueta\n<span> JS library</div>\n    <p>www.xiyueta.com\n</div>";
     $().parse(html);
     $().repair();
-    // return $().printall()
-    if ($().printall() != "<div>xiyueta\n<span> JS library</span></div>\n    <p>www.xiyueta.com\n</p>") {
+    // return $().printHtml()
+    if ($().printHtml() != "<div>xiyueta\n<span> JS library</span></div>\n    <p>www.xiyueta.com\n</p>") {
         return "xiyueta().repair err2";
     }
 
@@ -612,9 +612,9 @@ function test_wrap() {
     // $().debug()
     // return $("br").wrap("<div>aaa</div>").print()
 
-    if ($("br").wrap("<div>aaa</div>").printall() != "<div><p class='nav'>hellp word<div>aaa<br></div>bbb</p></div>") {
+    if ($("br").wrap("<div>aaa</div>").printHtml() != "<div><p class='nav'>hellp word<div>aaa<br></div>bbb</p></div>") {
         return "xiyueta().wrap().unwrap() err1";
-    } else if ($("br").unwrap().printall() != "<div>hellp word<div>aaa<br></div>bbb</div>") {
+    } else if ($("br").unwrap().printHtml() != "<div>hellp word<div>aaa<br></div>bbb</div>") {
         return "xiyueta().wrap().unwrap() err2";
     }
     return "xiyueta().wrap().unwrap() OK";
@@ -631,7 +631,7 @@ function test_css() {
         return "xiyueta().css() err1";
     } else if ($("span").css("font-size", "33px").css("color", "green").css("font-weight", "bold").htmlwrap() != '<span style="font-size: 33px; color: green; font-weight: bold;">aaaa</span>') {
         return "xiyueta().css() err2";
-    } else if ($("li:eq(1)").parse("<li>aaa</li><li>1111</li><li>ccc</li>").css({ color: "red", "font-size": "22px" }).printall() != '<li>aaa</li><li style="color: red; font-size: 22px;">1111</li><li>ccc</li>') {
+    } else if ($("li:eq(1)").parse("<li>aaa</li><li>1111</li><li>ccc</li>").css({ color: "red", "font-size": "22px" }).printHtml() != '<li>aaa</li><li style="color: red; font-size: 22px;">1111</li><li>ccc</li>') {
         return "xiyueta().css() err3";
     }
     return "xiyueta().css() OK";
@@ -659,14 +659,14 @@ function test_swap() {
     // $().debug()
     // return $("ul").swap("div:eq(1)").print(); 
 
-    if ($("ul").swap("div:eq(1)").printall() != "<div>aaa</div><div><ul><li>1</li><li>2</li></ul></div>") {
+    if ($("ul").swap("div:eq(1)").printHtml() != "<div>aaa</div><div><ul><li>1</li><li>2</li></ul></div>") {
         return "xiyueta().swap() err1";
     }
 
     var html = "start<div>1</div> center <span>2</span>end"
     $().parse(html);
 
-    if ($("div").swap("span").printall() != "start<span>2</span> center <div>1</div>end") return "xiyueta().swap() err2";
+    if ($("div").swap("span").printHtml() != "start<span>2</span> center <div>1</div>end") return "xiyueta().swap() err2";
 
 
 
@@ -745,7 +745,7 @@ function test_addClass() {
         return "xiyueta().addClass() err2";
     } else if ($("a").removeClass(" bb ").attr("class") != "redA") {
         return "xiyueta().addClass() err3";
-    } else if ($("li:eq(1)").parse("<li>aaa</li><li>1111</li><li>ccc</li>").attr({ id: "nav", name: "daohang" }).printall() != '<li>aaa</li><li id="nav" name="daohang">1111</li><li>ccc</li>') {
+    } else if ($("li:eq(1)").parse("<li>aaa</li><li>1111</li><li>ccc</li>").attr({ id: "nav", name: "daohang" }).printHtml() != '<li>aaa</li><li id="nav" name="daohang">1111</li><li>ccc</li>') {
         return "xiyueta().addClass() err4";
 
     }
@@ -782,12 +782,12 @@ function test_each() {
         }
     })
 
-    // return $().printall()  + "\n"+ s1
+    // return $().printHtml()  + "\n"+ s1
 
 
     if (c != "1.asp,2.asp,3.asp") {
         return "xiyueta().each() err1";
-    } else if ($().printall() != s1) {
+    } else if ($().printHtml() != s1) {
         return "xiyueta().each() err2";
 
     }
